@@ -3,6 +3,7 @@ import { Fraunces, Newsreader, JetBrains_Mono, Caveat } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -113,6 +114,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
