@@ -65,11 +65,11 @@ const PRODUCTS: Product[] = [
     numeral: "IV.",
     hook: "Third-party sign-off",
     name: "Auditor Bridge",
-    tagline: "Productized model validation. With liability coverage.",
+    tagline: "Productized model validation. Structurally independent.",
     description:
-      "SR 11-7 requires independent third-party model validation. Today, that means a $500K Big 4 engagement and six months of waiting. Auditor Bridge gives banks a productized network of certified AI validators - bonded, insured and pre-trained on the Caventia evidence model. Validation cycles shrink from quarters to weeks.",
-    regulator: "SR 11-7 §VI (independent validation)",
-    artifact: "Signed validator opinion + liability rider",
+      "SR 11-7 requires independent third-party model validation. Today, that means a $500K Big 4 engagement and six months of waiting. Auditor Bridge runs as a separately-incorporated entity (Caventia Audit Services LLC) with its own management chain, P&L and quality control function. Auditor compensation is flat-fee and not tied to validation outcome. The four pillars (functional, organizational, compensation and knowledge independence) are documented in a public independence policy. Cycles shrink from quarters to weeks while the SR 11-7 independence standard goes up, not down.",
+    regulator: "SR 11-7 §VI (independent validation), OCC Bulletin 2011-12, Interagency Third-Party Risk Guidance (June 2023)",
+    artifact: "Signed validator opinion, liability rider and independence attestation",
     pricingBand: "$40K-$80K per validation",
   },
 ];

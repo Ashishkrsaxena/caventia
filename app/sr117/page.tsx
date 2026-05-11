@@ -4,22 +4,91 @@ import WhitepaperGate from "@/components/WhitepaperGate";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "SR 11-7 Compliance for AI Agents - A Practical Framework",
+  title: "Applying SR 11-7 to AI Agents - A Practical Framework",
   description:
-    "A 24-page whitepaper on SR 11-7 model risk management applied to generative AI agents. Written by Ashish K. Saxena. Free download for banking and fintech model risk professionals.",
+    "A twelve-page whitepaper on applying the Federal Reserve's SR 11-7 model risk management guidance to LLM-based AI agents. Written by Ashish K. Saxena. Free for banking and fintech model risk professionals.",
   openGraph: {
-    title: "SR 11-7 Compliance for AI Agents - A Practical Framework",
+    title: "Applying SR 11-7 to AI Agents - A Practical Framework",
     description:
-      "A 24-page whitepaper on SR 11-7 applied to AI agents. Free download.",
+      "Twelve pages on SR 11-7 applied to AI agents. Free for model risk officers.",
     images: [
       {
-        url: "/api/og?title=SR+11-7+Compliance+for+AI+Agents&desc=A+practical+framework+for+model+risk",
+        url: "/api/og?title=Applying+SR+11-7+to+AI+Agents&desc=A+practical+framework+for+model+risk+officers",
         width: 1200,
         height: 630,
       },
     ],
   },
 };
+
+type Section = {
+  num: string;
+  title: string;
+  body: string;
+};
+
+const SECTIONS: Section[] = [
+  {
+    num: "I.",
+    title: "Why SR 11-7 Still Matters in 2026",
+    body: "The Fed has confirmed in supervisory letters throughout 2024 and 2025 that LLM-based decisions fit squarely inside SR 11-7's model definition. Banks treating AI agents as automation face MRA findings.",
+  },
+  {
+    num: "II.",
+    title: "Where the framework maps cleanly",
+    body: "SR 11-7's three pillars (development, validation, ongoing monitoring) translate to AI agents without modification. The principles are durable. The artifacts are not.",
+  },
+  {
+    num: "III.",
+    title: "Five places it breaks down",
+    body: "Non-determinism. Prompt-as-feature. Tool use and emergent behavior. Model provider opacity. Continuous capability evolution. Each gets a specific fix.",
+  },
+  {
+    num: "IV.",
+    title: "A five-step practical framework",
+    body: "Inventory and classify. Document each agent. Validate before deployment. Capture production decisions. Monitor and re-validate. Pressure-tested against examiner conversations.",
+  },
+  {
+    num: "V.",
+    title: "Documentation artifacts you need",
+    body: "Per-agent (Model Identity Document, validation reports, monitoring history, exception log). Program-level (inventory, policy, independence policy, provider risk assessment).",
+  },
+  {
+    num: "VI.",
+    title: "Architectural requirements for capture",
+    body: "Reproducibility. Tamper evidence. Independence from agent operator. Retention. Demographic capture for ECOA. Replay queries. Minimum bars for examiner-credible evidence.",
+  },
+  {
+    num: "VII.",
+    title: "Validation for non-deterministic systems",
+    body: "Behavioral envelope testing. Adversarial test suites. Disparate impact analysis on balanced corpora. Shift from accuracy-on-test-set to envelope stability.",
+  },
+  {
+    num: "VIII.",
+    title: "Seven pitfalls banks are making in 2026",
+    body: "Treating AI as automation. Documenting the LLM as the model. Validating once, never again. No demographic capture. Capture in logs engineers can modify. Among others.",
+  },
+  {
+    num: "IX.",
+    title: "Implementation roadmap",
+    body: "Days 1-90 (inventory, classify, pattern build). Days 91-180 (capture layer rollout, monitoring). Days 181-365 (full coverage, re-validation cycle).",
+  },
+  {
+    num: "X.",
+    title: "Independence: the quiet advantage",
+    body: "Counterintuitive: AI agents make independence requirements easier to satisfy than traditional models. Validators no longer need scarce quant PhDs.",
+  },
+  {
+    num: "XI.",
+    title: "Provider risk: a specific concern",
+    body: "LLM providers ship updates that meaningfully change agent behavior. Contractual, operational, strategic and documentary controls for managing the dependency.",
+  },
+  {
+    num: "App.",
+    title: "Appendices",
+    body: "SR 11-7 to AI agent mapping table. Glossary covering agent, capture layer, decision drift, feature snapshot, hash chain, Merkle root, MRA, prompt drift and tamper evidence.",
+  },
+];
 
 export default function SR117Page() {
   return (
@@ -40,7 +109,7 @@ export default function SR117Page() {
                   fontVariationSettings: '"opsz" 96, "SOFT" 30',
                 }}
               >
-                SR 11-7 Compliance for AI Agents:{" "}
+                Applying SR 11-7 to AI Agents:{" "}
                 <em
                   className="italic text-accent font-display"
                   style={{ fontVariationSettings: '"opsz" 96, "SOFT" 100, "WONK" 1' }}
@@ -49,10 +118,11 @@ export default function SR117Page() {
                 </em>
               </h1>
               <p className="type-body-lg mt-8 max-w-[620px] text-ink-mute font-light">
-                Twenty-four pages on how to apply the Federal Reserve&apos;s SR
-                11-7 model risk management guidance to the generative AI
-                agents your business units are now deploying. Written for
-                Chief Model Risk Officers and their teams.
+                Twelve pages on how the Federal Reserve&apos;s SR 11-7 model
+                risk management guidance applies to the LLM-based AI agents
+                your business units are now deploying. Written for Chief
+                Model Risk Officers, Heads of Model Validation and AI
+                Governance leads at banks $10B+ AUM.
               </p>
               <p className="mt-6 font-mono text-[12px] tracking-[0.06em] uppercase text-ink-mute">
                 Written by Ashish K. Saxena · Founder, Caventia
@@ -70,54 +140,55 @@ export default function SR117Page() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28">
           <SectionLabel numeral="I.">An excerpt</SectionLabel>
           <h2 className="type-display-md mt-6 mb-10 max-w-[820px]">
-            What the SR 11-7 framework asks and why generative AI breaks it.
+            The principles hold up. The artifacts don&apos;t.
           </h2>
 
           <div className="max-w-[720px]">
             <p className="dropcap font-body text-[19px] text-ink leading-[1.65] mb-6">
-              SR 11-7 was written in 2011 for a world of credit scorecards,
-              fraud rules and stress-test econometrics. Its three pillars -
-              conceptual soundness, ongoing monitoring and outcomes analysis -
-              were designed around models you could specify, freeze, and
-              reason about as a mathematical object. The generative AI agent
-              your business unit is piloting today fits none of those
-              assumptions and your examiner has noticed.
+              SR 11-7 was written in 2011, three years before GPT-2 and seven
+              years before the term &ldquo;AI agent&rdquo; entered common
+              usage. Today, banks are deploying AI agents in fraud detection,
+              KYC adjudication, credit underwriting and customer service
+              while still wrestling with whether traditional model risk
+              frameworks apply.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              The first place SR 11-7 strains is conceptual soundness. The
-              guidance asks for a clear statement of what the model is
-              supposed to do, what data it was trained on and what the
-              expected error modes are. For a foundation model invoked
-              through prompts, those statements either become trivially true
-              (“it processes natural language”) or trivially false (“we
-              cannot enumerate the training data”). Neither answer satisfies
-              the examiner.
+              The honest answer: SR 11-7&apos;s principles hold up better
+              than you&apos;d expect. The artifacts and workflows it implies
+              break down quickly when applied to LLM-based agents. An
+              LLM-based fraud detector that produces a fraud_score from a
+              transaction prompt fits squarely inside SR 11-7&apos;s model
+              definition. So does an AI agent that synthesizes a KYC verdict
+              from multiple data sources. The Fed has confirmed this
+              position in supervisory letters and OCC examiner training
+              materials throughout 2024 and 2025.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              The second place it strains is ongoing monitoring. SR 11-7
-              expects the model risk function to detect drift, retrain on
-              schedule and document each change. With prompt-based agents
-              the change cadence is daily, the “retraining” is a prompt
-              rewrite and the population is shifting under your feet because
-              user behaviour adapts to the agent. The bank needs a monitoring
-              substrate that captures every prompt-version, every feature
-              snapshot and every outcome - and produces drift evidence on
-              the schema your examiner reads.
+              Yet many banks are still treating AI agents as
+              &ldquo;automation&rdquo; rather than as models. This creates
+              two risks. First, examiner findings: the OCC and Fed
+              increasingly ask explicitly about AI/ML model governance, and
+              banks without an answer face Matters Requiring Attention.
+              Second, disparate impact exposure: AI agents making
+              credit-adjacent decisions without ECOA-compliant validation
+              are creating CFPB enforcement risk.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              The third place it strains is independent validation. SR 11-7
-              requires a third-party model validation function that can
-              opine on the model&apos;s fitness. The standard answer - hire a
-              Big 4 firm - is a six-month, half-million-dollar engagement
-              that scales poorly when your bank has fifty agents under
-              review. A productized validator network, bonded and trained on
-              a common evidence model, is the only economically viable
-              answer at scale.
+              The whitepaper organizes the response in three layers. The
+              three pillars of SR 11-7 (robust development, independent
+              validation, ongoing monitoring) translate to AI agents without
+              modification. The breakdowns happen in five specific places:
+              non-determinism, prompt-as-feature, tool use, model provider
+              opacity and continuous capability evolution. The fix is a
+              five-step practical framework: inventory and classify;
+              document each agent; validate before deployment; capture
+              production decisions; monitor and re-validate.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75]">
-              The remainder of this whitepaper proposes a concrete framework
-              for each pillar, with templates your model risk function can
-              adopt this quarter.{" "}
+              The opportunity: banks that build AI agent governance
+              correctly in 2026 have a twelve to twenty-four month head
+              start on competitors who will be forced to retrofit it under
+              examiner pressure.{" "}
               <span className="font-mono text-[14px] text-ink-mute">
                 [Download to continue reading.]
               </span>
@@ -126,47 +197,20 @@ export default function SR117Page() {
         </div>
       </section>
 
-      {/* What you get */}
+      {/* What's inside */}
       <section className="bg-parchment border-t border-rule">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28">
           <SectionLabel numeral="II.">What&apos;s inside</SectionLabel>
-          <h2 className="type-display-md mt-6 mb-12 max-w-[820px]">
-            Five sections, twenty-four pages, three appendices.
+          <h2 className="type-display-md mt-6 mb-2 max-w-[820px]">
+            Eleven sections and two appendices.
           </h2>
+          <p className="type-body-lg text-ink-mute font-light mt-2 mb-12 max-w-[640px]">
+            About four thousand eight hundred words. Roughly twelve pages
+            once typeset.
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-            {[
-              {
-                num: "I.",
-                title: "Where SR 11-7 strains",
-                body: "Pillar-by-pillar diagnosis of where the 2011 guidance breaks under generative AI workloads.",
-              },
-              {
-                num: "II.",
-                title: "The conceptual-soundness rewrite",
-                body: "How to write a model documentation pack that satisfies an OCC examiner for a prompt-based agent.",
-              },
-              {
-                num: "III.",
-                title: "Monitoring substrate",
-                body: "The minimum data structure for runtime audit logs that survive an SR 11-7 reconstruction.",
-              },
-              {
-                num: "IV.",
-                title: "Independent validation, productized",
-                body: "A framework for a bonded validator network and the economics of moving from $500K engagements to $40K cycles.",
-              },
-              {
-                num: "V.",
-                title: "Implementation checklist",
-                body: "A 30-page-by-page checklist your model risk function can adapt this quarter.",
-              },
-              {
-                num: "App.",
-                title: "Templates and appendices",
-                body: "Model documentation template, drift detection schema, examiner briefing one-pager.",
-              },
-            ].map((item) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-10">
+            {SECTIONS.map((item) => (
               <div key={item.num} className="border-t border-rule pt-6">
                 <p className="font-display italic text-[22px] text-accent font-medium mb-2 leading-none">
                   {item.num}

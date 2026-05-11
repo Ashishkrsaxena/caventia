@@ -7,17 +7,17 @@ import Marginalia from "@/components/Marginalia";
 export const metadata: Metadata = {
   title: "About - Ashish K. Saxena, founder",
   description:
-    "Caventia is founded by Ashish K. Saxena: Amazon FinTech alum, author of The Ethics of Artificial Intelligence, IJSR reviewer, 42 peer-reviewed papers.",
+    "Caventia is founded by Ashish K. Saxena: Amazon FinTech alum, author of two books on AI ethics, IJSR reviewer, 42 peer-reviewed papers and the 2024 Best Technical Researcher of AI award.",
 };
 
 const CREDENTIALS = [
-  "Amazon FinTech - 40% fraud reduction, 75% processing-error reduction at scale",
-  "Author, The Ethics of Artificial Intelligence (2024) & Society and the Machine",
-  "42 peer-reviewed papers · 37 citations on flagship FinTech fraud-detection paper",
-  "IJSR (International Journal of Scientific Research) reviewer",
-  "IEEE TEMSCON & ISTAS contributor",
-  "Best Technical Researcher of AI 2024",
-  "London Book Festival winner 2024 · Marquis Who's Who",
+  "Amazon FinTech: 40% fraud reduction and 75% processing-error reduction at scale",
+  "Hospital management AI research: 30% wait-time reduction and 20% equipment utilization gain",
+  'Author: "Society and the Machine" (2024 London Book Festival winner) and "The Ethics of Artificial Intelligence"',
+  "42 peer-reviewed papers; 37 citations on the 2019 fraud-detection paper",
+  "Reviewer, International Journal of Science and Research (IJSR)",
+  "IEEE TEMSCON ASPAC 2024 and IEEE ISTAS 2024 contributor",
+  '2024 "Best Technical Researcher of AI" award, Business Innovation Awards',
 ];
 
 export default function AboutPage() {
@@ -36,16 +36,16 @@ export default function AboutPage() {
               fontVariationSettings: '"opsz" 120, "SOFT" 30',
             }}
           >
-            Caventia is the work of one founder with a specific résumé and a
-            specific argument.
+            Caventia is the work of one founder with a specific track record
+            and a specific argument.
           </h1>
         </div>
       </section>
 
+      {/* Founder card with photo, credentials list and contact links */}
       <section className="bg-paper">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28">
           <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-10 md:gap-20 items-start">
-            {/* Photo placeholder */}
             <div
               className="relative w-[200px] md:w-[260px] aspect-square rounded-[2px] overflow-hidden"
               style={{
@@ -64,7 +64,7 @@ export default function AboutPage() {
                 Ashish K. Saxena
               </h2>
               <p className="font-display italic text-[20px] md:text-[22px] text-ink-mute mb-8 leading-[1.4]">
-                Amazon FinTech alum. Author. IJSR reviewer. Forty-two peer-reviewed papers.
+                FinTech engineer. AI ethicist. IJSR reviewer.
               </p>
 
               <ul className="space-y-1 mb-8">
@@ -111,42 +111,82 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* "Why Caventia exists" - long form with drop cap */}
+      {/* Biographical statement - ported from the SR 11-7 whitepaper's
+          "About the Author" section. Citation-specific, awards-specific. */}
       <section className="bg-parchment border-t border-rule">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28">
+          <SectionLabel numeral="I.">Biographical statement</SectionLabel>
+
+          <div className="mt-12 max-w-[720px] mx-auto md:mx-0 font-body text-[17px] text-ink leading-[1.75] space-y-6">
+            <p>
+              Ashish K. Saxena is the founder of Caventia. He has fifteen
+              years of AI deployment experience, including financial fraud
+              detection at Amazon (40% fraud reduction, 75% processing-error
+              reduction) and AI-driven hospital resource allocation research
+              (30% wait-time reduction, 20% equipment utilization gain).
+            </p>
+            <p>
+              He is the author of{" "}
+              <em className="italic">Society and the Machine</em> (winner,
+              2024 London Book Festival; second place Non-Fiction Education
+              at the 2024 PenCraft Book Awards) and{" "}
+              <em className="italic">The Ethics of Artificial Intelligence</em>.
+              He serves as a reviewer for the International Journal of
+              Science and Research (IJSR), has peer-reviewed 42 research
+              papers and received the 2024 &ldquo;Best Technical Researcher
+              of AI&rdquo; award at the Business Innovation Awards.
+            </p>
+            <p>
+              His published research on machine learning fraud detection
+              (Emerging Trends in Machine Intelligence and Big Data, 2019)
+              has received 37 citations. His paper on AI integration
+              (&ldquo;Decoding Socioeconomic Influence on AI Integration and
+              Trust in the U.S.&rdquo;) was accepted at the 2024 IEEE
+              TEMSCON ASPAC. His work on bias measurement in AI-generated
+              content was presented at the 2024 IEEE International Symposium
+              on Technology and Society (ISTAS).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* "Why Caventia exists" - personal essay with drop cap */}
+      <section className="bg-paper border-t border-rule">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-24 md:py-32">
-          <SectionLabel numeral="I.">Why Caventia exists</SectionLabel>
+          <SectionLabel numeral="II.">Why Caventia exists</SectionLabel>
 
           <div className="mt-12 max-w-[720px] mx-auto md:mx-0">
             <p className="dropcap font-body text-[19px] md:text-[20px] text-ink leading-[1.65] mb-6">
               At Amazon FinTech I watched smart engineers ship models that
               moved billions of dollars in payments and I watched the model
               risk function struggle to keep up. We were good at the
-              engineering. We were not great at the documentation an examiner
-              expects under SR 11-7. The gap kept widening.
+              engineering. We were not great at the documentation an
+              examiner expects under SR 11-7. The gap kept widening.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              Then generative AI arrived. Suddenly every business unit wanted
-              an agent. Suddenly every agent was making decisions that touched
-              fair-lending, fraud, KYC and clinical care. The horizontal AI
-              governance vendors that sprang up in 2023 and 2024 - Credo,
-              Fiddler, Arthur - were doing useful work, but none of them were
-              shipping the artifact a Federal Reserve examiner asks for. The
-              language did not match. The schema did not match. The mental
-              model did not match.
+              Then generative AI arrived. Suddenly every business unit
+              wanted an agent. Suddenly every agent was making decisions
+              that touched fair-lending, fraud, KYC and clinical care. The
+              horizontal AI governance vendors that sprang up in 2023 and
+              2024 (Credo, Fiddler, Arthur) were doing useful work, but
+              none of them were shipping the artifact a Federal Reserve
+              examiner asks for. The language did not match. The schema did
+              not match. The mental model did not match.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              Caventia exists because the next decade of AI inside regulated
-              industries needs a platform whose first principle is not “make
-              AI safe” but “make AI legible to the specific regulator who is
-              going to read it.” That is a vertical problem. SR 11-7 is not
-              the same as the FDA&apos;s 510(k) is not the same as ECOA. The
-              artifact your OCC examiner expects is not the artifact your IRB
-              expects. We built the platform around the artifact, not the
-              other way around.
+              Caventia exists because the next decade of AI inside
+              regulated industries needs a platform whose first principle
+              is not &ldquo;make AI safe&rdquo; but &ldquo;make AI legible
+              to the specific regulator who is going to read it.&rdquo;
+              That is a vertical problem. SR 11-7 is not the same as the
+              FDA&apos;s 510(k). 510(k) is not the same as ECOA. The
+              artifact your OCC examiner expects is not the artifact your
+              IRB expects. We built the platform around the artifact, not
+              the other way around.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75]">
-              The bet is simple: in the regulated half of the AI market, the
-              winning platform will be the one whose evidence ledger is
+              The bet is simple: in the regulated half of the AI market,
+              the winning platform will be the one whose evidence ledger is
               examiner-ready by construction. Caventia is that ledger.
             </p>
           </div>
