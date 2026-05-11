@@ -137,29 +137,38 @@ export default function FDAPage() {
             <p className="dropcap font-body text-[19px] text-ink leading-[1.65] mb-6">
               The single most consequential FDA decision for a clinical AI
               agent platform is not the 510(k) clearance. It is the
-              classification call: device or non-device. Get it wrong and
-              you are spending eighteen months and seven figures on a
-              regulatory pathway you did not need to enter. Get it right
+              classification call: device or non-device.
+            </p>
+            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
+              Get it wrong and you spend 18 months and seven figures on a
+              regulatory pathway you didn&apos;t need to enter. Get it right
               and you can ship inside the 21st Century Cures Act Section
               3060 carve-out for clinical decision support software.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
               The FDA Pre-Submission Program (Q-Sub) is the mechanism for
-              locking in that call. It is free, voluntary and returns
-              written FDA feedback within seventy to seventy-five days. For
-              an AI agent governance platform that audits, logs and governs
-              other AI systems without making clinical decisions itself,
-              the Q-Sub is the gate that confirms non-device status before
-              customer contracts make refactoring expensive.
+              locking in that call. It&apos;s free, voluntary and returns
+              written FDA feedback within 70 to 75 days.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              The framing has to be precise. The platform does not acquire,
-              process or analyze patient data. It captures metadata about
-              the operation of customer-owned AI systems. The platform does
-              not generate clinical recommendations. Recommendations are
-              produced by customer systems. The platform supports the
-              independent clinical review required under Section 3060. Each
-              of those sentences corresponds to one of the four Section
+              For an AI agent governance platform that audits, logs and
+              governs other AI systems without making clinical decisions
+              itself, the Q-Sub is the gate that confirms non-device status
+              before customer contracts make refactoring expensive.
+            </p>
+            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
+              The framing has to be precise. The platform doesn&apos;t
+              acquire, process or analyze patient data. It captures metadata
+              about the operation of customer-owned AI systems.
+            </p>
+            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
+              The platform doesn&apos;t generate clinical recommendations.
+              Recommendations are produced by customer systems. The platform
+              supports the independent clinical review required under
+              Section 3060.
+            </p>
+            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
+              Each of those sentences corresponds to one of the four Section
               3060 criteria that determine whether you are inside the
               carve-out or outside it.
             </p>
@@ -167,13 +176,16 @@ export default function FDAPage() {
               The whitepaper covers the package contents, the five specific
               questions you ask FDA, counsel selection criteria, risks and
               mitigations and the six-month timeline that lets a Q-Sub
-              return before your Healthcare SKU launch. It also covers what
-              you cannot say in marketing without triggering FTC
-              unfair-trade-practice exposure (FDA approved, FDA cleared,
-              FDA certified are all off the table for governance software).
+              return before your Healthcare SKU launch.
+            </p>
+            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
+              It also covers what you can&apos;t say in marketing without
+              triggering FTC unfair-trade-practice exposure (FDA approved,
+              FDA cleared, FDA certified are all off the table for
+              governance software).
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75]">
-              If you are a clinical AI founder reading this in 2026,
+              If you&apos;re a clinical AI founder reading this in 2026,
               filing a Q-Sub before Healthcare launch is the highest-ROI
               regulatory move you can make this quarter.{" "}
               <span className="font-mono text-[14px] text-ink-mute">
@@ -220,13 +232,16 @@ export default function FDAPage() {
           <SectionLabel>A note on marketing claims</SectionLabel>
           <p className="font-body text-[17px] text-ink leading-[1.75] mt-8">
             False or misleading claims about regulatory status are FTC
-            unfair-trade-practice violations. You cannot say &ldquo;FDA
-            approved,&rdquo; &ldquo;FDA cleared&rdquo; or &ldquo;regulatory
-            approved auditor&rdquo; for a governance platform. You can say
-            &ldquo;aligned with SR 11-7 requirements,&rdquo; &ldquo;generates
-            510(k)-submission-ready documentation&rdquo; and
-            &ldquo;HIPAA-compliant architecture, BAA available.&rdquo; Bake
-            this into the brand from day one. One wrong sales-deck slide
+            unfair-trade-practice violations. You can&apos;t say
+            &ldquo;FDA approved&rdquo;, &ldquo;FDA cleared&rdquo; or
+            &ldquo;regulatory approved auditor&rdquo; for a governance
+            platform.
+          </p>
+          <p className="font-body text-[17px] text-ink leading-[1.75] mt-6">
+            You can say &ldquo;aligned with SR 11-7 requirements&rdquo;,
+            &ldquo;generates 510(k)-submission-ready documentation&rdquo;
+            and &ldquo;HIPAA-compliant architecture, BAA available&rdquo;.
+            Bake this into the brand from day one. One wrong sales-deck slide
             creates years of FTC exposure.
           </p>
         </div>

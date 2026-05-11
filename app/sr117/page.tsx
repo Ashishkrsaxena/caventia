@@ -6,11 +6,11 @@ import Marginalia from "@/components/Marginalia";
 export const metadata: Metadata = {
   title: "Applying SR 11-7 to AI Agents - A Practical Framework",
   description:
-    "A twelve-page whitepaper on applying the Federal Reserve's SR 11-7 model risk management guidance to LLM-based AI agents. Written by Ashish K. Saxena. Free for banking and fintech model risk professionals.",
+    "A 12-page whitepaper on applying the Federal Reserve's SR 11-7 model risk management guidance to LLM-based AI agents. Written by Ashish K. Saxena. Free for banking and fintech model risk professionals.",
   openGraph: {
     title: "Applying SR 11-7 to AI Agents - A Practical Framework",
     description:
-      "Twelve pages on SR 11-7 applied to AI agents. Free for model risk officers.",
+      "12 pages on SR 11-7 applied to AI agents. Free for model risk officers.",
     images: [
       {
         url: "/api/og?title=Applying+SR+11-7+to+AI+Agents&desc=A+practical+framework+for+model+risk+officers",
@@ -118,7 +118,7 @@ export default function SR117Page() {
                 </em>
               </h1>
               <p className="type-body-lg mt-8 max-w-[620px] text-ink-mute font-light">
-                Twelve pages on how the Federal Reserve&apos;s SR 11-7 model
+                12 pages on how the Federal Reserve&apos;s SR 11-7 model
                 risk management guidance applies to the LLM-based AI agents
                 your business units are now deploying. Written for Chief
                 Model Risk Officers, Heads of Model Validation and AI
@@ -155,8 +155,10 @@ export default function SR117Page() {
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
               The honest answer: SR 11-7&apos;s principles hold up better
               than you&apos;d expect. The artifacts and workflows it implies
-              break down quickly when applied to LLM-based agents. An
-              LLM-based fraud detector that produces a fraud_score from a
+              break down quickly when applied to LLM-based agents.
+            </p>
+            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
+              An LLM-based fraud detector that produces a fraud_score from a
               transaction prompt fits squarely inside SR 11-7&apos;s model
               definition. So does an AI agent that synthesizes a KYC verdict
               from multiple data sources. The Fed has confirmed this
@@ -166,9 +168,14 @@ export default function SR117Page() {
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
               Yet many banks are still treating AI agents as
               &ldquo;automation&rdquo; rather than as models. This creates
-              two risks. First, examiner findings: the OCC and Fed
-              increasingly ask explicitly about AI/ML model governance, and
-              banks without an answer face Matters Requiring Attention.
+              two risks.
+            </p>
+            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
+              First, examiner findings: the OCC and Fed increasingly ask
+              explicitly about AI/ML model governance. Banks without an
+              answer face Matters Requiring Attention.
+            </p>
+            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
               Second, disparate impact exposure: AI agents making
               credit-adjacent decisions without ECOA-compliant validation
               are creating CFPB enforcement risk.
@@ -177,18 +184,21 @@ export default function SR117Page() {
               The whitepaper organizes the response in three layers. The
               three pillars of SR 11-7 (robust development, independent
               validation, ongoing monitoring) translate to AI agents without
-              modification. The breakdowns happen in five specific places:
-              non-determinism, prompt-as-feature, tool use, model provider
-              opacity and continuous capability evolution. The fix is a
-              five-step practical framework: inventory and classify;
-              document each agent; validate before deployment; capture
-              production decisions; monitor and re-validate.
+              modification.
+            </p>
+            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
+              The breakdowns happen in five specific places: non-determinism,
+              prompt-as-feature, tool use, model provider opacity and
+              continuous capability evolution. The fix is a five-step
+              practical framework: inventory and classify, document each
+              agent, validate before deployment, capture production
+              decisions, monitor and re-validate.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75]">
               The opportunity: banks that build AI agent governance
-              correctly in 2026 have a twelve to twenty-four month head
-              start on competitors who will be forced to retrofit it under
-              examiner pressure.{" "}
+              correctly in 2026 have a 12 to 24 month head start on
+              competitors who will be forced to retrofit it under examiner
+              pressure.{" "}
               <span className="font-mono text-[14px] text-ink-mute">
                 [Download to continue reading.]
               </span>
@@ -205,8 +215,7 @@ export default function SR117Page() {
             Eleven sections and two appendices.
           </h2>
           <p className="type-body-lg text-ink-mute font-light mt-2 mb-12 max-w-[640px]">
-            About four thousand eight hundred words. Roughly twelve pages
-            once typeset.
+            About 4,800 words. Roughly 12 pages once typeset.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-10">

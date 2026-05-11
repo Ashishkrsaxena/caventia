@@ -66,8 +66,7 @@ export default function AboutPage() {
               </h2>
               <p className="font-display italic text-[20px] md:text-[22px] text-ink-mute mb-8 leading-[1.4]">
                 Amazon FinTech alum. Bestselling AI ethics author. IJSR peer
-                reviewer. Two hundred and twenty-six citations across the
-                literature.
+                reviewer. 226 citations across the literature.
               </p>
 
               <ul className="space-y-1 mb-8">
@@ -144,13 +143,17 @@ export default function AboutPage() {
               (Emerging Trends in Machine Intelligence and Big Data, 2019),
               healthcare AI (an LSTM resource-allocation paper in the
               International Journal of Applied Health Care Analytics, 2022)
-              and AI policy. His paper on AI integration
-              (&ldquo;Decoding Socioeconomic Influence on AI Integration
-              and Trust in the U.S.&rdquo;) was accepted at the 2024 IEEE
-              TEMSCON ASPAC. His work on bias measurement in AI-generated
-              content was presented at the 2024 IEEE International Symposium
-              on Technology and Society (ISTAS). Google Scholar reports an
-              h-index of eight with two hundred and twenty-six citations
+              and AI policy.
+            </p>
+            <p>
+              His paper on AI integration (&ldquo;Decoding Socioeconomic
+              Influence on AI Integration and Trust in the U.S.&rdquo;) was
+              accepted at the 2024 IEEE TEMSCON ASPAC. His work on bias
+              measurement in AI-generated content was presented at the 2024
+              IEEE International Symposium on Technology and Society (ISTAS).
+            </p>
+            <p>
+              Google Scholar reports an h-index of 8 with 226 citations
               across the literature.
             </p>
           </div>

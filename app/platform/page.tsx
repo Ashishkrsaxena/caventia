@@ -17,7 +17,8 @@ type Product = {
   hook: string;
   name: string;
   tagline: string;
-  description: string;
+  // Array of paragraphs. Keep each one to 2-3 sentences max.
+  description: string[];
   regulator: string;
   artifact: string;
   pricingBand: string;
@@ -30,8 +31,10 @@ const PRODUCTS: Product[] = [
     hook: "Pre-deployment",
     name: "AgentGuard",
     tagline: "The CI/CD scanner for AI agents.",
-    description:
-      "AgentGuard wires into your build pipeline and runs adversarial checks every time a model or prompt changes. It detects prompt-injection paths, PII leakage, jailbreak surfaces and policy violations before an agent reaches production. Output is a deploy-gate decision and a machine-readable report.",
+    description: [
+      "AgentGuard wires into your build pipeline and runs adversarial checks every time a model or prompt changes. It detects prompt-injection paths, PII leakage, jailbreak surfaces and policy violations before an agent reaches production.",
+      "Output is a deploy-gate decision and a machine-readable report.",
+    ],
     regulator: "SR 11-7 §IV (model implementation), NIST AI RMF GOVERN-2.1",
     artifact: "Pre-deployment validation report (PDF + JSON)",
     pricingBand: "$60K-$120K annual seat",
@@ -42,8 +45,10 @@ const PRODUCTS: Product[] = [
     hook: "Runtime",
     name: "Audit Trail",
     tagline: "The spine. Every agent action, captured with full context.",
-    description:
-      "An SDK and dashboard that capture every input, feature snapshot, decision and outcome. The data structure was designed to satisfy SR 11-7's reconstruction requirement and FDA's algorithm change protocol expectations. This is the substrate every other Caventia product reads from.",
+    description: [
+      "An SDK and dashboard that capture every input, feature snapshot, decision and outcome. The data structure was designed to satisfy SR 11-7's reconstruction requirement and FDA's algorithm change protocol expectations.",
+      "This is the substrate every other Caventia product reads from.",
+    ],
     regulator: "SR 11-7 §V (ongoing monitoring), FDA PCCP, ECOA §1002.9",
     artifact: "Queryable runtime log with examiner-mode export",
     pricingBand: "$120K-$250K platform + per-event scaling",
@@ -54,8 +59,10 @@ const PRODUCTS: Product[] = [
     hook: "Governance documentation",
     name: "Compliance Passport",
     tagline: "Auto-assembled regulator packs. No more spreadsheet glue.",
-    description:
-      "The Passport reads from the Audit Trail and emits the model risk pack your examiner expects: SR 11-7 model documentation, ECOA disparate-impact analysis, NIST AI RMF mapping, NYC Local Law 144 disclosures. The artifacts ship as PDFs with full evidence links back to the audit log.",
+    description: [
+      "The Passport reads from the Audit Trail and emits the model risk pack your examiner expects: SR 11-7 model documentation, ECOA disparate-impact analysis, NIST AI RMF mapping, NYC Local Law 144 disclosures.",
+      "The artifacts ship as PDFs with full evidence links back to the audit log.",
+    ],
     regulator: "SR 11-7 §VII, ECOA, NYC LL 144, NIST AI RMF",
     artifact: "Examiner-ready model risk pack",
     pricingBand: "$80K-$150K annual",
@@ -66,8 +73,11 @@ const PRODUCTS: Product[] = [
     hook: "Third-party sign-off",
     name: "Auditor Bridge",
     tagline: "Productized model validation. Structurally independent.",
-    description:
-      "SR 11-7 requires independent third-party model validation. Today, that means a $500K Big 4 engagement and six months of waiting. Auditor Bridge runs as a separately-incorporated entity (Caventia Audit Services LLC) with its own management chain, P&L and quality control function. Auditor compensation is flat-fee and not tied to validation outcome. The four pillars (functional, organizational, compensation and knowledge independence) are documented in a public independence policy. Cycles shrink from quarters to weeks while the SR 11-7 independence standard goes up, not down.",
+    description: [
+      "SR 11-7 requires independent third-party model validation. Today, that means a $500K Big 4 engagement and six months of waiting.",
+      "Auditor Bridge runs as a separately-incorporated entity (Caventia Audit Services LLC) with its own management chain, P&L and quality control function. Auditor compensation is flat-fee and not tied to validation outcome.",
+      "The four pillars (functional, organizational, compensation and knowledge independence) are documented in a public independence policy. Cycles shrink from quarters to weeks while the SR 11-7 independence standard goes up, not down.",
+    ],
     regulator: "SR 11-7 §VI (independent validation), OCC Bulletin 2011-12, Interagency Third-Party Risk Guidance (June 2023)",
     artifact: "Signed validator opinion, liability rider and independence attestation",
     pricingBand: "$40K-$80K per validation",
@@ -135,9 +145,16 @@ export default function PlatformPage() {
                   <p className="font-display italic text-[20px] md:text-[22px] text-ink-mute mb-6 leading-[1.35]">
                     {p.tagline}
                   </p>
-                  <p className="font-body text-[16px] md:text-[17px] text-ink leading-[1.65] mb-8 max-w-[640px]">
-                    {p.description}
-                  </p>
+                  <div className="mb-8 max-w-[640px] space-y-4">
+                    {p.description.map((para, idx) => (
+                      <p
+                        key={idx}
+                        className="font-body text-[16px] md:text-[17px] text-ink leading-[1.65]"
+                      >
+                        {para}
+                      </p>
+                    ))}
+                  </div>
 
                   <dl className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-rule">
                     <div>

@@ -59,7 +59,7 @@ export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string
         Get the SR 11-7 framework.
       </h3>
       <p className="font-body text-[15px] text-ink-mute mb-6 leading-[1.55]">
-        A 24-page whitepaper written by the founder. Work email only - no
+        A 12-page whitepaper written by the founder. Work email only - no
         gmail.com, yahoo.com, outlook.com.
       </p>
 
