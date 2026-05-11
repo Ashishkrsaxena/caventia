@@ -1,0 +1,24 @@
+import type { MetadataRoute } from "next";
+
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://caventia.com";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  const routes = [
+    { path: "/", priority: 1.0 },
+    { path: "/platform", priority: 0.9 },
+    { path: "/sr117", priority: 0.9 },
+    { path: "/about", priority: 0.8 },
+    { path: "/research", priority: 0.7 },
+    { path: "/contact", priority: 0.8 },
+    { path: "/legal/privacy", priority: 0.3 },
+    { path: "/legal/terms", priority: 0.3 },
+  ];
+
+  return routes.map(({ path, priority }) => ({
+    url: `${SITE}${path}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority,
+  }));
+}

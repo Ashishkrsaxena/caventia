@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────────
+   Caventia design tokens (per CAVENTIA_DESIGN_SYSTEM.md)
+   "Editorial Institutional" — parchment, deep ink, Pompeii red.
+   ──────────────────────────────────────────────────────────── */
+
+@theme {
+  /* Colors — Backgrounds */
+  --color-parchment: #F7F4ED;
+  --color-paper: #FFFFFF;
+  --color-deep: #0F1116;
+
+  /* Colors — Text */
+  --color-ink: #0F1116;
+  --color-ink-mute: #5C5852;
+  --color-ink-light: #8E8980;
+  --color-ink-inverse: #F7F4ED;
+
+  /* Colors — Rules & dividers */
+  --color-rule: #D4CFC4;
+  --color-rule-strong: #A8A296;
+
+  /* Colors — Accent (Pompeii red — sparingly!) */
+  --color-accent: #8B2C2C;
+  --color-accent-soft: #C4948E;
+  --color-accent-bg: #F2E4E1;
+
+  /* Colors — Functional */
+  --color-success: #2E5C3E;
+  --color-warning: #A87A2F;
+  --color-link: #8B2C2C;
+  --color-link-hover: #6B2020;
+
+  /* Fonts — wired to next/font CSS variables in layout.tsx */
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-newsreader), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  /* Breakpoints */
+  --breakpoint-xs: 480px;
+}
+
+/* ──────────────────────────────────────────────────────────── */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-ink);
+  background: var(--color-parchment);
+  font-feature-settings: "kern", "liga", "onum";
+}
+
+/* Subtle paper texture — fixed dot pattern */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(15,17,22,0.012) 1px, transparent 1px),
+    radial-gradient(circle at 80% 60%, rgba(15,17,22,0.010) 1px, transparent 1px);
+  background-size: 13px 13px, 17px 17px;
+  z-index: 1;
+}
+
+::selection {
+  background: var(--color-accent-bg);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-ink);
+  color: var(--color-parchment);
+  padding: 12px 20px;
+  z-index: 1000;
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+}
+
+/* ──────────────── Typography utility classes ──────────────── */
+
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+.font-mono { font-family: var(--font-mono); }
+
+.type-display-xl {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 6.5vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
+.type-display-lg {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.10;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+}
+.type-display-md {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.5vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+.type-display-sm {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 28px);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+}
+
+.type-body-lg {
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+}
+.type-body-md {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+}
+.type-body-sm {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.type-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-ink-mute);
+}
+
+.type-mono-md {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.50;
+}
+.type-mono-sm {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.50;
+}
+
+/* Drop cap — first letter on long-form pages */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  font-size: 5.5em;
+  line-height: 0.85;
+  float: left;
+  font-weight: 400;
+  color: var(--color-accent);
+  padding: 0.08em 0.08em 0 0;
+  margin-top: 0.05em;
+}
+
+/* Roman numeral section divider */
+.roman-numeral {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  color: var(--color-ink-mute);
+}
+
+/* ──────────────── Page-load choreography ──────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.anim-fade-in {
+  opacity: 0;
+  animation: fadeIn 300ms ease forwards;
+}
+.anim-fade-up {
+  opacity: 0;
+  animation: fadeUp 400ms ease forwards;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-800 { animation-delay: 800ms; }
+
+/* Spine diagram draw */
+@keyframes drawDown {
+  from { stroke-dashoffset: 400; }
+  to { stroke-dashoffset: 0; }
+}
+.spine-draw {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawDown 1200ms ease-out forwards;
+}
+
+/* Reduced motion — kill all animation */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .anim-fade-in,
+  .anim-fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .spine-draw {
+    stroke-dashoffset: 0 !important;
+  }
+}
