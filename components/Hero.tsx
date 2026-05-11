@@ -42,9 +42,8 @@ export default function Hero() {
             fontVariationSettings: '"opsz" 144, "SOFT" 30, "WONK" 0',
           }}
         >
-          The audit-trail&nbsp;spine
+          The audit-trail spine for
           <br />
-          for{" "}
           <em
             className="text-accent"
             style={{
@@ -52,9 +51,7 @@ export default function Hero() {
               fontVariationSettings: '"opsz" 144, "SOFT" 100, "WONK" 1',
             }}
           >
-            regulated
-            <br />
-            AI&nbsp;agents.
+            regulated AI agents.
           </em>
         </h1>
 

@@ -72,31 +72,39 @@ function SpineNode({
 }) {
   return (
     <div
-      className={`group relative bg-parchment border border-rule transition-all duration-300 hover:bg-paper hover:border-accent hover:-translate-y-0.5 ${
+      className={`group relative flex flex-col bg-parchment border border-rule transition-all duration-300 hover:bg-paper hover:border-accent hover:-translate-y-0.5 ${
         side === "left" ? "text-right" : "text-left"
       }`}
       style={{
-        padding: "32px 32px 28px",
+        padding: "32px 36px 28px",
+        minHeight: "180px",
         opacity: revealed ? 1 : 0,
         transform: revealed ? "translateY(0)" : "translateY(8px)",
         transition: `opacity 400ms ease ${delay}ms, transform 400ms ease ${delay}ms, background-color 300ms ease, border-color 300ms ease`,
       }}
     >
-      {/* Connector hairline to the spine — desktop only */}
+      {/* Connector hairline to the spine — desktop only, longer + softer in v3 */}
       <span
         aria-hidden="true"
-        className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-px bg-ink transition-[width] duration-[600ms] ease-out ${
-          side === "left" ? "-right-[41px]" : "-left-[41px]"
+        className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-px bg-ink opacity-40 transition-[width] duration-[600ms] ease-out ${
+          side === "left" ? "-right-[84px]" : "-left-[84px]"
         }`}
-        style={{ width: revealed ? "40px" : "0px" }}
+        style={{ width: revealed ? "84px" : "0px" }}
       />
 
-      {/* Roman numeral pinned to outside edge */}
+      {/* Roman numeral floats above the node as a paper-bg tab */}
       <span
-        className={`absolute font-display italic font-medium text-accent ${
-          side === "left" ? "right-8" : "left-8"
+        className={`absolute font-display italic font-medium text-accent bg-paper ${
+          side === "left" ? "right-9" : "left-9"
         }`}
-        style={{ top: "24px", fontSize: "14px", letterSpacing: "0.05em" }}
+        style={{
+          top: "-14px",
+          fontSize: "17px",
+          letterSpacing: "0.05em",
+          padding: "0 12px",
+          lineHeight: 1.6,
+          fontVariationSettings: '"opsz" 36, "SOFT" 100, "WONK" 1',
+        }}
       >
         {node.num}
       </span>
@@ -241,7 +249,7 @@ export default function SpineDiagram() {
 
         {/* Spine stage */}
         <div ref={ref} className="relative max-w-[1080px] mx-auto py-10">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_80px_1fr] items-stretch gap-6 md:gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_140px_1fr] items-stretch gap-6 md:gap-6">
             {/* Left side */}
             <div className="flex flex-col gap-7 justify-center">
               <SpineNode node={LEFT_NODES[0]} side="left" revealed={revealed} delay={0} />

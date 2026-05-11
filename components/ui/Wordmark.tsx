@@ -10,43 +10,86 @@ type Props = {
 };
 
 /**
- * Caventia wordmark. v2 pairs a custom geometric sigil (circle + C +
- * Pompeii red spine bar) with lowercase Fraunces "caventia."
+ * Caventia wordmark. v3 pairs the architectural-column sigil with
+ * lowercase Fraunces "caventia."
  *
- * - `nav` — small (sigil 22px + 22px Fraunces text).
- * - `display` — large (sigil 32px + clamp(40px, 5vw, 56px) text), used on /about hero.
- * - `footer` — parchment-tinted variant for the deep-ink footer (sigil 28px + 28px text).
+ * - `nav` — sigil 14×22 + 22px Fraunces, gap 12px. Ink color.
+ * - `display` — sigil 24×38 + clamp(40-56px) Fraunces. For oversized
+ *    presentations (currently unused but kept symmetrical).
+ * - `footer` — sigil 18×28 + 28px Fraunces, gap 14px. Parchment color
+ *    on the deep-ink footer with terracotta sigil shaft for visibility.
  */
 export function Wordmark({ variant = "nav", href = "/", className = "" }: Props) {
-  let sigilSize = 22;
-  let textSize = "22px";
-  let textColor = "text-ink";
-
-  if (variant === "display") {
-    sigilSize = 32;
-    textSize = "clamp(40px, 5vw, 56px)";
-    textColor = "text-ink";
-  } else if (variant === "footer") {
-    sigilSize = 28;
-    textSize = "28px";
-    textColor = "text-parchment/85";
+  if (variant === "footer") {
+    const inner = (
+      <span
+        className={`inline-flex items-center gap-[14px] font-display font-medium tracking-[-0.02em] ${className}`}
+        style={{
+          fontSize: "28px",
+          lineHeight: 1,
+          color: "rgba(245,241,232,0.85)",
+          fontVariationSettings: '"opsz" 48, "SOFT" 40',
+        }}
+      >
+        <Sigil
+          width={18}
+          height={28}
+          accentColor="#C4948E"
+        />
+        <span>caventia</span>
+      </span>
+    );
+    return href ? (
+      <Link href={href} aria-label="Caventia — home" className="inline-flex">
+        {inner}
+      </Link>
+    ) : (
+      inner
+    );
   }
 
+  if (variant === "display") {
+    const inner = (
+      <span
+        className={`inline-flex items-center gap-[14px] font-display font-medium tracking-[-0.02em] text-ink ${className}`}
+        style={{
+          fontSize: "clamp(40px, 5vw, 56px)",
+          lineHeight: 1,
+          fontVariationSettings: '"opsz" 96, "SOFT" 40',
+        }}
+      >
+        <Sigil width={24} height={38} />
+        <span>caventia</span>
+      </span>
+    );
+    return href ? (
+      <Link href={href} aria-label="Caventia — home" className="inline-flex">
+        {inner}
+      </Link>
+    ) : (
+      inner
+    );
+  }
+
+  // nav (default)
   const inner = (
     <span
-      className={`inline-flex items-center gap-[10px] font-display font-medium tracking-[-0.02em] ${textColor} ${className}`}
-      style={{ fontSize: textSize, lineHeight: 1 }}
+      className={`inline-flex items-center gap-3 font-display font-medium tracking-[-0.02em] text-ink ${className}`}
+      style={{
+        fontSize: "22px",
+        lineHeight: 1,
+        fontVariationSettings: '"opsz" 36, "SOFT" 40',
+      }}
     >
-      <Sigil size={sigilSize} inverse={variant === "footer"} />
+      <Sigil width={14} height={22} />
       <span>caventia</span>
     </span>
   );
-
-  if (!href) return inner;
-
-  return (
+  return href ? (
     <Link href={href} aria-label="Caventia — home" className="inline-flex">
       {inner}
     </Link>
+  ) : (
+    inner
   );
 }
