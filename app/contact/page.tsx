@@ -29,7 +29,7 @@ export default function ContactPage() {
           </h1>
           <p className="type-body-lg mt-8 max-w-[640px] text-ink-mute font-light">
             We&apos;re taking ten design partners in 2026. If you are a Chief
-            Model Risk Officer, Chief Medical Information Officer, or a
+            Model Risk Officer, Chief Medical Information Officer or a
             founder shipping AI into a regulated workflow - write to us.
             Thirty-minute discovery calls; no decks.
           </p>

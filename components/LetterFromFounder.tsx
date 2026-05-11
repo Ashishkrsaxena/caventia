@@ -89,7 +89,7 @@ export default function LetterFromFounder() {
           >
             The conversations are with me directly. There is no sales team. We
             will spend thirty minutes on your specific SR 11-7 exam, your
-            specific model inventory, or your specific FDA Q-Sub timeline -
+            specific model inventory or your specific FDA Q-Sub timeline -
             and figure out together whether the platform we&apos;re building
             fits your gauntlet. If not, you&apos;ll leave with a one-page
             framework you can use anyway.

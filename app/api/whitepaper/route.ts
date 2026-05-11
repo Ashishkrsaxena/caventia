@@ -32,7 +32,7 @@ export async function POST(req: Request) {
   }
   if (!isBusinessEmail(email)) {
     return NextResponse.json(
-      { error: "Please use your work email - no gmail.com, yahoo.com, or outlook.com." },
+      { error: "Please use your work email - no gmail.com, yahoo.com or outlook.com." },
       { status: 400 }
     );
   }

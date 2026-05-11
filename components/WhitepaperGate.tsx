@@ -88,7 +88,7 @@ export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string
       </div>
 
       <p className="mt-4 font-mono text-[11px] tracking-[0.06em] text-ink-light">
-        We will email you the PDF. We do not sell, share, or rent the email.
+        We&apos;ll email you the PDF. We do not sell, share or rent the email.
       </p>
     </form>
   );

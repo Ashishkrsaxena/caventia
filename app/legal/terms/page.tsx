@@ -33,7 +33,7 @@ export default function TermsPage() {
           <p>
             The Site is an informational and marketing presence for Caventia.
             It is not a product and it does not constitute legal, regulatory,
-            financial, or medical advice. The frameworks, whitepapers, and
+            financial or medical advice. The frameworks, whitepapers and
             opinions on the Site are provided for general professional
             interest only.
           </p>
@@ -47,12 +47,12 @@ export default function TermsPage() {
           <ul className="list-disc pl-6 space-y-2">
             <li>Use the Site for any unlawful purpose.</li>
             <li>
-              Scrape, crawl, or systematically reproduce the Site&apos;s
+              Scrape, crawl or systematically reproduce the Site&apos;s
               content except as permitted by robots.txt and applicable law.
             </li>
             <li>Submit forms with deliberately false or misleading information.</li>
             <li>
-              Reverse engineer, decompile, or attempt to derive source code
+              Reverse engineer, decompile or attempt to derive source code
               from the Site.
             </li>
           </ul>
@@ -75,7 +75,7 @@ export default function TermsPage() {
           <p>
             Whitepapers are provided for your professional use. You may share
             them inside your organization. You may not redistribute them
-            externally, repost them, or claim authorship.
+            externally, repost them or claim authorship.
           </p>
 
           <h2 className="font-display text-[28px] font-medium leading-tight mt-12 mb-2">
@@ -84,7 +84,7 @@ export default function TermsPage() {
           <p>
             The Site is provided &ldquo;as is&rdquo; without warranty of any
             kind, express or implied. We do not warrant that the Site will be
-            error-free, uninterrupted, or that the information will be
+            error-free, uninterrupted or that the information will be
             current.
           </p>
 

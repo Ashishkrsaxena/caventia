@@ -150,7 +150,7 @@ export default function ContactForm() {
                 id="pain"
                 name="pain"
                 rows={5}
-                placeholder="What's the SR 11-7, ECOA, or examiner-readiness gap you're trying to close?"
+                placeholder="What's the SR 11-7, ECOA or examiner-readiness gap you're trying to close?"
               />
             </div>
             <div className="md:col-span-2">
@@ -190,7 +190,7 @@ export default function ContactForm() {
             />
             <span>
               I agree to receive a follow-up from Caventia regarding this inquiry.
-              We don&apos;t sell, share, or rent contact information.
+              We don&apos;t sell, share or rent contact information.
             </span>
           </label>
         </div>

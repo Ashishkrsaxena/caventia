@@ -69,7 +69,7 @@ export default function PrivacyPage() {
             </li>
           </ul>
           <p>
-            We do not sell, rent, share, or trade your personal information
+            We do not sell, rent, share or trade your personal information
             with third parties for their own marketing.
           </p>
 

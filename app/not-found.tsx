@@ -13,7 +13,7 @@ export default function NotFound() {
         </h1>
 
         <p className="type-body-lg text-ink-mute font-light mb-12 max-w-[620px]">
-          The URL may be stale, mistyped, or pointing to a page that hasn&apos;t
+          The URL may be stale, mistyped or pointing to a page that hasn&apos;t
           been built yet. The rest of the site is below.
         </p>
 
