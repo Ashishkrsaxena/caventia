@@ -39,7 +39,7 @@ yarn-error.log*
 
 # local task artifacts (keep todo.md, exclude transient outputs)
 tasks/*.output
-tasks/og-preview.png
+tasks/og-preview*.png
 
 # typescript
 *.tsbuildinfo

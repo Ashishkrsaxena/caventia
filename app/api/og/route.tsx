@@ -2,11 +2,16 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-// NOTE: OG image currently renders with Satori's default sans-serif.
-// To match the brand exactly (Fraunces + Newsreader), drop the .ttf
-// files into /public/fonts and fetch via `new URL(...)` then pass to
-// the `fonts` array on ImageResponse. Skipping for MVP — system sans
-// still renders parchment + Pompeii red on-brand at a glance.
+// Fonts are served as static assets from /public/fonts and fetched at request
+// time. The Edge runtime caches the response so the network hit only happens
+// on cold start.
+
+async function loadFont(req: Request, path: string): Promise<ArrayBuffer> {
+  const origin = new URL(req.url).origin;
+  const res = await fetch(`${origin}${path}`);
+  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+  return res.arrayBuffer();
+}
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -14,6 +19,30 @@ export async function GET(request: Request) {
   const desc =
     searchParams.get("desc") ??
     "The audit-trail spine for regulated AI agents.";
+
+  let fonts:
+    | Array<{
+        name: string;
+        data: ArrayBuffer;
+        style?: "normal" | "italic";
+        weight?: 400 | 500;
+      }>
+    | undefined;
+
+  try {
+    const [fraunces, newsreader] = await Promise.all([
+      loadFont(request, "/fonts/Fraunces-Regular.ttf"),
+      loadFont(request, "/fonts/Newsreader-Regular.ttf"),
+    ]);
+    fonts = [
+      { name: "Fraunces", data: fraunces, style: "normal", weight: 400 },
+      { name: "Newsreader", data: newsreader, style: "normal", weight: 400 },
+    ];
+  } catch {
+    // If fonts fail to load (e.g. local preview without fonts in /public),
+    // fall back to system sans rather than 500.
+    fonts = undefined;
+  }
 
   return new ImageResponse(
     (
@@ -27,6 +56,7 @@ export async function GET(request: Request) {
           background: "#F7F4ED",
           padding: "80px 96px",
           color: "#0F1116",
+          fontFamily: fonts ? "Newsreader" : undefined,
         }}
       >
         {/* Top hairline + wordmark */}
@@ -34,8 +64,9 @@ export async function GET(request: Request) {
           <div style={{ width: 16, height: 2, background: "#8B2C2C" }} />
           <div
             style={{
+              fontFamily: fonts ? "Newsreader" : undefined,
               fontSize: 22,
-              fontWeight: 600,
+              fontWeight: 500,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
             }}
@@ -48,11 +79,12 @@ export async function GET(request: Request) {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
-              fontSize: 78,
+              fontFamily: fonts ? "Fraunces" : undefined,
+              fontSize: 84,
               lineHeight: 1.05,
               letterSpacing: "-0.03em",
               maxWidth: 1000,
-              fontWeight: 500,
+              fontWeight: 400,
             }}
           >
             {title}
@@ -60,8 +92,9 @@ export async function GET(request: Request) {
           {desc && (
             <div
               style={{
+                fontFamily: fonts ? "Newsreader" : undefined,
                 fontSize: 28,
-                fontWeight: 300,
+                fontWeight: 400,
                 color: "#5C5852",
                 marginTop: 36,
                 maxWidth: 900,
@@ -79,6 +112,7 @@ export async function GET(request: Request) {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "flex-end",
+            fontFamily: fonts ? "Newsreader" : undefined,
             fontSize: 16,
             color: "#5C5852",
             letterSpacing: "0.08em",
@@ -95,6 +129,7 @@ export async function GET(request: Request) {
     {
       width: 1200,
       height: 630,
+      ...(fonts ? { fonts } : {}),
     }
   );
 }

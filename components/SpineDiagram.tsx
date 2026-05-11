@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 type Node = {
@@ -36,16 +39,35 @@ const RIGHT_NODES: Node[] = [
   },
 ];
 
+// Reveal order per design system §6:
+// spine first, then top-left → top-right → bottom-left → bottom-right.
+const NODE_DELAYS = {
+  topLeft: 1200,
+  topRight: 1400,
+  bottomLeft: 1600,
+  bottomRight: 1800,
+} as const;
+
 function SpineNode({
   node,
   side,
+  delay,
+  revealed,
 }: {
   node: Node;
   side: "left" | "right";
+  delay: number;
+  revealed: boolean;
 }) {
   return (
-    <div className="relative bg-paper border border-rule rounded-[2px] p-7">
-      {/* Connecting horizontal hairline to the spine — hidden on mobile */}
+    <div
+      className="relative bg-paper border border-rule rounded-[2px] p-7 transition-all duration-[400ms] ease-out"
+      style={{
+        opacity: revealed ? 1 : 0,
+        transform: revealed ? "translateY(0)" : "translateY(8px)",
+        transitionDelay: revealed ? `${delay}ms` : "0ms",
+      }}
+    >
       <span
         aria-hidden="true"
         className={`hidden md:block absolute top-1/2 w-[60px] h-px bg-rule-strong ${
@@ -66,6 +88,39 @@ function SpineNode({
 }
 
 export default function SpineDiagram() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [revealed, setRevealed] = useState(false);
+
+  useEffect(() => {
+    if (revealed) return;
+    const el = ref.current;
+    if (!el) return;
+
+    // Respect reduced motion — reveal immediately, skip the animation.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setRevealed(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setRevealed(true);
+            observer.disconnect();
+            break;
+          }
+        }
+      },
+      // 30% rather than the 60% suggested in design system §6 — at 60% the
+      // container is taller than the viewport on mobile and never fires.
+      { threshold: 0.3 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [revealed]);
+
   return (
     <section className="bg-parchment relative">
       <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-24 md:py-32">
@@ -81,28 +136,64 @@ export default function SpineDiagram() {
           and produce regulator-ready artifacts without manual stitching.
         </p>
 
-        <div className="mt-16 md:mt-20 flex justify-center">
+        <div ref={ref} className="mt-16 md:mt-20 flex justify-center">
           <div className="w-full max-w-[880px] grid grid-cols-1 md:grid-cols-[1fr_60px_1fr] gap-6 md:gap-0 items-center">
             <div className="flex flex-col gap-8">
-              {LEFT_NODES.map((node) => (
-                <SpineNode key={node.name} node={node} side="left" />
-              ))}
+              <SpineNode
+                node={LEFT_NODES[0]}
+                side="left"
+                delay={NODE_DELAYS.topLeft}
+                revealed={revealed}
+              />
+              <SpineNode
+                node={LEFT_NODES[1]}
+                side="left"
+                delay={NODE_DELAYS.bottomLeft}
+                revealed={revealed}
+              />
             </div>
 
-            {/* Spine line — desktop only */}
+            {/* Spine line — desktop only; draws downward over 1200ms */}
             <div className="hidden md:flex justify-center self-stretch relative">
-              <div className="relative w-[3px] h-full bg-ink">
-                <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-accent opacity-60" />
-                <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] origin-center bg-parchment px-2.5 py-1.5 font-mono text-[10px] tracking-[0.2em] uppercase text-ink-mute whitespace-nowrap">
+              <div className="relative w-[3px] h-full">
+                {/* Static background placeholder so layout doesn't jump */}
+                <div className="absolute inset-0 w-[3px] bg-ink/0" />
+                {/* The drawing line */}
+                <div
+                  className="absolute top-0 left-0 w-[3px] bg-ink transition-[height] duration-[1200ms] ease-out origin-top"
+                  style={{ height: revealed ? "100%" : "0%" }}
+                />
+                {/* Pompeii red overlay, draws in sync */}
+                <div
+                  className="absolute top-0 left-1/2 -translate-x-1/2 w-px bg-accent opacity-60 transition-[height] duration-[1200ms] ease-out"
+                  style={{ height: revealed ? "100%" : "0%" }}
+                />
+                {/* Label appears after spine completes */}
+                <span
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] origin-center bg-parchment px-2.5 py-1.5 font-mono text-[10px] tracking-[0.2em] uppercase text-ink-mute whitespace-nowrap transition-opacity duration-[300ms]"
+                  style={{
+                    opacity: revealed ? 1 : 0,
+                    transitionDelay: revealed ? "1000ms" : "0ms",
+                  }}
+                >
                   audit log
                 </span>
               </div>
             </div>
 
             <div className="flex flex-col gap-8">
-              {RIGHT_NODES.map((node) => (
-                <SpineNode key={node.name} node={node} side="right" />
-              ))}
+              <SpineNode
+                node={RIGHT_NODES[0]}
+                side="right"
+                delay={NODE_DELAYS.topRight}
+                revealed={revealed}
+              />
+              <SpineNode
+                node={RIGHT_NODES[1]}
+                side="right"
+                delay={NODE_DELAYS.bottomRight}
+                revealed={revealed}
+              />
             </div>
           </div>
         </div>

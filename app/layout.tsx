@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Newsreader, JetBrains_Mono } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -77,6 +78,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${newsreader.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <StructuredData />
         {PLAUSIBLE_DOMAIN && (
           <script
             defer
