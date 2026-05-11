@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SHORT as ENTITY_SHORT } from "@/lib/entity";
 
 /**
  * Letter from the founder - replaces the generic dark-block CTA on the
@@ -122,7 +123,7 @@ export default function LetterFromFounder() {
               >
                 Ashish K. Saxena
               </strong>
-              Founder, Caventia Inc.
+              Founder, {ENTITY_SHORT}
               <br />
               Reaching out: ashish@caventia.com
             </div>

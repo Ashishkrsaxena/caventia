@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { longForm } from "@/lib/entity";
 
 /*
   FLAGGED FOR COUNSEL REVIEW
@@ -11,10 +12,15 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
   the items below are not gating for design-partner conversations but
   must be resolved before any paid contract or SDK access.
 
-  1. Entity status. "Caventia" appears throughout as a Delaware C-Corp
-     in formation. Counsel should confirm filing timing and whether the
-     governing-law and limitation-of-liability clauses are enforceable
-     pre-incorporation.
+  1. Entity status. Incorporation is being filed via Stripe Atlas
+     (Delaware C-Corp). Until Atlas confirms the certificate, the
+     entity name renders as "Caventia (in formation as a Delaware
+     C-Corp)" via lib/entity.ts. Once filed:
+       (a) Flip INCORPORATED to true in lib/entity.ts
+       (b) Set FORMATION_DATE to the ISO date on the certificate
+     Counsel should also confirm governing-law and limitation-of-
+     liability clauses are enforceable as of the actual incorporation
+     date.
 
   2. Arbitration and class-action waiver. Currently NOT included.
      Counsel should advise on whether to add binding arbitration
@@ -76,10 +82,10 @@ export default function TermsPage() {
         <div className="font-body text-[17px] text-ink leading-[1.75] space-y-6">
           <p>
             These terms govern your use of caventia.com (the
-            &ldquo;Site&rdquo;) operated by Caventia (in formation as a
-            Delaware C-Corp; &ldquo;Caventia&rdquo;, &ldquo;we&rdquo; or
-            &ldquo;our&rdquo;). By accessing or using the Site you agree to
-            these terms. If you do not agree, please do not use the Site.
+            &ldquo;Site&rdquo;) operated by {longForm()} (&ldquo;Caventia&rdquo;,
+            &ldquo;we&rdquo; or &ldquo;our&rdquo;). By accessing or using
+            the Site you agree to these terms. If you do not agree, please
+            do not use the Site.
           </p>
 
           <h2 className="font-display text-[28px] font-medium leading-tight mt-12 mb-2">

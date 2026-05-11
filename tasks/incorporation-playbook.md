@@ -278,15 +278,27 @@ You have 30 days from "doing business" in WA to register. Filing within the firs
 
 ### Business insurance
 
-Bind these before your first design partner contract:
+**Defer at incorporation. Bind when customer talks start.**
 
-- **General liability** - $1M per occurrence / $2M aggregate, ~$400/yr (Hiscox or Next)
+The trigger: your first scheduled CMRO call, your first serious whitepaper inbound asking for a follow-up or any explicit request to walk through the platform. Whichever lands first.
+
+Why this timing: underwriting takes 1-3 weeks. You don't want insurance to be the gating item on your first design-partner contract. Binding at "first conversation" gives you a 2-6 week lead on the contract close. Binding at incorporation costs $5K with zero value for the period before any conversation happens.
+
+What to bind when the trigger fires:
+
 - **Errors and Omissions (E&O) / Professional Liability** - $5M starter limit, ~$2,500/yr (Embroker or Vouch)
 - **Cyber liability** - $5M starter limit, ~$2,000/yr (Coalition or Vouch)
+- **General liability** - $1M per occurrence / $2M aggregate, ~$400/yr (Hiscox or Next), often bundled with the above for negligible additional premium
 
 For your eventual SR 11-7 sales: banks under OCC 2013-29 will require minimum E&O and cyber coverage in the master agreement. $5M is a common floor; $10M is common for any $250K+ contract.
 
-Total year 1 insurance: ~$5,000.
+Total when bound: ~$5,000/yr.
+
+**Action this week (parallel to Atlas signup):**
+
+1. Get quotes from Embroker, Vouch and Coalition. Free 15-minute online applications.
+2. Save the quotes.
+3. Have an inbox-trigger plan: when the trigger event fires, click Bind on the saved quote that week.
 
 ### Bookkeeping
 
@@ -336,7 +348,11 @@ I can prep all of those as one PR once you have the date. About 15 minutes of wo
 
 ## Cost summary
 
-### One-time costs (year 1)
+Costs split into two distinct phases: what you pay at incorporation versus what kicks in when customer talks start.
+
+### Phase A: at incorporation
+
+One-time:
 
 | Item | Cost |
 |---|---|
@@ -344,21 +360,34 @@ I can prep all of those as one PR once you have the date. About 15 minutes of wo
 | WA foreign qualification filing | $200 |
 | Sub-total one-time | **$700** |
 
-### Recurring annual costs
+Recurring from day one:
 
 | Item | Year 1 | Year 2+ |
 |---|---|---|
-| Delaware franchise tax | $0 (first year often prorated) | ~$450 |
+| Delaware franchise tax | $0 (first year prorated) | ~$450 |
 | Delaware registered agent | $0 (Atlas year 1) | ~$125 |
 | WA annual report | $70 | $70 |
 | Mercury bank account | $0 | $0 |
-| Business insurance (GL + E&O + cyber) | ~$5,000 | $5,000-15,000 (scales with revenue) |
-| Bookkeeping (QuickBooks year 1) | $360 | $360 (or Pilot $3-6K) |
-| Sub-total recurring | **~$5,430** | **~$6,000-21,000** |
+| Bookkeeping (QuickBooks) | $360 | $360 |
+| Sub-total recurring | **$430** | **$1,005** |
 
-### Year 1 total
+**Phase A year-1 total: ~$1,060.**
 
-Roughly **$6,100** all-in. Sub-1% of a $2-5M ARR target.
+### Phase B: when customer talks start
+
+Trigger: first scheduled CMRO call or serious whitepaper inbound. Bind same week.
+
+| Item | Cost |
+|---|---|
+| Business insurance (E&O + Cyber + GL bundle) | ~$5,000/yr |
+
+**Phase B year-1 add-on: ~$5,000.** Combined Phase A + Phase B if the trigger fires inside year 1: **~$6,060.**
+
+### What changed from the original draft
+
+The original cost summary bound insurance at incorporation. The revised plan defers it until customer talks start, which saves the premium for the pre-conversation window (typically 2-6 weeks for a founder running active outreach). The savings are modest (~$500-1,000) but the right framing matters: insurance is a contract-triggered cost, not an incorporation cost.
+
+Against a Year 1 ARR target of $2-5M, the full $6,060 if it lands is still sub-1% of revenue. Rounding error.
 
 ---
 
@@ -372,7 +401,8 @@ Roughly **$6,100** all-in. Sub-1% of a $2-5M ARR target.
 | Day 7-14 | Mercury bank account opens |
 | Within 30 days of stock issuance | File 83(b) election (CRITICAL) |
 | Within 30 days of doing business in WA | File WA foreign qualification |
-| Within 90 days | Bind insurance, set up QuickBooks, finalize cap table in Carta |
+| Within 90 days | Set up QuickBooks, finalize cap table in Carta. Get insurance quotes from Embroker, Vouch, Coalition (save, don't bind yet) |
+| When first CMRO call lands | Bind E&O + cyber + GL insurance ($5K/yr) within the week |
 | Annually by Mar 1 | Pay Delaware franchise tax |
 | Annually | Renew WA foreign registration ($70) |
 
@@ -433,7 +463,7 @@ When you're ready to actually file:
 - [ ] I have notified immigration counsel of the incorporation plan
 - [ ] I have decided on Atlas / Clerky / lawyer
 - [ ] I have $700 set aside for one-time costs
-- [ ] I have $5,000 set aside for year 1 insurance
+- [ ] I have insurance quotes saved from Embroker, Vouch and Coalition, ready to bind same-week when the first CMRO call lands ($5K/yr available cash)
 - [ ] I understand the 83(b) deadline and have a plan to mail it the same week
 - [ ] I have a folder structure ready for the corporate documents
 - [ ] I will not commingle personal and corporate funds after Mercury opens

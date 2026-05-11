@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Wordmark } from "@/components/ui/Wordmark";
+import { SHORT as ENTITY_SHORT, copyrightYear } from "@/lib/entity";
 
 const linkClass =
   "block font-body text-[14px] text-parchment/50 hover:text-parchment/90 transition-colors py-1.5";
@@ -86,7 +87,7 @@ export default function Footer() {
             className="font-mono"
             style={{ color: "rgba(245,241,232,0.3)", letterSpacing: "0.05em" }}
           >
-            © {new Date().getFullYear()} Caventia Inc. · All rights reserved
+            © {copyrightYear()} {ENTITY_SHORT} · All rights reserved
           </span>
           <span
             className="font-display italic"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { longForm } from "@/lib/entity";
 
 /*
   FLAGGED FOR COUNSEL REVIEW
@@ -10,11 +11,14 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
   collection at scale (early design-partner volumes are unlikely to
   trigger material exposure, but the open items below are real):
 
-  1. Entity status. "Caventia Inc." is stated as a Delaware C-Corp.
-     Per the product plan, incorporation is deferred until first
-     paid contract or three signed LOIs. Soften to "Caventia (in
-     formation as a Delaware C-Corp)" until filing. Otherwise align
-     this page with the actual incorporation date.
+  1. Entity status. Incorporation is being filed via Stripe Atlas
+     (Delaware C-Corp). Until Atlas confirms the certificate, the
+     entity name renders as "Caventia (in formation as a Delaware
+     C-Corp)" via lib/entity.ts. Once filed:
+       (a) Flip INCORPORATED to true in lib/entity.ts
+       (b) Set FORMATION_DATE to the ISO date on the certificate
+       (c) Counsel should verify the longForm() output is correct
+           for any state-specific privacy register
 
   2. CCPA/CPRA categories disclosure. California law requires
      enumerating each category of personal information collected,
@@ -79,12 +83,11 @@ export default function PrivacyPage() {
 
         <div className="font-body text-[17px] text-ink leading-[1.75] space-y-6">
           <p>
-            This policy describes how Caventia (in formation as a Delaware
-            C-Corp; together with its affiliates, &ldquo;Caventia&rdquo;,
-            &ldquo;we&rdquo; or &ldquo;our&rdquo;) collects, uses and
-            discloses personal information through caventia.com (the
-            &ldquo;Site&rdquo;). It applies to anyone who visits the Site or
-            submits a form on it.
+            This policy describes how {longForm()} (together with its
+            affiliates, &ldquo;Caventia&rdquo;, &ldquo;we&rdquo; or
+            &ldquo;our&rdquo;) collects, uses and discloses personal
+            information through caventia.com (the &ldquo;Site&rdquo;). It
+            applies to anyone who visits the Site or submits a form on it.
           </p>
           <p>
             Caventia is pre-product. This policy covers Site activity only.

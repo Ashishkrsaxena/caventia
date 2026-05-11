@@ -1,10 +1,12 @@
+import { SHORT, foundingDate, CONVERSATIONAL } from "@/lib/entity";
+
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://caventia.com";
 
 const organization = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Caventia",
-  legalName: "Caventia Inc.",
+  name: CONVERSATIONAL,
+  legalName: SHORT,
   url: SITE_URL,
   logo: `${SITE_URL}/api/og?title=Caventia`,
   description:
@@ -19,7 +21,7 @@ const organization = {
       "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
     ],
   },
-  foundingDate: "2026",
+  foundingDate: foundingDate(),
   industry: "Artificial Intelligence Governance",
   sameAs: [
     // TODO: fill in when public profiles exist
