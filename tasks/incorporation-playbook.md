@@ -6,7 +6,6 @@ This is the end-to-end flow for incorporating Caventia as a Delaware C-Corp from
 
 - Sole founder (you, Ashish K. Saxena)
 - Operating from Redmond, WA
-- Pursuing EB-1A immigrant visa
 - Year 1 ARR target $2-5M with a Series A planned for end of year
 - Auditor Bridge will eventually be a separately-incorporated subsidiary (Caventia Audit Services LLC) per product plan section 15
 
@@ -70,14 +69,6 @@ Recommendation: Atlas bundle for year 1. Switch to Northwest in year 2 if you wa
 ### 0.6 Caventia Audit Services LLC
 
 Per product plan section 15, Auditor Bridge runs as a separate LLC for SR 11-7 independence. **Do NOT file this entity yet.** File it only when Auditor Bridge enters the pilot stage (Year 1 Q3 per the plan). Premature filing creates ongoing annual obligations with no operational purpose.
-
-### 0.7 EB-1A coordination
-
-Before you incorporate, send a one-paragraph note to your immigration counsel:
-
-> I'm about to incorporate Caventia Inc. as a Delaware C-Corp with me as sole founder, 8M of 10M shares issued to me, 4yr / 1yr cliff vesting. EB-1A petition is in progress. Confirm: (a) this doesn't conflict with the petition timing, (b) my role title for the I-140 evidence package and (c) whether incorporation strengthens the "extraordinary ability" criteria or is timing-neutral.
-
-If they say wait, wait. If they say proceed, proceed. Most likely answer: incorporate, then send them the certificate of incorporation as evidence material.
 
 ---
 
@@ -417,27 +408,8 @@ Against a Year 1 ARR target of $2-5M, the full $6,060 if it lands is still sub-1
 | Choosing too high a par value | $0.00001 par is the standard. Anything higher punishes you on franchise tax. |
 | Granting yourself stock before incorporating | Don't. Wait for the entity to exist before you "buy" your founder stock. |
 | Mixing personal and corporate funds in the first weeks | Open Mercury immediately. Use only the corporate account for any company expense. Personal cards for company expenses = piercing the corporate veil. |
-| EB-1A petition disruption | Notify immigration counsel before filing. Forward them the certificate of incorporation once issued. |
 | Auditor Bridge entity confusion | Do NOT file Caventia Audit Services LLC at incorporation time. That's a Year 1 Q3 task per product plan section 15. |
 | Founder stock IP not assigned to the company | Sign the CIIA / PIIA on day 1. This assigns all prior Caventia-related work to the company. Without it, ownership of your existing prompts, templates, whitepapers is ambiguous and a future investor will flag it. |
-
----
-
-## EB-1A coordination notes
-
-Per personal statement, you're pursuing EB-1A immigrant visa as an individual of extraordinary ability. Caventia incorporation interacts with the petition in a few specific ways:
-
-1. **Strengthens evidence of founder role.** USCIS adjudicators look for documented founder activity. Certificate of Incorporation + your role as sole director + stock issuance is strong material under the "extraordinary ability" criteria.
-
-2. **Provides equity-based compensation path.** EB-1A doesn't require employment but does benefit from documented ongoing professional activity. Equity grants tied to vesting schedule are evidence.
-
-3. **Timing relative to I-140 / I-485 stages.** If your I-140 is filed but pending, incorporation is generally fine and supplementary. If you're at I-485 adjustment, incorporation timing should be coordinated with counsel.
-
-4. **Travel and signing.** If you have any pending travel restrictions (advance parole), be available physically in the US during the Atlas filing flow because some IRS / Delaware document processing assumes US-resident signing.
-
-5. **Don't add "President" titles unless meaningful.** "CEO, Founder, sole director" is enough. Multiple grand-sounding titles look like padding to adjudicators.
-
-The cleanest sequence: notify counsel, incorporate, send counsel the certificate of incorporation. Counsel updates the I-140 evidence file with the new material.
 
 ---
 
@@ -460,7 +432,6 @@ Tell me when you've started Atlas (or another route) and I'll execute on these i
 When you're ready to actually file:
 
 - [ ] I have answers to all seven Phase 0 questions
-- [ ] I have notified immigration counsel of the incorporation plan
 - [ ] I have decided on Atlas / Clerky / lawyer
 - [ ] I have $700 set aside for one-time costs
 - [ ] I have insurance quotes saved from Embroker, Vouch and Coalition, ready to bind same-week when the first CMRO call lands ($5K/yr available cash)
