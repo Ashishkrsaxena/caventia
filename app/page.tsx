@@ -1,32 +1,37 @@
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
+import PullQuote from "@/components/PullQuote";
 import SpineDiagram from "@/components/SpineDiagram";
 import FounderBlock from "@/components/FounderBlock";
-import FinalCta from "@/components/FinalCta";
+import StatFrame from "@/components/StatFrame";
+import LetterFromFounder from "@/components/LetterFromFounder";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <ProblemSection />
+      <PullQuote
+        cite="From the SR 11-7 whitepaper · Ashish K. Saxena"
+      >
+        &ldquo;The audit log isn&apos;t a feature. It&apos;s the{" "}
+        <em
+          className="italic text-accent"
+          style={{ fontVariationSettings: '"opsz" 96, "SOFT" 100, "WONK" 1' }}
+        >
+          spine
+        </em>
+        . Every other artifact regulators require — model cards,
+        disparate-impact reports, 510(k) submissions — hangs off it.&rdquo;
+      </PullQuote>
       <SpineDiagram />
       <FounderBlock />
-      <FinalCta
-        numeral="V."
-        eyebrow="Year One — Design Partners"
-        heading={
-          <>
-            We&apos;re taking{" "}
-            <em className="italic text-accent-soft font-display">
-              ten design partners
-            </em>{" "}
-            in 2026.
-          </>
-        }
-        sub="US banks $10B+ AUM. Series B+ fintechs with lending or fraud products. Health systems planning clinical AI rollouts. Conversations are with the founder directly — not a sales team."
-        ctaHref="/contact"
-        ctaLabel="Start a conversation →"
+      <StatFrame
+        number="42"
+        title="Peer-reviewed papers, two books, thirty-seven citations."
+        body="Spanning fraud detection, LSTM hospital systems, AI ethics, and TRiSM frameworks — the kind of credentials banks ask for and rarely find in an AI infrastructure founder."
       />
+      <LetterFromFounder />
     </>
   );
 }

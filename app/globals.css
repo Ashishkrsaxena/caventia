@@ -6,25 +6,30 @@
    ──────────────────────────────────────────────────────────── */
 
 @theme {
-  /* Colors — Backgrounds */
-  --color-parchment: #F7F4ED;
-  --color-paper: #FFFFFF;
-  --color-deep: #0F1116;
+  /* Colors — Backgrounds (v2: warmer parchment, deeper warm black) */
+  --color-parchment: #F5F1E8;
+  --color-paper: #FBF8F0;
+  --color-deep: #14110D;
+  --color-deep-warm: #1E1A14;
 
   /* Colors — Text */
-  --color-ink: #0F1116;
-  --color-ink-mute: #5C5852;
-  --color-ink-light: #8E8980;
-  --color-ink-inverse: #F7F4ED;
+  --color-ink: #14110D;
+  --color-ink-mute: #5C5346;
+  --color-ink-light: #8E8275;
+  --color-ink-inverse: #F5F1E8;
 
   /* Colors — Rules & dividers */
-  --color-rule: #D4CFC4;
-  --color-rule-strong: #A8A296;
+  --color-rule: #D4CCBA;
+  --color-rule-strong: #A89F8A;
+  --color-rule-soft: #E5DDC9;
 
-  /* Colors — Accent (Pompeii red — sparingly!) */
+  /* Colors — Accent (Pompeii red) */
   --color-accent: #8B2C2C;
+  --color-accent-bright: #A93428;
   --color-accent-soft: #C4948E;
-  --color-accent-bg: #F2E4E1;
+  --color-accent-bg: #EFE0DC;
+  --color-accent-deep: #6B2020;
+  --color-accent-warm: #C68D60;
 
   /* Colors — Functional */
   --color-success: #2E5C3E;
@@ -36,6 +41,7 @@
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-body: var(--font-newsreader), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-script: var(--font-caveat), cursive;
 
   /* Breakpoints */
   --breakpoint-xs: 480px;
@@ -61,19 +67,23 @@ body {
   color: var(--color-ink);
   background: var(--color-parchment);
   font-feature-settings: "kern", "liga", "onum";
+  overflow-x: hidden;
 }
 
-/* Subtle paper texture — fixed dot pattern */
+/* Paper texture — slightly more visible than v1, four-layer grain */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(circle at 10% 20%, rgba(15,17,22,0.012) 1px, transparent 1px),
-    radial-gradient(circle at 80% 60%, rgba(15,17,22,0.010) 1px, transparent 1px);
-  background-size: 13px 13px, 17px 17px;
+    radial-gradient(circle at 23% 41%, rgba(20,17,13,0.018) 1px, transparent 1.5px),
+    radial-gradient(circle at 67% 19%, rgba(20,17,13,0.015) 1px, transparent 1.5px),
+    radial-gradient(circle at 89% 73%, rgba(20,17,13,0.014) 1px, transparent 1.5px),
+    radial-gradient(circle at 12% 87%, rgba(20,17,13,0.013) 1px, transparent 1.5px);
+  background-size: 7px 7px, 11px 11px, 13px 13px, 17px 17px;
   z-index: 1;
+  mix-blend-mode: multiply;
 }
 
 ::selection {
@@ -183,16 +193,23 @@ body::before {
   line-height: 1.50;
 }
 
-/* Drop cap — first letter on long-form pages */
-.dropcap::first-letter {
+/* Drop cap — Fraunces 84px in Pompeii red, opsz axis cranked to display size */
+.dropcap::first-letter,
+.dropcap-v2::first-letter {
   font-family: var(--font-display);
-  font-size: 5.5em;
+  font-size: 84px;
   line-height: 0.85;
   float: left;
   font-weight: 400;
   color: var(--color-accent);
-  padding: 0.08em 0.08em 0 0;
-  margin-top: 0.05em;
+  padding: 6px 14px 0 0;
+  font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
+}
+@media (max-width: 980px) {
+  .dropcap::first-letter,
+  .dropcap-v2::first-letter {
+    font-size: 64px;
+  }
 }
 
 /* Roman numeral section divider */

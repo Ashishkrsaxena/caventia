@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Wordmark } from "@/components/ui/Wordmark";
-import { LinkButton } from "@/components/ui/Button";
 import { NAV_LINKS } from "@/lib/site";
 
 export default function Nav() {
@@ -11,7 +10,7 @@ export default function Nav() {
 
   return (
     <header className="relative z-30 border-b border-rule bg-parchment">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8 h-[72px] flex items-center justify-between">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 h-[72px] flex items-center justify-between">
         <Wordmark variant="nav" />
 
         {/* Desktop nav */}
@@ -20,18 +19,23 @@ export default function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-body text-[14px] font-medium tracking-[0.04em] text-ink hover:text-accent transition-colors"
+              className="group relative font-body text-[14px] font-normal tracking-[0.01em] text-ink-mute hover:text-ink transition-colors"
             >
               {link.label}
+              {/* Hover underline that draws from right to left, settles on the left */}
+              <span
+                aria-hidden="true"
+                className="absolute -bottom-[3px] left-0 right-0 h-px bg-ink origin-right group-hover:origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+              />
             </Link>
           ))}
-        </nav>
-
-        <div className="hidden md:block">
-          <LinkButton href="/contact" variant="primary">
+          <Link
+            href="/contact"
+            className="font-body text-[14px] font-medium bg-accent text-parchment px-5 py-2.5 rounded-[2px] hover:bg-accent-deep transition-colors"
+          >
             Talk to us →
-          </LinkButton>
-        </div>
+          </Link>
+        </nav>
 
         {/* Mobile hamburger */}
         <button
@@ -77,9 +81,13 @@ export default function Nav() {
               </Link>
             ))}
             <div className="pt-4">
-              <LinkButton href="/contact" variant="primary" className="w-full">
+              <Link
+                href="/contact"
+                onClick={() => setOpen(false)}
+                className="block w-full text-center font-body text-[15px] font-medium bg-accent text-parchment px-5 py-3.5 rounded-[2px] hover:bg-accent-deep transition-colors"
+              >
                 Talk to us →
-              </LinkButton>
+              </Link>
             </div>
           </nav>
         </div>

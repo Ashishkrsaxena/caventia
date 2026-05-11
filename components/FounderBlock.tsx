@@ -1,86 +1,172 @@
 import Link from "next/link";
-import { SectionLabel } from "@/components/ui/SectionLabel";
-import { PullStat } from "@/components/ui/PullStat";
+import Marginalia from "@/components/Marginalia";
 
-const CREDENTIALS = [
-  "Amazon FinTech — 40% fraud reduction, 75% processing-error reduction at scale",
-  "Author, The Ethics of Artificial Intelligence & Society and the Machine",
-  "42 peer-reviewed papers · 37 citations on flagship FinTech fraud-detection paper",
-  "IJSR reviewer · IEEE TEMSCON & ISTAS contributor",
-  "Best Technical Researcher of AI 2024 · London Book Festival winner 2024",
+type Credential = {
+  num: string;
+  text: React.ReactNode;
+  meta: string;
+};
+
+const CREDENTIALS: Credential[] = [
+  {
+    num: "I.",
+    text: "Amazon FinTech — 40% fraud reduction, 75% processing-error reduction at scale",
+    meta: "2018–2023",
+  },
+  {
+    num: "II.",
+    text: (
+      <>
+        Author, <em className="italic">The Ethics of Artificial Intelligence</em>{" "}
+        &amp; <em className="italic">Society and the Machine</em>
+      </>
+    ),
+    meta: "2024",
+  },
+  {
+    num: "III.",
+    text: "42 peer-reviewed papers · 37 citations on flagship FinTech fraud-detection paper",
+    meta: "IJSR · IEEE",
+  },
+  {
+    num: "IV.",
+    text: "IEEE TEMSCON & ISTAS contributor · IJSR reviewer",
+    meta: "Ongoing",
+  },
+  {
+    num: "V.",
+    text: "Best Technical Researcher of AI 2024 · London Book Festival winner",
+    meta: "2024",
+  },
 ];
 
 export default function FounderBlock() {
   return (
-    <section className="bg-paper border-y border-rule">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-24 md:py-32">
-        <SectionLabel numeral="IV.">The founder</SectionLabel>
+    <section className="relative overflow-hidden z-[2]">
+      <Marginalia numeral="IV" position="top-left" />
 
-        <h2 className="type-display-md mt-6 max-w-[820px]">
-          The credibility that pre-sells the platform.
-        </h2>
-
-        <p className="type-body-lg mt-6 max-w-[640px] text-ink-mute font-light">
-          Caventia is founded by someone who has shipped AI in production at
-          scale in both verticals — and who has published the ethics and risk
-          frameworks the industry is now scrambling to adopt.
+      <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 py-24 md:py-40">
+        <p
+          className="font-body font-medium uppercase text-ink-mute inline-flex items-center gap-2.5 mb-5"
+          style={{ fontSize: "11px", letterSpacing: "0.18em" }}
+        >
+          <span aria-hidden="true" className="w-6 h-px bg-accent" />
+          The founder
         </p>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-[220px_1fr] gap-10 md:gap-16 items-start py-12 border-y border-rule">
-          {/* Photo placeholder — replace with /public/founder.jpg when provided */}
-          <div className="relative w-40 h-40 md:w-[220px] md:h-[220px] overflow-hidden rounded-[2px]" style={{
-            background:
-              "linear-gradient(135deg, #C4B8A0, #948876)",
-          }}>
-            <div className="absolute inset-0 flex items-center justify-center font-mono text-[11px] tracking-[0.15em] uppercase text-white/50">
-              photo
+        <h2
+          className="font-display font-normal text-ink max-w-[880px] mb-16 md:mb-20"
+          style={{
+            fontSize: "clamp(32px, 5vw, 64px)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.03em",
+            fontVariationSettings: '"opsz" 96, "SOFT" 30',
+          }}
+        >
+          Credibility that pre-sells the platform.
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-10 md:gap-20 items-start">
+          {/* Photo block with caption row */}
+          <div className="relative">
+            <div
+              className="w-full aspect-[4/5] rounded-[2px] relative overflow-hidden"
+              style={{
+                background:
+                  "linear-gradient(135deg, #C4B8A0 0%, #948876 70%, #6F5F4A 100%)",
+              }}
+            >
+              <div
+                className="absolute inset-0 flex items-center justify-center font-mono uppercase text-white/40"
+                style={{ fontSize: "11px", letterSpacing: "0.25em" }}
+              >
+                PHOTO
+              </div>
+            </div>
+            <div
+              className="font-mono uppercase mt-3 pt-3 border-t border-rule text-ink-mute flex justify-between"
+              style={{ fontSize: "10px", letterSpacing: "0.15em" }}
+            >
+              <span>Ashish K. Saxena</span>
+              <span>Founder · 2026</span>
             </div>
           </div>
 
-          <div>
-            <p className="type-label mb-3">Founder & CEO</p>
-            <h3 className="font-display text-[28px] md:text-[36px] font-medium leading-[1.15] tracking-[-0.02em] mb-6 text-ink">
+          {/* Founder content with drop cap */}
+          <div className="pt-3">
+            <div
+              className="font-body font-medium uppercase text-ink-mute mb-4 pb-4 border-b border-rule"
+              style={{ fontSize: "11px", letterSpacing: "0.18em" }}
+            >
+              Founder &amp; CEO
+            </div>
+            <h3
+              className="font-display font-normal text-ink mb-2"
+              style={{
+                fontSize: "clamp(36px, 4vw, 56px)",
+                lineHeight: 1,
+                letterSpacing: "-0.025em",
+                fontVariationSettings: '"opsz" 96, "SOFT" 30',
+              }}
+            >
               Ashish K. Saxena
             </h3>
-            <ul className="space-y-1 mb-6">
+            <p
+              className="font-display italic font-normal text-ink-mute mb-10"
+              style={{
+                fontSize: "20px",
+                fontVariationSettings: '"opsz" 36, "SOFT" 50',
+              }}
+            >
+              FinTech engineer · AI ethicist · IJSR reviewer
+            </p>
+
+            <p
+              className="dropcap-v2 font-body text-ink mb-8"
+              style={{ fontSize: "18px", lineHeight: 1.55 }}
+            >
+              Caventia exists because the people building AI in banks and
+              hospitals don&apos;t have what they need from horizontal AI
+              platforms. After fifteen years deploying machine learning in
+              regulated industries — at Amazon FinTech, in hospital management
+              systems, and in published frameworks read by the field — the
+              gap became impossible to ignore.
+            </p>
+
+            <ul className="list-none p-0 m-0 pt-8 border-t border-rule">
               {CREDENTIALS.map((cred) => (
                 <li
-                  key={cred}
-                  className="relative pl-6 font-body text-[15px] md:text-[16px] leading-[1.9] text-ink"
+                  key={cred.num}
+                  className="relative grid grid-cols-[1fr_auto] gap-5 items-baseline pl-10 py-3.5 border-b border-rule-soft last:border-b-0 font-body text-ink"
+                  style={{ fontSize: "15px", lineHeight: 1.45 }}
                 >
                   <span
                     aria-hidden="true"
-                    className="absolute left-0 top-[2px] text-accent text-[28px] leading-none"
+                    className="absolute left-0 top-3.5 font-display italic text-accent w-7"
+                    style={{ fontSize: "13px", letterSpacing: "0.05em" }}
                   >
-                    ·
+                    {cred.num}
                   </span>
-                  {cred}
+                  <span>{cred.text}</span>
+                  <span
+                    className="font-mono uppercase text-ink-light whitespace-nowrap"
+                    style={{ fontSize: "11px", letterSpacing: "0.1em" }}
+                  >
+                    {cred.meta}
+                  </span>
                 </li>
               ))}
             </ul>
+
             <Link
               href="/about"
-              className="inline-block font-body text-[15px] font-medium text-accent border-b border-accent pb-[2px] hover:text-link-hover hover:border-link-hover transition-colors"
+              className="inline-flex items-center gap-3 mt-8 font-body font-medium text-accent border-b border-accent pb-1 hover:gap-4 transition-all duration-200"
+              style={{ fontSize: "15px" }}
             >
-              Full bio and research →
+              Full bio and research
+              <span aria-hidden="true">→</span>
             </Link>
           </div>
-        </div>
-
-        {/* Pull stat */}
-        <div className="mt-20 md:mt-24 max-w-[720px] mx-auto grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 md:gap-12 items-center">
-          <PullStat
-            number="42"
-            label={
-              <>
-                peer-reviewed papers spanning fraud detection, LSTM hospital
-                systems, AI ethics, and TRiSM frameworks.{" "}
-                <em className="italic font-display text-[18px] text-ink-mute">
-                  The kind of credentials banks ask for and rarely find.
-                </em>
-              </>
-            }
-          />
         </div>
       </div>
     </section>

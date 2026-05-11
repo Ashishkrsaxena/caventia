@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
   title: "Research — Peer-reviewed papers and books by the founder",
@@ -128,10 +129,19 @@ export default function ResearchPage() {
   return (
     <>
       {/* Hero */}
-      <section className="border-b border-rule">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8 pt-20 md:pt-28 pb-16 md:pb-20">
-          <SectionLabel numeral="0.">Research</SectionLabel>
-          <h1 className="type-display-lg mt-6 max-w-[820px]">
+      <section className="relative overflow-hidden border-b border-rule">
+        <Marginalia numeral="III" position="top-right" />
+        <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 pt-20 md:pt-28 pb-16 md:pb-24">
+          <SectionLabel>Research</SectionLabel>
+          <h1
+            className="font-display font-normal text-ink mt-6 max-w-[920px]"
+            style={{
+              fontSize: "clamp(40px, 6vw, 88px)",
+              lineHeight: 1.0,
+              letterSpacing: "-0.03em",
+              fontVariationSettings: '"opsz" 120, "SOFT" 30',
+            }}
+          >
             The published record behind the platform.
           </h1>
           <p className="type-body-lg mt-8 max-w-[640px] text-ink-mute font-light">

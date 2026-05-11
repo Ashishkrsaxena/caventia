@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Sigil } from "@/components/ui/Sigil";
 
 type Variant = "nav" | "display" | "footer";
 
@@ -9,47 +10,43 @@ type Props = {
 };
 
 /**
- * Caventia wordmark.
+ * Caventia wordmark. v2 pairs a custom geometric sigil (circle + C +
+ * Pompeii red spine bar) with lowercase Fraunces "caventia."
  *
- * - `nav`: small caps in Newsreader at 14px, accent rule above the first letter.
- *   This is the variant used in the top navigation per design system §5.1.
- * - `display`: lowercase Fraunces at display weight, used on `/about` hero and the footer.
- *   Accent rule appears above the "c".
- * - `footer`: parchment-colored display variant for the deep-ink footer.
+ * - `nav` — small (sigil 22px + 22px Fraunces text).
+ * - `display` — large (sigil 32px + clamp(40px, 5vw, 56px) text), used on /about hero.
+ * - `footer` — parchment-tinted variant for the deep-ink footer (sigil 28px + 28px text).
  */
 export function Wordmark({ variant = "nav", href = "/", className = "" }: Props) {
-  const isNav = variant === "nav";
-  const isFooter = variant === "footer";
+  let sigilSize = 22;
+  let textSize = "22px";
+  let textColor = "text-ink";
 
-  const content = isNav ? (
+  if (variant === "display") {
+    sigilSize = 32;
+    textSize = "clamp(40px, 5vw, 56px)";
+    textColor = "text-ink";
+  } else if (variant === "footer") {
+    sigilSize = 28;
+    textSize = "28px";
+    textColor = "text-parchment/85";
+  }
+
+  const inner = (
     <span
-      className={`relative inline-block font-body text-[14px] font-medium tracking-[0.18em] uppercase text-ink ${className}`}
+      className={`inline-flex items-center gap-[10px] font-display font-medium tracking-[-0.02em] ${textColor} ${className}`}
+      style={{ fontSize: textSize, lineHeight: 1 }}
     >
-      <span aria-hidden="true" className="absolute -top-[6px] left-0 w-[12px] h-[1.5px] bg-accent" />
-      caventia
-    </span>
-  ) : (
-    <span
-      className={`relative inline-block font-display font-medium tracking-[-0.02em] ${
-        isFooter ? "text-parchment" : "text-ink"
-      } ${className}`}
-      style={{ fontSize: variant === "display" ? "clamp(40px, 5vw, 56px)" : "32px" }}
-    >
-      <span
-        aria-hidden="true"
-        className={`absolute -top-[10px] left-0 w-[14px] h-[2px] ${
-          isFooter ? "bg-accent-soft" : "bg-accent"
-        }`}
-      />
-      caventia
+      <Sigil size={sigilSize} inverse={variant === "footer"} />
+      <span>caventia</span>
     </span>
   );
 
-  if (!href) return content;
+  if (!href) return inner;
 
   return (
-    <Link href={href} aria-label="Caventia — home" className="inline-block">
-      {content}
+    <Link href={href} aria-label="Caventia — home" className="inline-flex">
+      {inner}
     </Link>
   );
 }

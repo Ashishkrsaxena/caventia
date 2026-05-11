@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import WhitepaperGate from "@/components/WhitepaperGate";
+import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
   title: "SR 11-7 Compliance for AI Agents — A Practical Framework",
@@ -24,14 +25,26 @@ export default function SR117Page() {
   return (
     <>
       {/* Hero with email gate side-by-side */}
-      <section className="border-b border-rule">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8 pt-20 md:pt-28 pb-16 md:pb-24">
+      <section className="relative overflow-hidden border-b border-rule">
+        <Marginalia numeral="V" position="top-right" />
+        <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 pt-20 md:pt-28 pb-16 md:pb-24">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-16 items-start">
             <div>
-              <SectionLabel numeral="0.">Whitepaper · Free download</SectionLabel>
-              <h1 className="type-display-lg mt-6">
+              <SectionLabel>Whitepaper · Free download</SectionLabel>
+              <h1
+                className="font-display font-normal text-ink mt-6"
+                style={{
+                  fontSize: "clamp(36px, 5.5vw, 80px)",
+                  lineHeight: 1.0,
+                  letterSpacing: "-0.03em",
+                  fontVariationSettings: '"opsz" 96, "SOFT" 30',
+                }}
+              >
                 SR 11-7 Compliance for AI Agents:{" "}
-                <em className="italic text-accent font-display">
+                <em
+                  className="italic text-accent font-display"
+                  style={{ fontVariationSettings: '"opsz" 96, "SOFT" 100, "WONK" 1' }}
+                >
                   a practical framework.
                 </em>
               </h1>

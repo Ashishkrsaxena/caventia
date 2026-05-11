@@ -1,10 +1,10 @@
-import { SectionLabel } from "@/components/ui/SectionLabel";
+import Marginalia from "@/components/Marginalia";
 
 const PROBLEMS = [
   {
     numeral: "I.",
     title: "Horizontal tools, vertical regulators",
-    body: "Credo AI, Fiddler, Arthur — none of them ship the SR 11-7 model risk documentation pack an OCC examiner expects. They were built for “AI governance” in the abstract.",
+    body: 'Credo AI, Fiddler, Arthur — none of them ship the SR 11-7 model risk documentation pack an OCC examiner expects. They were built for "AI governance" in the abstract.',
   },
   {
     numeral: "II.",
@@ -20,32 +20,71 @@ const PROBLEMS = [
 
 export default function ProblemSection() {
   return (
-    <section className="bg-paper border-t border-rule">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-24 md:py-32">
-        <SectionLabel numeral="II.">The compliance gauntlet</SectionLabel>
+    <section className="relative overflow-hidden bg-paper border-y border-rule z-[2]">
+      <Marginalia numeral="II" position="top-right" />
 
-        <h2 className="type-display-md mt-6 max-w-[820px]">
-          Banks deploying AI agents face a four-step compliance gauntlet. Most
-          are gluing it together with spreadsheets.
+      <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 py-24 md:py-36">
+        <p
+          className="font-body font-medium uppercase text-ink-mute inline-flex items-center gap-2.5 mb-5"
+          style={{ fontSize: "11px", letterSpacing: "0.18em" }}
+        >
+          <span aria-hidden="true" className="w-6 h-px bg-accent" />
+          The compliance gauntlet
+        </p>
+
+        <h2
+          className="font-display font-normal text-ink mb-10 max-w-[880px]"
+          style={{
+            fontSize: "clamp(32px, 5vw, 64px)",
+            lineHeight: 1.05,
+            letterSpacing: "-0.03em",
+            fontVariationSettings: '"opsz" 96, "SOFT" 30',
+          }}
+        >
+          A four-step gauntlet, stitched together with spreadsheets.
         </h2>
 
-        <p className="type-body-lg mt-6 max-w-[640px] text-ink-mute font-light">
+        <p
+          className="font-display italic text-ink-mute max-w-[680px]"
+          style={{
+            fontSize: "22px",
+            lineHeight: 1.5,
+            fontVariationSettings: '"opsz" 36, "SOFT" 30',
+          }}
+        >
           Pre-deploy security scan. Runtime audit logging. Governance
           documentation. Third-party sign-off. Today, each step is a separate
           vendor, a separate workflow, and a separate gap in the model risk
           file your examiner is going to read.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16 md:mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-14 mt-24 relative z-[2]">
           {PROBLEMS.map((p) => (
-            <div key={p.numeral} className="pt-8 border-t border-rule">
-              <p className="font-display italic text-[28px] text-accent font-medium leading-none mb-3">
+            <div key={p.numeral} className="pt-9 border-t-2 border-ink relative">
+              <p
+                className="font-display italic font-normal text-accent leading-none mb-4"
+                style={{
+                  fontSize: "56px",
+                  fontVariationSettings: '"opsz" 96, "SOFT" 100, "WONK" 1',
+                }}
+              >
                 {p.numeral}
               </p>
-              <h3 className="font-display text-[22px] font-medium leading-tight text-ink mb-3">
+              <h3
+                className="font-display font-medium text-ink mb-4"
+                style={{
+                  fontSize: "26px",
+                  lineHeight: 1.2,
+                  letterSpacing: "-0.015em",
+                  fontVariationSettings: '"opsz" 36, "SOFT" 30',
+                }}
+              >
                 {p.title}
               </h3>
-              <p className="text-[15px] leading-[1.6] text-ink-mute font-body">
+              <p
+                className="font-body text-ink-mute"
+                style={{ fontSize: "16px", lineHeight: 1.55 }}
+              >
                 {p.body}
               </p>
             </div>

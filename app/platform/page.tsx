@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { LinkButton } from "@/components/ui/Button";
 import SpineDiagram from "@/components/SpineDiagram";
+import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
   title: "Platform — Four products, one audit-trail spine",
@@ -77,10 +78,19 @@ export default function PlatformPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8 pt-20 md:pt-28 pb-16 md:pb-20 border-b border-rule">
-          <SectionLabel numeral="0.">Platform</SectionLabel>
-          <h1 className="type-display-lg mt-6 max-w-[900px]">
+      <section className="relative overflow-hidden border-b border-rule">
+        <Marginalia numeral="II" position="top-right" />
+        <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 pt-20 md:pt-28 pb-16 md:pb-24">
+          <SectionLabel>Platform</SectionLabel>
+          <h1
+            className="font-display font-normal text-ink mt-6 max-w-[920px]"
+            style={{
+              fontSize: "clamp(40px, 6vw, 88px)",
+              lineHeight: 1.0,
+              letterSpacing: "-0.03em",
+              fontVariationSettings: '"opsz" 120, "SOFT" 30',
+            }}
+          >
             One platform. Four artifacts. A single audit-trail spine.
           </h1>
           <p className="type-body-lg mt-8 max-w-[640px] text-ink-mute font-light">
