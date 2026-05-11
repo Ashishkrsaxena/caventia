@@ -94,3 +94,9 @@ All 8 marketing pages return 200, sizes 34KB-58KB. Sitemap and robots return 200
 
 ### Design-system deviations to confirm
 None intentional. Spacing scale in CAVENTIA_DESIGN_SYSTEM.md §4 maps cleanly onto Tailwind's default 4px base, so no custom spacing tokens were needed. Type scale uses CSS `clamp()` for fluid sizing — the design-system gives fixed px values, but fluid resize was implied by §8 mobile adaptations ("Hero headline scales down: 72px to 44px on mobile"). If a fixed-px approach is preferred, this is a one-line change in each `.type-display-*` rule.
+
+### Design decisions log
+
+| Date | Decision | Source of truth |
+|---|---|---|
+| 2026-05-10 | Hero italic "regulated AI agents." stays in Pompeii red `#8B2C2C` | Prototype `caventia-homepage.html`. Design system §3.1 ("accent used sparingly") is overridden — the prototype is art-directed and represents the founder's actual taste; when in conflict, prototype wins. |
