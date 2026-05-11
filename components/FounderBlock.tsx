@@ -11,31 +11,32 @@ const CREDENTIALS: Credential[] = [
   {
     num: "I.",
     text: "Amazon FinTech - 40% fraud reduction, 75% processing-error reduction at scale",
-    meta: "2018-2023",
+    meta: "Amazon",
   },
   {
     num: "II.",
     text: (
       <>
-        Author, <em className="italic">The Ethics of Artificial Intelligence</em>{" "}
-        &amp; <em className="italic">Society and the Machine</em>
+        Author, <em className="italic">Society and the Machine</em> and{" "}
+        <em className="italic">The Ethics of Artificial Intelligence</em>{" "}
+        - Amazon bestsellers, London Book Festival 2024 first place
       </>
     ),
     meta: "2024",
   },
   {
     num: "III.",
-    text: "42 peer-reviewed papers · 37 citations on flagship FinTech fraud-detection paper",
-    meta: "IJSR · IEEE",
+    text: "h-index 8 with 226 citations on Google Scholar across machine learning, healthcare AI and AI policy",
+    meta: "Verified",
   },
   {
     num: "IV.",
-    text: "IEEE TEMSCON & ISTAS contributor · IJSR reviewer",
+    text: "IJSR peer reviewer (42 papers reviewed) · IEEE TEMSCON ASPAC and ISTAS 2024 contributor",
     meta: "Ongoing",
   },
   {
     num: "V.",
-    text: "Best Technical Researcher of AI 2024 · London Book Festival winner",
+    text: 'Best Technical Researcher of AI 2024, Business Innovation Awards · Marquis Who\'s Who',
     meta: "2024",
   },
 ];
@@ -118,7 +119,7 @@ export default function FounderBlock() {
                 fontVariationSettings: '"opsz" 36, "SOFT" 50',
               }}
             >
-              FinTech engineer · AI ethicist · IJSR reviewer
+              Amazon FinTech alum · Bestselling AI ethics author · IJSR peer reviewer · 226 citations
             </p>
 
             <p

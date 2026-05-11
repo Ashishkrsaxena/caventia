@@ -7,17 +7,18 @@ import Marginalia from "@/components/Marginalia";
 export const metadata: Metadata = {
   title: "About - Ashish K. Saxena, founder",
   description:
-    "Caventia is founded by Ashish K. Saxena: Amazon FinTech alum, author of two books on AI ethics, IJSR reviewer, 42 peer-reviewed papers and the 2024 Best Technical Researcher of AI award.",
+    "Caventia is founded by Ashish K. Saxena: Amazon FinTech alum, Amazon-bestselling author of two books on AI ethics, IJSR peer reviewer, h-index 8 with 226 citations on Google Scholar and the 2024 Best Technical Researcher of AI award.",
 };
 
 const CREDENTIALS = [
-  "Amazon FinTech: 40% fraud reduction and 75% processing-error reduction at scale",
+  "Amazon FinTech: 40% fraud reduction and 75% processing-error reduction at scale; 20% false-positive reduction",
   "Hospital management AI research: 30% wait-time reduction and 20% equipment utilization gain",
-  'Author: "Society and the Machine" (2024 London Book Festival winner) and "The Ethics of Artificial Intelligence"',
-  "42 peer-reviewed papers; 37 citations on the 2019 fraud-detection paper",
-  "Reviewer, International Journal of Science and Research (IJSR)",
-  "IEEE TEMSCON ASPAC 2024 and IEEE ISTAS 2024 contributor",
-  '2024 "Best Technical Researcher of AI" award, Business Innovation Awards',
+  'Author: "Society and the Machine" (2024 London Book Festival first place) and "The Ethics of Artificial Intelligence" - Amazon bestsellers in the US and UK',
+  "h-index 8 on Google Scholar; 226 total citations spanning fraud detection, healthcare AI, AI policy and machine learning",
+  "Peer reviewer at the International Journal of Science and Research (IJSR); 42 papers reviewed",
+  "IEEE TEMSCON ASPAC and IEEE ISTAS 2024 contributor",
+  '2024 "Best Technical Researcher of AI", Business Innovation Awards · Marquis Who\'s Who',
+  "Founder, MindBytesAI. Creator, ImpactLens AI. Fifty-plus AI professionals mentored.",
 ];
 
 export default function AboutPage() {
@@ -64,7 +65,9 @@ export default function AboutPage() {
                 Ashish K. Saxena
               </h2>
               <p className="font-display italic text-[20px] md:text-[22px] text-ink-mute mb-8 leading-[1.4]">
-                FinTech engineer. AI ethicist. IJSR reviewer.
+                Amazon FinTech alum. Bestselling AI ethics author. IJSR peer
+                reviewer. Two hundred and twenty-six citations across the
+                literature.
               </p>
 
               <ul className="space-y-1 mb-8">
@@ -137,14 +140,18 @@ export default function AboutPage() {
               of AI&rdquo; award at the Business Innovation Awards.
             </p>
             <p>
-              His published research on machine learning fraud detection
-              (Emerging Trends in Machine Intelligence and Big Data, 2019)
-              has received 37 citations. His paper on AI integration
-              (&ldquo;Decoding Socioeconomic Influence on AI Integration and
-              Trust in the U.S.&rdquo;) was accepted at the 2024 IEEE
+              His published research spans machine learning fraud detection
+              (Emerging Trends in Machine Intelligence and Big Data, 2019),
+              healthcare AI (an LSTM resource-allocation paper in the
+              International Journal of Applied Health Care Analytics, 2022)
+              and AI policy. His paper on AI integration
+              (&ldquo;Decoding Socioeconomic Influence on AI Integration
+              and Trust in the U.S.&rdquo;) was accepted at the 2024 IEEE
               TEMSCON ASPAC. His work on bias measurement in AI-generated
               content was presented at the 2024 IEEE International Symposium
-              on Technology and Society (ISTAS).
+              on Technology and Society (ISTAS). Google Scholar reports an
+              h-index of eight with two hundred and twenty-six citations
+              across the literature.
             </p>
           </div>
         </div>

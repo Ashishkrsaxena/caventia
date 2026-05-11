@@ -14,7 +14,10 @@ const organization = {
     name: "Ashish K. Saxena",
     jobTitle: "Founder & CEO",
     description:
-      "Amazon FinTech alum, author of The Ethics of Artificial Intelligence, IJSR reviewer, 42 peer-reviewed papers.",
+      "Amazon FinTech alum. Amazon-bestselling author of two books on AI ethics. IJSR peer reviewer with 42 papers reviewed. h-index 8 with 226 citations on Google Scholar. 2024 Best Technical Researcher of AI award.",
+    sameAs: [
+      "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
+    ],
   },
   foundingDate: "2026",
   industry: "Artificial Intelligence Governance",

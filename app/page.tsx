@@ -27,9 +27,9 @@ export default function Home() {
       <SpineDiagram />
       <FounderBlock />
       <StatFrame
-        number="42"
-        title="Peer-reviewed papers, two books, thirty-seven citations."
-        body="Spanning fraud detection, LSTM hospital systems, AI ethics and TRiSM frameworks - the kind of credentials banks ask for and rarely find in an AI infrastructure founder."
+        number="226"
+        title="Peer-reviewed citations. h-index 8. Two bestselling books on AI ethics."
+        body="Spanning fraud detection at Amazon, LSTM hospital systems, AI policy and TRiSM frameworks. The kind of credentials banks ask for and rarely find in an AI infrastructure founder."
       />
       <LetterFromFounder />
     </>

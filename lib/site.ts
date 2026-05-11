@@ -44,39 +44,42 @@ export const FOUR_PRODUCTS = [
 export const FOUNDER = {
   name: "Ashish K. Saxena",
   shortBio:
-    "Amazon FinTech alum · Author, The Ethics of Artificial Intelligence · IJSR reviewer · IEEE TEMSCON & ISTAS contributor",
+    "Amazon FinTech alum · Bestselling AI ethics author · IJSR peer reviewer · 226 citations on Google Scholar",
+  scholarUrl:
+    "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
   credentials: [
     "Amazon FinTech alum",
-    "42 peer-reviewed papers",
-    'Author, "The Ethics of Artificial Intelligence" (2024)',
-    "IJSR reviewer",
-    "IEEE TEMSCON & ISTAS contributor",
-    "Best Technical Researcher of AI 2024",
+    'Author, "Society and the Machine" (2024 London Book Festival first place) and "The Ethics of Artificial Intelligence" - Amazon bestsellers',
+    "h-index 8 on Google Scholar; 226 citations across the literature",
+    "IJSR peer reviewer (42 papers reviewed); IEEE TEMSCON ASPAC and ISTAS 2024 contributor",
+    'Best Technical Researcher of AI 2024, Business Innovation Awards · Marquis Who\'s Who',
+    "Founder, MindBytesAI. Creator, ImpactLens AI. Fifty-plus AI professionals mentored.",
   ],
 } as const;
 
 export const FEATURED_PAPERS = [
   {
     title:
-      "Machine Learning and Big Data Analytics for Fraud Detection in the U.S. FinTech Industry",
-    venue: "International Journal of Scientific Research",
-    year: 2023,
-    citations: 37,
-    href: "#",
+      "An LSTM Neural Network Approach to Resource Allocation in Hospital Management Systems",
+    venue: "International Journal of Applied Health Care Analytics",
+    year: 2022,
+    citations: 29,
+    href: "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
   },
   {
     title:
-      "LSTM Neural Network Approach to Resource Allocation in Hospital Management Systems",
-    venue: "International Journal of Scientific Research",
-    year: 2023,
-    citations: 18,
-    href: "#",
+      "The Influence of AI: The Revolutionary Effects of Artificial Intelligence in Healthcare",
+    venue: "Journal of Engineering Research and Reports",
+    year: 2024,
+    citations: 27,
+    href: "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
   },
   {
-    title: "Beyond Code: How TRiSM Redefines AI's Promise",
-    venue: "Medium",
-    year: 2024,
-    citations: null,
-    href: "#",
+    title:
+      "Machine Learning and Big Data Analytics for Fraud Detection in the U.S. FinTech Industry",
+    venue: "Emerging Trends in Machine Intelligence and Big Data",
+    year: 2019,
+    citations: 19,
+    href: "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
   },
 ] as const;
