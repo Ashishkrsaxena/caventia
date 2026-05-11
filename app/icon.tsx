@@ -1,23 +1,14 @@
 import { ImageResponse } from "next/og";
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 
-// Next.js App Router favicon convention. 32x32 PNG generated on demand
-// from the locally-bundled Fraunces 144pt Regular TTF so the favicon
-// matches the wordmark.
+// Next.js App Router favicon convention. 32×32 PNG rendered with the
+// column sigil — the same architectural mark used in the nav wordmark.
+// Flutes are dropped at this size (sub-pixel) and stroke widths bumped
+// so the column shape reads cleanly at favicon scale.
 
 export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
 
-export default async function Icon() {
-  const fontPath = join(process.cwd(), "public", "fonts", "Fraunces-Regular.ttf");
-  let fontData: Buffer | undefined;
-  try {
-    fontData = await readFile(fontPath);
-  } catch {
-    // Fallback to system serif if font missing.
-  }
-
+export default function Icon() {
   return new ImageResponse(
     (
       <div
@@ -27,33 +18,33 @@ export default async function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#F7F4ED",
-          color: "#0F1116",
-          fontFamily: fontData ? "Fraunces" : "serif",
-          fontSize: 30,
-          fontWeight: 400,
-          letterSpacing: "-0.04em",
-          lineHeight: 1,
-          paddingBottom: 2,
+          background: "#F5F1E8",
         }}
       >
-        c
+        <svg
+          width="18"
+          height="26"
+          viewBox="0 0 18 26"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Capital */}
+          <rect x="0" y="0" width="18" height="3" fill="#14110D" />
+          {/* Shaft in Pompeii red */}
+          <line
+            x1="9"
+            y1="4"
+            x2="9"
+            y2="22"
+            stroke="#8B2C2C"
+            strokeWidth="3"
+            strokeLinecap="square"
+          />
+          {/* Base */}
+          <rect x="0" y="23" width="18" height="3" fill="#14110D" />
+        </svg>
       </div>
     ),
-    {
-      ...size,
-      ...(fontData
-        ? {
-            fonts: [
-              {
-                name: "Fraunces",
-                data: fontData,
-                style: "normal",
-                weight: 400,
-              },
-            ],
-          }
-        : {}),
-    }
+    { ...size }
   );
 }

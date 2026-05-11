@@ -53,22 +53,42 @@ export async function GET(request: Request) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#F7F4ED",
+          background: "#F5F1E8",
           padding: "80px 96px",
-          color: "#0F1116",
+          color: "#14110D",
           fontFamily: fonts ? "Newsreader" : undefined,
         }}
       >
-        {/* Top hairline + wordmark */}
-        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <div style={{ width: 16, height: 2, background: "#8B2C2C" }} />
+        {/* Wordmark — column sigil + lowercase Fraunces caventia */}
+        <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+          <svg
+            width="22"
+            height="34"
+            viewBox="0 0 18 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="0" y="0" width="18" height="2" fill="#14110D" />
+            <line
+              x1="9"
+              y1="3"
+              x2="9"
+              y2="21"
+              stroke="#8B2C2C"
+              strokeWidth="2"
+              strokeLinecap="square"
+            />
+            <line x1="6" y1="4" x2="6" y2="20" stroke="#14110D" strokeWidth="0.5" opacity="0.4" />
+            <line x1="12" y1="4" x2="12" y2="20" stroke="#14110D" strokeWidth="0.5" opacity="0.4" />
+            <rect x="0" y="22" width="18" height="2" fill="#14110D" />
+          </svg>
           <div
             style={{
-              fontFamily: fonts ? "Newsreader" : undefined,
-              fontSize: 22,
+              fontFamily: fonts ? "Fraunces" : undefined,
+              fontSize: 34,
               fontWeight: 500,
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
+              letterSpacing: "-0.02em",
+              lineHeight: 1,
             }}
           >
             caventia
@@ -95,7 +115,7 @@ export async function GET(request: Request) {
                 fontFamily: fonts ? "Newsreader" : undefined,
                 fontSize: 28,
                 fontWeight: 400,
-                color: "#5C5852",
+                color: "#5C5346",
                 marginTop: 36,
                 maxWidth: 900,
                 lineHeight: 1.4,
@@ -114,10 +134,10 @@ export async function GET(request: Request) {
             alignItems: "flex-end",
             fontFamily: fonts ? "Newsreader" : undefined,
             fontSize: 16,
-            color: "#5C5852",
+            color: "#5C5346",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            borderTop: "1px solid #D4CFC4",
+            borderTop: "1px solid #D4CCBA",
             paddingTop: 24,
           }}
         >
