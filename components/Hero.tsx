@@ -35,7 +35,11 @@ export default function Hero() {
         <h1
           className="anim-fade-up delay-200 font-display font-normal relative max-w-[1040px] mb-12 md:mb-12"
           style={{
-            fontSize: "clamp(40px, 11vw, 144px)",
+            // Cap reduced from 144 to 120px: at 144 the italic "for regulated
+            // AI agents." overflowed the 1040 container and wrapped to a 3rd
+            // line on wide viewports. 120 fits cleanly in 2 lines while staying
+            // editorial-scale.
+            fontSize: "clamp(40px, 9vw, 120px)",
             lineHeight: 0.95,
             letterSpacing: "-0.035em",
             color: "var(--color-ink)",
