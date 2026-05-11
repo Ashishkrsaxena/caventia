@@ -27,7 +27,7 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-paper">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28 grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10 lg:gap-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-10 lg:gap-20">
           <aside>
             <p className="type-label mb-3">What to expect</p>
             <ul className="space-y-3 mb-10">

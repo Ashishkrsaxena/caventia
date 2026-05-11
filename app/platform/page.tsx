@@ -108,7 +108,7 @@ export default function PlatformPage() {
               <article
                 key={p.id}
                 id={p.id}
-                className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 md:gap-16 pb-20 border-b border-rule last:border-b-0 last:pb-0"
+                className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-6 md:gap-16 pb-20 border-b border-rule last:border-b-0 last:pb-0"
               >
                 <div>
                   <p className="font-display italic text-[28px] text-accent font-medium leading-none mb-2">

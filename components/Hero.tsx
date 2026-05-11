@@ -21,11 +21,20 @@ export default function Hero() {
           industries, not by horizontal AI platforms.
         </p>
 
-        <div className="mt-12 flex flex-col xs:flex-row gap-4 anim-fade-up delay-600">
-          <LinkButton href="/contact" variant="primary">
+        <div className="mt-12 flex flex-col xs:flex-row gap-4 anim-fade-up delay-600 items-stretch xs:items-start">
+          {/* Design system §8.5: primary CTA ~80% width on mobile, centered */}
+          <LinkButton
+            href="/contact"
+            variant="primary"
+            className="w-[80%] xs:w-auto self-center xs:self-auto"
+          >
             Talk to the founder
           </LinkButton>
-          <LinkButton href="/sr117" variant="secondary">
+          <LinkButton
+            href="/sr117"
+            variant="secondary"
+            className="w-[80%] xs:w-auto self-center xs:self-auto"
+          >
             Read the SR 11-7 whitepaper
           </LinkButton>
         </div>
