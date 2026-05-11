@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 type Props = {
   children: ReactNode;
   // v2: section labels lead with a 24px accent rule. `numeral` is kept for
-  // backward compatibility but is now optional — marginalia handles the
+  // backward compatibility but is now optional - marginalia handles the
   // chapter feel on most pages.
   numeral?: string;
   centered?: boolean;

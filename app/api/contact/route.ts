@@ -93,8 +93,8 @@ export async function POST(req: Request) {
 
   const subject =
     kind === "press"
-      ? `[Caventia] Press inquiry — ${body.outlet}`
-      : `[Caventia] Design-partner inquiry — ${body.institution}`;
+      ? `[Caventia] Press inquiry - ${body.outlet}`
+      : `[Caventia] Design-partner inquiry - ${body.institution}`;
 
   await sendNotification({
     to: FORWARD_TO,
@@ -106,15 +106,15 @@ export async function POST(req: Request) {
   // Confirmation back to requester.
   await sendNotification({
     to: email,
-    subject: "Caventia — we received your note",
+    subject: "Caventia - we received your note",
     text: [
-      `Hi ${name.split(" ")[0]} —`,
+      `Hi ${name.split(" ")[0]} -`,
       ``,
       `Thanks for writing. Your ${
         kind === "press" ? "press" : "design-partner"
       } note has reached the founder. Expect a reply within two business days.`,
       ``,
-      `— Caventia`,
+      `- Caventia`,
     ].join("\n"),
   });
 

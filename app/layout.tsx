@@ -40,13 +40,13 @@ const PLAUSIBLE_DOMAIN = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Caventia — The audit-trail spine for regulated AI agents",
+    default: "Caventia - The audit-trail spine for regulated AI agents",
     template: "%s · Caventia",
   },
   description:
     "Caventia is the vertical TRiSM platform that ships SR 11-7 model risk artifacts for banks and FDA 510(k)-ready governance artifacts for health systems.",
   openGraph: {
-    title: "Caventia — The audit-trail spine for regulated AI agents",
+    title: "Caventia - The audit-trail spine for regulated AI agents",
     description:
       "Vertical AI governance for regulated industries. SR 11-7 for banks, FDA 510(k) for health systems.",
     siteName: "Caventia",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Caventia — The audit-trail spine for regulated AI agents",
+    title: "Caventia - The audit-trail spine for regulated AI agents",
     description:
       "Vertical AI governance for regulated industries. SR 11-7 for banks, FDA 510(k) for health systems.",
     images: ["/api/og?title=Caventia&desc=The+audit-trail+spine+for+regulated+AI+agents"],

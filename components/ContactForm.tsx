@@ -15,9 +15,9 @@ type Kind = "design-partner" | "press";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const AUM_TIERS = [
-  "$10B–$50B AUM",
-  "$50B–$100B AUM",
-  "$100B–$500B AUM",
+  "$10B-$50B AUM",
+  "$50B-$100B AUM",
+  "$100B-$500B AUM",
   "$500B+ AUM",
   "Series B+ fintech",
   "Health system ($1B+ revenue)",

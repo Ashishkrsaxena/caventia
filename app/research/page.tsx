@@ -4,9 +4,9 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "Research — Peer-reviewed papers and books by the founder",
+  title: "Research - Peer-reviewed papers and books by the founder",
   description:
-    "A curated list of Ashish K. Saxena's published work: peer-reviewed papers on fraud detection, LSTM hospital systems, AI ethics, and TRiSM frameworks.",
+    "A curated list of Ashish K. Saxena's published work: peer-reviewed papers on fraud detection, LSTM hospital systems, AI ethics and TRiSM frameworks.",
 };
 
 type Paper = {
@@ -146,7 +146,7 @@ export default function ResearchPage() {
           </h1>
           <p className="type-body-lg mt-8 max-w-[640px] text-ink-mute font-light">
             Forty-two peer-reviewed papers and two books across fraud
-            detection, fair lending, clinical AI, federated learning, and AI
+            detection, fair lending, clinical AI, federated learning and AI
             ethics. A curated selection follows.
           </p>
         </div>

@@ -4,7 +4,7 @@ const PROBLEMS = [
   {
     numeral: "I.",
     title: "Horizontal tools, vertical regulators",
-    body: 'Credo AI, Fiddler, Arthur — none of them ship the SR 11-7 model risk documentation pack an OCC examiner expects. They were built for "AI governance" in the abstract.',
+    body: 'Credo AI, Fiddler, Arthur - none of them ship the SR 11-7 model risk documentation pack an OCC examiner expects. They were built for "AI governance" in the abstract.',
   },
   {
     numeral: "II.",
@@ -14,7 +14,7 @@ const PROBLEMS = [
   {
     numeral: "III.",
     title: "No certified human in the loop",
-    body: "Banks need third-party model validation under SR 11-7. There is no productized auditor network for AI agents — you hire a Big 4 consulting team at $500K and wait six months.",
+    body: "Banks need third-party model validation under SR 11-7. There is no productized auditor network for AI agents - you hire a Big 4 consulting team at $500K and wait six months.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function ProblemSection() {
         >
           Pre-deploy security scan. Runtime audit logging. Governance
           documentation. Third-party sign-off. Today, each step is a separate
-          vendor, a separate workflow, and a separate gap in the model risk
+          vendor, a separate workflow and a separate gap in the model risk
           file your examiner is going to read.
         </p>
 

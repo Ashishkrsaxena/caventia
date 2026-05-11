@@ -21,15 +21,15 @@ export default function Home() {
         >
           spine
         </em>
-        . Every other artifact regulators require — model cards,
-        disparate-impact reports, 510(k) submissions — hangs off it.&rdquo;
+        . Every other artifact regulators require - model cards,
+        disparate-impact reports, 510(k) submissions - hangs off it.&rdquo;
       </PullQuote>
       <SpineDiagram />
       <FounderBlock />
       <StatFrame
         number="42"
         title="Peer-reviewed papers, two books, thirty-seven citations."
-        body="Spanning fraud detection, LSTM hospital systems, AI ethics, and TRiSM frameworks — the kind of credentials banks ask for and rarely find in an AI infrastructure founder."
+        body="Spanning fraud detection, LSTM hospital systems, AI ethics and TRiSM frameworks - the kind of credentials banks ask for and rarely find in an AI infrastructure founder."
       />
       <LetterFromFounder />
     </>

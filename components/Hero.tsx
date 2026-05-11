@@ -28,7 +28,7 @@ export default function Hero() {
           >
             Caventia · f.pl.
           </span>
-          from Latin <i>cavēns, cavēre</i> — to be on guard, to take heed.
+          from Latin <i>cavēns, cavēre</i> - to be on guard, to take heed.
         </div>
 
         {/* Massive headline */}
@@ -61,7 +61,7 @@ export default function Hero() {
           </em>
         </h1>
 
-        {/* Hero meta — For FinTech / For Healthcare */}
+        {/* Hero meta - For FinTech / For Healthcare */}
         <div
           className="anim-fade-in delay-600 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 max-w-[880px] mt-16 md:mt-20 pt-10 md:pt-12 border-t border-rule"
         >

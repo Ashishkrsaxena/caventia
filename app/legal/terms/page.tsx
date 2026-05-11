@@ -32,7 +32,7 @@ export default function TermsPage() {
           </h2>
           <p>
             The Site is an informational and marketing presence for Caventia.
-            It is not a product, and it does not constitute legal, regulatory,
+            It is not a product and it does not constitute legal, regulatory,
             financial, or medical advice. The frameworks, whitepapers, and
             opinions on the Site are provided for general professional
             interest only.
@@ -63,7 +63,7 @@ export default function TermsPage() {
           <p>
             The Site, including its text, design, source code, whitepapers,
             and the Caventia name and wordmark, is owned by Caventia and
-            protected by applicable copyright, trademark, and intellectual
+            protected by applicable copyright, trademark and intellectual
             property law. You may quote brief excerpts of whitepapers with
             attribution. Republishing whole sections requires written
             permission.
@@ -109,7 +109,7 @@ export default function TermsPage() {
             Contact
           </h2>
           <p>
-            Caventia Inc. — Delaware, USA. Email{" "}
+            Caventia Inc. - Delaware, USA. Email{" "}
             <a
               href="mailto:legal@caventia.com"
               className="text-accent border-b border-accent"

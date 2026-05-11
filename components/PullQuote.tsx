@@ -5,8 +5,8 @@ type Props = {
 
 /**
  * Editorial pull quote. Sits between sections as a hairline-bordered break,
- * giving a memorable line magazine-feature weight. Two accent rules — one
- * above, one below — frame the quote.
+ * giving a memorable line magazine-feature weight. Two accent rules - one
+ * above, one below - frame the quote.
  */
 export default function PullQuote({ children, cite }: Props) {
   return (

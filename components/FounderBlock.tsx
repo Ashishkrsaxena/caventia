@@ -10,8 +10,8 @@ type Credential = {
 const CREDENTIALS: Credential[] = [
   {
     num: "I.",
-    text: "Amazon FinTech — 40% fraud reduction, 75% processing-error reduction at scale",
-    meta: "2018–2023",
+    text: "Amazon FinTech - 40% fraud reduction, 75% processing-error reduction at scale",
+    meta: "2018-2023",
   },
   {
     num: "II.",
@@ -128,8 +128,8 @@ export default function FounderBlock() {
               Caventia exists because the people building AI in banks and
               hospitals don&apos;t have what they need from horizontal AI
               platforms. After fifteen years deploying machine learning in
-              regulated industries — at Amazon FinTech, in hospital management
-              systems, and in published frameworks read by the field — the
+              regulated industries - at Amazon FinTech, in hospital management
+              systems and in published frameworks read by the field - the
               gap became impossible to ignore.
             </p>
 

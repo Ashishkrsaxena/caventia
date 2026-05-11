@@ -1,7 +1,7 @@
 /**
  * Minimal Resend wrapper that no-ops when no API key is configured.
  *
- * Real Resend integration is intentionally not pulled in as a dependency yet —
+ * Real Resend integration is intentionally not pulled in as a dependency yet -
  * once `RESEND_API_KEY` is set, install the `resend` package and swap the
  * fetch-based call below for the SDK. The shape stays the same.
  */
@@ -23,7 +23,7 @@ export async function sendNotification({
   const from = process.env.RESEND_FROM_EMAIL ?? "Caventia <noreply@caventia.com>";
 
   if (!key) {
-    // Dev/stub mode — just log to server console.
+    // Dev/stub mode - just log to server console.
     // eslint-disable-next-line no-console
     console.log("[email:logged]", { to, subject, text, replyTo });
     return { ok: true, mode: "logged" };

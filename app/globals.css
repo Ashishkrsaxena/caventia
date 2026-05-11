@@ -2,28 +2,28 @@
 
 /* ──────────────────────────────────────────────────────────────
    Caventia design tokens (per CAVENTIA_DESIGN_SYSTEM.md)
-   "Editorial Institutional" — parchment, deep ink, Pompeii red.
+   "Editorial Institutional" - parchment, deep ink, Pompeii red.
    ──────────────────────────────────────────────────────────── */
 
 @theme {
-  /* Colors — Backgrounds (v2: warmer parchment, deeper warm black) */
+  /* Colors - Backgrounds (v2: warmer parchment, deeper warm black) */
   --color-parchment: #F5F1E8;
   --color-paper: #FBF8F0;
   --color-deep: #14110D;
   --color-deep-warm: #1E1A14;
 
-  /* Colors — Text */
+  /* Colors - Text */
   --color-ink: #14110D;
   --color-ink-mute: #5C5346;
   --color-ink-light: #8E8275;
   --color-ink-inverse: #F5F1E8;
 
-  /* Colors — Rules & dividers */
+  /* Colors - Rules & dividers */
   --color-rule: #D4CCBA;
   --color-rule-strong: #A89F8A;
   --color-rule-soft: #E5DDC9;
 
-  /* Colors — Accent (Pompeii red) */
+  /* Colors - Accent (Pompeii red) */
   --color-accent: #8B2C2C;
   --color-accent-bright: #A93428;
   --color-accent-soft: #C4948E;
@@ -31,13 +31,13 @@
   --color-accent-deep: #6B2020;
   --color-accent-warm: #C68D60;
 
-  /* Colors — Functional */
+  /* Colors - Functional */
   --color-success: #2E5C3E;
   --color-warning: #A87A2F;
   --color-link: #8B2C2C;
   --color-link-hover: #6B2020;
 
-  /* Fonts — wired to next/font CSS variables in layout.tsx */
+  /* Fonts - wired to next/font CSS variables in layout.tsx */
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-body: var(--font-newsreader), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
@@ -70,7 +70,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Paper texture — slightly more visible than v1, four-layer grain */
+/* Paper texture - slightly more visible than v1, four-layer grain */
 body::before {
   content: '';
   position: fixed;
@@ -119,7 +119,7 @@ body::before {
 .font-body { font-family: var(--font-body); }
 .font-mono { font-family: var(--font-mono); }
 
-/* Design system §2.4 — display numerals lining, body numerals oldstyle.
+/* Design system §2.4 - display numerals lining, body numerals oldstyle.
    Body already gets onum from the body{} rule above. */
 .font-display,
 [class*="type-display-"] {
@@ -193,7 +193,7 @@ body::before {
   line-height: 1.50;
 }
 
-/* Drop cap — Fraunces 84px in Pompeii red, opsz axis cranked to display size */
+/* Drop cap - Fraunces 84px in Pompeii red, opsz axis cranked to display size */
 .dropcap::first-letter,
 .dropcap-v2::first-letter {
   font-family: var(--font-display);
@@ -259,7 +259,7 @@ body::before {
   animation: drawDown 1200ms ease-out forwards;
 }
 
-/* Reduced motion — kill all animation */
+/* Reduced motion - kill all animation */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -281,7 +281,7 @@ body::before {
 
 /* ──────────────── Print stylesheet ────────────────
    Design system §11 quality bar: "Print the home page to PDF.
-   Does it look like a serious document?" — strip chrome, invert
+   Does it look like a serious document?" - strip chrome, invert
    the deep-ink sections, drop the texture overlay. */
 @media print {
   html, body {
@@ -315,7 +315,7 @@ body::before {
     background: #4A1414 !important;
     color: white !important;
   }
-  /* Drop animated reveals — show final state */
+  /* Drop animated reveals - show final state */
   .anim-fade-in,
   .anim-fade-up {
     opacity: 1 !important;

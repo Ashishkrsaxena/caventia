@@ -99,7 +99,7 @@ export default function Footer() {
           </span>
         </div>
 
-        {/* Legal links — small subline so /privacy and /terms remain reachable */}
+        {/* Legal links - small subline so /privacy and /terms remain reachable */}
         <div className="mt-3 font-mono text-[11px] tracking-[0.05em] text-parchment/30">
           <Link href="/legal/privacy" className="hover:text-parchment/80 transition-colors">
             Privacy

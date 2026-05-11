@@ -32,7 +32,7 @@ export async function POST(req: Request) {
   }
   if (!isBusinessEmail(email)) {
     return NextResponse.json(
-      { error: "Please use your work email — no gmail.com, yahoo.com, or outlook.com." },
+      { error: "Please use your work email - no gmail.com, yahoo.com, or outlook.com." },
       { status: 400 }
     );
   }
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
   // 1. Notify the founder.
   await sendNotification({
     to: FORWARD_TO,
-    subject: `[Caventia] Whitepaper request — ${paperId}`,
+    subject: `[Caventia] Whitepaper request - ${paperId}`,
     text: `New whitepaper request.\n\nPaper: ${paperId}\nEmail: ${email}\n`,
     replyTo: email,
   });
@@ -50,13 +50,13 @@ export async function POST(req: Request) {
     to: email,
     subject: "Your Caventia whitepaper is on its way",
     text: [
-      `Hi —`,
+      `Hi -`,
       ``,
       `Thanks for requesting "${paperId === "sr117" ? "SR 11-7 Compliance for AI Agents: A Practical Framework" : paperId}".`,
       ``,
-      `The PDF will arrive in a follow-up email within the next business day. If you'd like to discuss your specific examiner readiness in the meantime, reply to this email — Ashish reads every reply.`,
+      `The PDF will arrive in a follow-up email within the next business day. If you'd like to discuss your specific examiner readiness in the meantime, reply to this email - Ashish reads every reply.`,
       ``,
-      `— Caventia`,
+      `- Caventia`,
     ].join("\n"),
   });
 

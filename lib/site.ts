@@ -19,13 +19,13 @@ export const FOUR_PRODUCTS = [
     name: "AgentGuard",
     hook: "Pre-deployment validation",
     description:
-      "Validate every AI agent against SR 11-7, ECOA, and HIPAA constraints before it reaches production.",
+      "Validate every AI agent against SR 11-7, ECOA and HIPAA constraints before it reaches production.",
   },
   {
     name: "Audit Trail",
     hook: "The spine",
     description:
-      "Immutable, examiner-ready log of every model decision, input, and outcome. The single source of truth.",
+      "Immutable, examiner-ready log of every model decision, input and outcome. The single source of truth.",
   },
   {
     name: "Compliance Passport",
@@ -37,7 +37,7 @@ export const FOUR_PRODUCTS = [
     name: "Auditor Bridge",
     hook: "Examiner workflow",
     description:
-      "Direct read-only access for OCC, FDA, and internal auditors. No screenshots, no email chains.",
+      "Direct read-only access for OCC, FDA and internal auditors. No screenshots, no email chains.",
   },
 ] as const;
 

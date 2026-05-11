@@ -59,7 +59,7 @@ export async function GET(request: Request) {
           fontFamily: fonts ? "Newsreader" : undefined,
         }}
       >
-        {/* Wordmark — column sigil + lowercase Fraunces caventia */}
+        {/* Wordmark - column sigil + lowercase Fraunces caventia */}
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           <svg
             width="22"

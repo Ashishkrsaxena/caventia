@@ -83,7 +83,7 @@ function SpineNode({
         transition: `opacity 400ms ease ${delay}ms, transform 400ms ease ${delay}ms, background-color 300ms ease, border-color 300ms ease`,
       }}
     >
-      {/* Connector hairline to the spine — desktop only, longer + softer in v3 */}
+      {/* Connector hairline to the spine - desktop only, longer + softer in v3 */}
       <span
         aria-hidden="true"
         className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-px bg-ink opacity-40 transition-[width] duration-[600ms] ease-out ${
@@ -212,7 +212,7 @@ export default function SpineDiagram() {
   return (
     <section className="relative overflow-hidden bg-paper border-y border-rule z-[2]">
       <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 py-24 md:py-40">
-        {/* Intro — centered */}
+        {/* Intro - centered */}
         <div className="text-center max-w-[720px] mx-auto mb-20 md:mb-24">
           <p
             className="font-body font-medium uppercase text-ink-mute inline-flex items-center gap-2.5 mb-5"
@@ -242,7 +242,7 @@ export default function SpineDiagram() {
             }}
           >
             Every AI decision flows through one capture layer. From there,
-            four product surfaces share evidence, share schema, and produce
+            four product surfaces share evidence, share schema and produce
             regulator-ready artifacts without manual stitching.
           </p>
         </div>
@@ -256,7 +256,7 @@ export default function SpineDiagram() {
               <SpineNode node={LEFT_NODES[1]} side="left" revealed={revealed} delay={200} />
             </div>
 
-            {/* Spine bone with vertebrae — desktop only */}
+            {/* Spine bone with vertebrae - desktop only */}
             <div className="hidden md:flex flex-col items-center justify-around py-3 relative">
               {/* Vertical bone */}
               <span

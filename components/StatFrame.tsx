@@ -5,7 +5,7 @@ type Props = {
 };
 
 /**
- * v2 stat frame — 2px ink rules top and bottom with ❦ ornaments at
+ * v2 stat frame - 2px ink rules top and bottom with ❦ ornaments at
  * center-top and center-bottom. Massive 200px display numeral on the
  * left, headline + italic caption on the right. Reads as a document
  * specimen page rather than a marketing stat.

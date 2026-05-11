@@ -5,13 +5,13 @@ import { LinkButton } from "@/components/ui/Button";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "About — Ashish K. Saxena, founder",
+  title: "About - Ashish K. Saxena, founder",
   description:
     "Caventia is founded by Ashish K. Saxena: Amazon FinTech alum, author of The Ethics of Artificial Intelligence, IJSR reviewer, 42 peer-reviewed papers.",
 };
 
 const CREDENTIALS = [
-  "Amazon FinTech — 40% fraud reduction, 75% processing-error reduction at scale",
+  "Amazon FinTech - 40% fraud reduction, 75% processing-error reduction at scale",
   "Author, The Ethics of Artificial Intelligence (2024) & Society and the Machine",
   "42 peer-reviewed papers · 37 citations on flagship FinTech fraud-detection paper",
   "IJSR (International Journal of Scientific Research) reviewer",
@@ -111,7 +111,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* "Why Caventia exists" — long form with drop cap */}
+      {/* "Why Caventia exists" - long form with drop cap */}
       <section className="bg-parchment border-t border-rule">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-24 md:py-32">
           <SectionLabel numeral="I.">Why Caventia exists</SectionLabel>
@@ -119,7 +119,7 @@ export default function AboutPage() {
           <div className="mt-12 max-w-[720px] mx-auto md:mx-0">
             <p className="dropcap font-body text-[19px] md:text-[20px] text-ink leading-[1.65] mb-6">
               At Amazon FinTech I watched smart engineers ship models that
-              moved billions of dollars in payments, and I watched the model
+              moved billions of dollars in payments and I watched the model
               risk function struggle to keep up. We were good at the
               engineering. We were not great at the documentation an examiner
               expects under SR 11-7. The gap kept widening.
@@ -127,9 +127,9 @@ export default function AboutPage() {
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
               Then generative AI arrived. Suddenly every business unit wanted
               an agent. Suddenly every agent was making decisions that touched
-              fair-lending, fraud, KYC, and clinical care. The horizontal AI
-              governance vendors that sprang up in 2023 and 2024 — Credo,
-              Fiddler, Arthur — were doing useful work, but none of them were
+              fair-lending, fraud, KYC and clinical care. The horizontal AI
+              governance vendors that sprang up in 2023 and 2024 - Credo,
+              Fiddler, Arthur - were doing useful work, but none of them were
               shipping the artifact a Federal Reserve examiner asks for. The
               language did not match. The schema did not match. The mental
               model did not match.

@@ -31,7 +31,7 @@ export default function NotFound() {
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-3">
             {[
               { href: "/", label: "Home" },
-              { href: "/platform", label: "Platform — four products" },
+              { href: "/platform", label: "Platform - four products" },
               { href: "/sr117", label: "SR 11-7 whitepaper" },
               { href: "/about", label: "About the founder" },
               { href: "/research", label: "Research" },

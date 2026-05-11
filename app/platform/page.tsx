@@ -6,7 +6,7 @@ import SpineDiagram from "@/components/SpineDiagram";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "Platform — Four products, one audit-trail spine",
+  title: "Platform - Four products, one audit-trail spine",
   description:
     "Caventia's four-product architecture: AgentGuard, Audit Trail, Compliance Passport, Auditor Bridge. Built around a single audit-log spine for SR 11-7 and FDA 510(k) examiner readiness.",
 };
@@ -31,10 +31,10 @@ const PRODUCTS: Product[] = [
     name: "AgentGuard",
     tagline: "The CI/CD scanner for AI agents.",
     description:
-      "AgentGuard wires into your build pipeline and runs adversarial checks every time a model or prompt changes. It detects prompt-injection paths, PII leakage, jailbreak surfaces, and policy violations before an agent reaches production. Output is a deploy-gate decision and a machine-readable report.",
+      "AgentGuard wires into your build pipeline and runs adversarial checks every time a model or prompt changes. It detects prompt-injection paths, PII leakage, jailbreak surfaces and policy violations before an agent reaches production. Output is a deploy-gate decision and a machine-readable report.",
     regulator: "SR 11-7 §IV (model implementation), NIST AI RMF GOVERN-2.1",
     artifact: "Pre-deployment validation report (PDF + JSON)",
-    pricingBand: "$60K–$120K annual seat",
+    pricingBand: "$60K-$120K annual seat",
   },
   {
     id: "audit-trail",
@@ -43,10 +43,10 @@ const PRODUCTS: Product[] = [
     name: "Audit Trail",
     tagline: "The spine. Every agent action, captured with full context.",
     description:
-      "An SDK and dashboard that capture every input, feature snapshot, decision, and outcome. The data structure was designed to satisfy SR 11-7's reconstruction requirement and FDA's algorithm change protocol expectations. This is the substrate every other Caventia product reads from.",
+      "An SDK and dashboard that capture every input, feature snapshot, decision and outcome. The data structure was designed to satisfy SR 11-7's reconstruction requirement and FDA's algorithm change protocol expectations. This is the substrate every other Caventia product reads from.",
     regulator: "SR 11-7 §V (ongoing monitoring), FDA PCCP, ECOA §1002.9",
     artifact: "Queryable runtime log with examiner-mode export",
-    pricingBand: "$120K–$250K platform + per-event scaling",
+    pricingBand: "$120K-$250K platform + per-event scaling",
   },
   {
     id: "passport",
@@ -58,7 +58,7 @@ const PRODUCTS: Product[] = [
       "The Passport reads from the Audit Trail and emits the model risk pack your examiner expects: SR 11-7 model documentation, ECOA disparate-impact analysis, NIST AI RMF mapping, NYC Local Law 144 disclosures. The artifacts ship as PDFs with full evidence links back to the audit log.",
     regulator: "SR 11-7 §VII, ECOA, NYC LL 144, NIST AI RMF",
     artifact: "Examiner-ready model risk pack",
-    pricingBand: "$80K–$150K annual",
+    pricingBand: "$80K-$150K annual",
   },
   {
     id: "bridge",
@@ -67,10 +67,10 @@ const PRODUCTS: Product[] = [
     name: "Auditor Bridge",
     tagline: "Productized model validation. With liability coverage.",
     description:
-      "SR 11-7 requires independent third-party model validation. Today, that means a $500K Big 4 engagement and six months of waiting. Auditor Bridge gives banks a productized network of certified AI validators — bonded, insured, and pre-trained on the Caventia evidence model. Validation cycles shrink from quarters to weeks.",
+      "SR 11-7 requires independent third-party model validation. Today, that means a $500K Big 4 engagement and six months of waiting. Auditor Bridge gives banks a productized network of certified AI validators - bonded, insured and pre-trained on the Caventia evidence model. Validation cycles shrink from quarters to weeks.",
     regulator: "SR 11-7 §VI (independent validation)",
     artifact: "Signed validator opinion + liability rider",
-    pricingBand: "$40K–$80K per validation",
+    pricingBand: "$40K-$80K per validation",
   },
 ];
 
@@ -95,14 +95,14 @@ export default function PlatformPage() {
           </h1>
           <p className="type-body-lg mt-8 max-w-[640px] text-ink-mute font-light">
             Caventia is a vertical TRiSM platform. The four products share one
-            data model, one identity layer, and one evidence ledger — so the
+            data model, one identity layer and one evidence ledger - so the
             artifact your OCC examiner reads is the same artifact your auditor
             countersigns.
           </p>
         </div>
       </section>
 
-      {/* Spine diagram — visual anchor */}
+      {/* Spine diagram - visual anchor */}
       <SpineDiagram />
 
       {/* Per-product detail */}
@@ -110,7 +110,7 @@ export default function PlatformPage() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-24 md:py-32">
           <SectionLabel numeral="V.">The four products</SectionLabel>
           <h2 className="type-display-md mt-6 max-w-[820px] mb-16">
-            What each surface ships, and which regulator hook it satisfies.
+            What each surface ships and which regulator hook it satisfies.
           </h2>
 
           <div className="flex flex-col gap-20">
@@ -175,7 +175,7 @@ export default function PlatformPage() {
           </h2>
           <p className="type-body-lg mt-6 max-w-[560px] mx-auto text-ink-mute font-light">
             Thirty minutes. No deck, no sales engineer. Just the architecture,
-            your specific regulator pain, and a real conversation about whether
+            your specific regulator pain and a real conversation about whether
             Caventia fits.
           </p>
           <div className="mt-10">

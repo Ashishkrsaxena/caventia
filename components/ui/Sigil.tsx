@@ -10,14 +10,14 @@ type Props = {
 };
 
 /**
- * Caventia sigil — architectural column motif.
+ * Caventia sigil - architectural column motif.
  *
  * Top + bottom horizontals form the capital and base of a classical
  * column. The central vertical shaft in Pompeii red is the spine motif
  * (the audit-trail spine, in logo form). Two thin flute lines flank the
  * shaft for restrained fluting.
  *
- * NOT a copyright symbol — the original C-with-vertical-bar mark read
+ * NOT a copyright symbol - the original C-with-vertical-bar mark read
  * exactly like © at small sizes; this column reads as architecture.
  *
  * Colors use `currentColor` and `var(--sigil-accent)` so the sigil
@@ -38,7 +38,7 @@ export function Sigil({
         width,
         height,
         color,
-        // @ts-expect-error — CSS custom prop
+        // @ts-expect-error - CSS custom prop
         "--sigil-accent": accentColor,
       }}
       aria-hidden="true"
@@ -50,9 +50,9 @@ export function Sigil({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Capital — top horizontal */}
+        {/* Capital - top horizontal */}
         <rect x="0" y="0" width="18" height="2" fill="currentColor" />
-        {/* Column shaft — the spine motif in accent */}
+        {/* Column shaft - the spine motif in accent */}
         <line
           x1="9"
           y1="3"
@@ -81,7 +81,7 @@ export function Sigil({
           strokeWidth="0.5"
           opacity="0.4"
         />
-        {/* Base — bottom horizontal */}
+        {/* Base - bottom horizontal */}
         <rect x="0" y="22" width="18" height="2" fill="currentColor" />
       </svg>
     </span>

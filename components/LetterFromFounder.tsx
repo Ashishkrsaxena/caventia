@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * Letter from the founder — replaces the generic dark-block CTA on the
+ * Letter from the founder - replaces the generic dark-block CTA on the
  * home page. Reads as personal correspondence: dated stamp, italic
  * salutation, body with italic accent, fine print, handwritten Caveat
  * signature with meta block, CTA with overlay-fill hover. A massive
@@ -52,7 +52,7 @@ export default function LetterFromFounder() {
               fontVariationSettings: '"opsz" 36, "SOFT" 60',
             }}
           >
-            To the model risk officer reading this —
+            To the model risk officer reading this -
           </p>
 
           {/* Body */}
@@ -89,7 +89,7 @@ export default function LetterFromFounder() {
           >
             The conversations are with me directly. There is no sales team. We
             will spend thirty minutes on your specific SR 11-7 exam, your
-            specific model inventory, or your specific FDA Q-Sub timeline —
+            specific model inventory, or your specific FDA Q-Sub timeline -
             and figure out together whether the platform we&apos;re building
             fits your gauntlet. If not, you&apos;ll leave with a one-page
             framework you can use anyway.

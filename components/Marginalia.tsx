@@ -9,7 +9,7 @@ type Props = {
 /**
  * Massive faded italic Roman numeral used as section marginalia. Sits in
  * the gutter, breaks the grid, gives each section the feel of a numbered
- * chapter in a document. Pure decoration — pointer-events disabled,
+ * chapter in a document. Pure decoration - pointer-events disabled,
  * user-select disabled.
  *
  * Sizes scale down on mobile so we don't blow out the layout. Parent

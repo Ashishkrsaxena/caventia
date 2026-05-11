@@ -1,4 +1,4 @@
-# Caventia.com — Phase 1 MVP Build
+# Caventia.com - Phase 1 MVP Build
 
 Build target: 7 pages + APIs + design system, scaffolded in this directory, Next.js 14+ App Router, TypeScript, Tailwind. All asset/integration values stubbed via env vars until founder provides real ones.
 
@@ -6,11 +6,11 @@ Build target: 7 pages + APIs + design system, scaffolded in this directory, Next
 - Scope: Full Phase 1 MVP this session
 - Location: Next.js root in `/Users/ashish/Documents/CaventiaV2` (matches NebulaToolV2 pattern, matches design-system file layout spec)
 - Assets: stub everything (photo placeholder, "whitepaper coming soon" gate, mailto fallback, no analytics) until env vars provided
-- Design system: contract — do not deviate without asking
+- Design system: contract - do not deviate without asking
 
 ## Stages
 
-### Stage A — Scaffold
+### Stage A - Scaffold
 - [ ] `npx create-next-app@latest` (TS, Tailwind, App Router, no src/, eslint)
 - [ ] Configure `next/font/google`: Fraunces (opsz, 400/500/600), Newsreader (300/400/500/600 + italic 400), JetBrains Mono (400/500)
 - [ ] `app/globals.css` with full token table from design-system §3
@@ -18,44 +18,44 @@ Build target: 7 pages + APIs + design system, scaffolded in this directory, Next
 - [ ] `.env.local.example` with `RESEND_API_KEY`, `PLAUSIBLE_DOMAIN`, `CALENDLY_URL`, `CONTACT_FORWARD_EMAIL`
 - [ ] `.gitignore`, README skeleton
 
-### Stage B — UI primitives (`components/ui/`)
-- [ ] `Button.tsx` — primary (Pompeii red bg) + secondary (ink border)
-- [ ] `Field.tsx` — input, textarea, select (no floating labels)
-- [ ] `Card.tsx` — parchment bg, hairline border, no shadow
-- [ ] `SectionLabel.tsx` — small-caps eyebrow
-- [ ] `PullStat.tsx` — 96px Fraunces accent number + label
-- [ ] `Wordmark.tsx` — full + nav variant with accent rule above the "c"
+### Stage B - UI primitives (`components/ui/`)
+- [ ] `Button.tsx` - primary (Pompeii red bg) + secondary (ink border)
+- [ ] `Field.tsx` - input, textarea, select (no floating labels)
+- [ ] `Card.tsx` - parchment bg, hairline border, no shadow
+- [ ] `SectionLabel.tsx` - small-caps eyebrow
+- [ ] `PullStat.tsx` - 96px Fraunces accent number + label
+- [ ] `Wordmark.tsx` - full + nav variant with accent rule above the "c"
 
-### Stage C — Layout (`components/`)
-- [ ] `Nav.tsx` — wordmark + 3 nav items + primary CTA, mobile hamburger <768px
-- [ ] `Footer.tsx` — deep-ink bg, thesis + link columns
+### Stage C - Layout (`components/`)
+- [ ] `Nav.tsx` - wordmark + 3 nav items + primary CTA, mobile hamburger <768px
+- [ ] `Footer.tsx` - deep-ink bg, thesis + link columns
 
-### Stage D — Feature components (`components/`)
-- [ ] `Hero.tsx` — page-load choreography per design-system §6
-- [ ] `FourProductStrip.tsx` — AgentGuard / Audit Trail / Compliance Passport / Auditor Bridge
-- [ ] `FounderBlock.tsx` — photo + plain-text credentials, hairline rule
-- [ ] `SpineDiagram.tsx` — custom SVG with scroll-triggered draw animation
-- [ ] `WhitepaperGate.tsx` — single business-email field with validation
-- [ ] `ContactForm.tsx` — design-partner inquiry
+### Stage D - Feature components (`components/`)
+- [ ] `Hero.tsx` - page-load choreography per design-system §6
+- [ ] `FourProductStrip.tsx` - AgentGuard / Audit Trail / Compliance Passport / Auditor Bridge
+- [ ] `FounderBlock.tsx` - photo + plain-text credentials, hairline rule
+- [ ] `SpineDiagram.tsx` - custom SVG with scroll-triggered draw animation
+- [ ] `WhitepaperGate.tsx` - single business-email field with validation
+- [ ] `ContactForm.tsx` - design-partner inquiry
 
-### Stage E — Pages (`app/`)
-- [ ] `layout.tsx` — global with Nav + Footer + metadata template
-- [ ] `page.tsx` — Home (port homepage prototype to React/Tailwind)
-- [ ] `platform/page.tsx` — four-product detail + spine diagram
-- [ ] `about/page.tsx` — founder bio with drop cap
-- [ ] `research/page.tsx` — curated paper list
-- [ ] `contact/page.tsx` — inquiry form
-- [ ] `sr117/page.tsx` — whitepaper landing
+### Stage E - Pages (`app/`)
+- [ ] `layout.tsx` - global with Nav + Footer + metadata template
+- [ ] `page.tsx` - Home (port homepage prototype to React/Tailwind)
+- [ ] `platform/page.tsx` - four-product detail + spine diagram
+- [ ] `about/page.tsx` - founder bio with drop cap
+- [ ] `research/page.tsx` - curated paper list
+- [ ] `contact/page.tsx` - inquiry form
+- [ ] `sr117/page.tsx` - whitepaper landing
 - [ ] `legal/privacy/page.tsx`, `legal/terms/page.tsx`
 
-### Stage F — API + infra
-- [ ] `api/contact/route.ts` — server-side validation, Resend if key set, else log
-- [ ] `api/whitepaper/route.ts` — business-email validation, capture, "coming soon" if no PDF
-- [ ] `api/og/route.tsx` — dynamic OG via @vercel/og
+### Stage F - API + infra
+- [ ] `api/contact/route.ts` - server-side validation, Resend if key set, else log
+- [ ] `api/whitepaper/route.ts` - business-email validation, capture, "coming soon" if no PDF
+- [ ] `api/og/route.tsx` - dynamic OG via @vercel/og
 - [ ] `sitemap.ts`, `robots.ts`
 - [ ] `lib/email.ts`, `lib/analytics.ts`
 
-### Stage G — Smoke test
+### Stage G - Smoke test
 - [ ] `npm run dev` → hit every route, check console, test forms, test mobile breakpoint
 
 ## Open items for founder (post-launch wiring)
@@ -70,9 +70,9 @@ Build target: 7 pages + APIs + design system, scaffolded in this directory, Next
 
 ### What shipped
 - Next.js 16 + React 19 + TypeScript + Tailwind v4 scaffold inside `CaventiaV2/`. App Router, no `src/` dir, `@/*` import alias.
-- Full design-system tokens in `app/globals.css` via `@theme` (parchment, ink, rule, accent Pompeii red, fonts piped to next/font CSS variables) — exactly per CAVENTIA_DESIGN_SYSTEM.md §3.
+- Full design-system tokens in `app/globals.css` via `@theme` (parchment, ink, rule, accent Pompeii red, fonts piped to next/font CSS variables) - exactly per CAVENTIA_DESIGN_SYSTEM.md §3.
 - Three Google fonts loaded via `next/font/google`: Fraunces (variable, with SOFT/WONK/opsz axes), Newsreader (300/400/500/600 + italic), JetBrains Mono.
-- UI primitives in `components/ui/`: Button (primary + secondary + ghost), Field (input/textarea/select + label + help), Card, SectionLabel (with optional Roman-numeral prefix), PullStat (96px Fraunces accent), Wordmark (nav + display + footer variants — each with the 12px Pompeii-red rule above the "c").
+- UI primitives in `components/ui/`: Button (primary + secondary + ghost), Field (input/textarea/select + label + help), Card, SectionLabel (with optional Roman-numeral prefix), PullStat (96px Fraunces accent), Wordmark (nav + display + footer variants - each with the 12px Pompeii-red rule above the "c").
 - Nav: wordmark + Platform / Research / About + primary CTA, mobile hamburger below 768px.
 - Footer: deep-ink `#0F1116`, parchment text, link columns, mono copyright.
 - Feature components: Hero (page-load choreography), ProblemSection (Roman numerals), SpineDiagram (with "audit log" rotated label down the spine), FounderBlock (photo placeholder + plain-text creds + pull stat), FinalCta (dark variant), WhitepaperGate (single-field business-email gate), ContactForm (design-partner / press toggle).
@@ -93,10 +93,10 @@ All 8 marketing pages return 200, sizes 34KB-58KB. Sitemap and robots return 200
 - **Spine diagram scroll-triggered animation**: the static state is in place; the design system §5.6 specifies a scroll-into-view draw animation. The keyframes are defined in `globals.css` (`.spine-draw`, `@keyframes drawDown`) but not yet hooked to an IntersectionObserver. Add a small client wrapper when polishing.
 
 ### Design-system deviations to confirm
-None intentional. Spacing scale in CAVENTIA_DESIGN_SYSTEM.md §4 maps cleanly onto Tailwind's default 4px base, so no custom spacing tokens were needed. Type scale uses CSS `clamp()` for fluid sizing — the design-system gives fixed px values, but fluid resize was implied by §8 mobile adaptations ("Hero headline scales down: 72px to 44px on mobile"). If a fixed-px approach is preferred, this is a one-line change in each `.type-display-*` rule.
+None intentional. Spacing scale in CAVENTIA_DESIGN_SYSTEM.md §4 maps cleanly onto Tailwind's default 4px base, so no custom spacing tokens were needed. Type scale uses CSS `clamp()` for fluid sizing - the design-system gives fixed px values, but fluid resize was implied by §8 mobile adaptations ("Hero headline scales down: 72px to 44px on mobile"). If a fixed-px approach is preferred, this is a one-line change in each `.type-display-*` rule.
 
 ### Design decisions log
 
 | Date | Decision | Source of truth |
 |---|---|---|
-| 2026-05-10 | Hero italic "regulated AI agents." stays in Pompeii red `#8B2C2C` | Prototype `caventia-homepage.html`. Design system §3.1 ("accent used sparingly") is overridden — the prototype is art-directed and represents the founder's actual taste; when in conflict, prototype wins. |
+| 2026-05-10 | Hero italic "regulated AI agents." stays in Pompeii red `#8B2C2C` | Prototype `caventia-homepage.html`. Design system §3.1 ("accent used sparingly") is overridden - the prototype is art-directed and represents the founder's actual taste; when in conflict, prototype wins. |

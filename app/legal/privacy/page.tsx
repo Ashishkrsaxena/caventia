@@ -3,7 +3,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export const metadata: Metadata = {
   title: "Privacy policy",
-  description: "How Caventia collects, stores, and uses personal data.",
+  description: "How Caventia collects, stores and uses personal data.",
   robots: { index: true, follow: false },
 };
 
@@ -38,11 +38,11 @@ export default function PrivacyPage() {
           <ul className="list-disc pl-6 space-y-2">
             <li>Your work email address, when you request a whitepaper.</li>
             <li>
-              Your name, title, institution, AUM tier, and the inquiry message
+              Your name, title, institution, AUM tier and the inquiry message
               you write, when you submit the design-partner contact form.
             </li>
             <li>
-              Your name, outlet, deadline, and topic, when you submit the
+              Your name, outlet, deadline and topic, when you submit the
               press form.
             </li>
           </ul>
@@ -96,9 +96,9 @@ export default function PrivacyPage() {
           </h2>
           <p>
             If you are in the EU/UK, you have rights under GDPR including
-            access, rectification, erasure, restriction, and portability. If
+            access, rectification, erasure, restriction and portability. If
             you are in California, you have rights under the CCPA/CPRA
-            including access, deletion, and the right to opt out of sale (we
+            including access, deletion and the right to opt out of sale (we
             do not sell). Email{" "}
             <a
               href="mailto:privacy@caventia.com"
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
             Contact
           </h2>
           <p>
-            Caventia Inc. — Delaware, USA. For privacy questions:{" "}
+            Caventia Inc. - Delaware, USA. For privacy questions:{" "}
             <a
               href="mailto:privacy@caventia.com"
               className="text-accent border-b border-accent"

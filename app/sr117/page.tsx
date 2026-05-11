@@ -4,11 +4,11 @@ import WhitepaperGate from "@/components/WhitepaperGate";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "SR 11-7 Compliance for AI Agents — A Practical Framework",
+  title: "SR 11-7 Compliance for AI Agents - A Practical Framework",
   description:
     "A 24-page whitepaper on SR 11-7 model risk management applied to generative AI agents. Written by Ashish K. Saxena. Free download for banking and fintech model risk professionals.",
   openGraph: {
-    title: "SR 11-7 Compliance for AI Agents — A Practical Framework",
+    title: "SR 11-7 Compliance for AI Agents - A Practical Framework",
     description:
       "A 24-page whitepaper on SR 11-7 applied to AI agents. Free download.",
     images: [
@@ -70,23 +70,23 @@ export default function SR117Page() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28">
           <SectionLabel numeral="I.">An excerpt</SectionLabel>
           <h2 className="type-display-md mt-6 mb-10 max-w-[820px]">
-            What the SR 11-7 framework asks, and why generative AI breaks it.
+            What the SR 11-7 framework asks and why generative AI breaks it.
           </h2>
 
           <div className="max-w-[720px]">
             <p className="dropcap font-body text-[19px] text-ink leading-[1.65] mb-6">
               SR 11-7 was written in 2011 for a world of credit scorecards,
-              fraud rules, and stress-test econometrics. Its three pillars —
-              conceptual soundness, ongoing monitoring, and outcomes analysis —
+              fraud rules and stress-test econometrics. Its three pillars -
+              conceptual soundness, ongoing monitoring and outcomes analysis -
               were designed around models you could specify, freeze, and
               reason about as a mathematical object. The generative AI agent
               your business unit is piloting today fits none of those
-              assumptions, and your examiner has noticed.
+              assumptions and your examiner has noticed.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
               The first place SR 11-7 strains is conceptual soundness. The
               guidance asks for a clear statement of what the model is
-              supposed to do, what data it was trained on, and what the
+              supposed to do, what data it was trained on and what the
               expected error modes are. For a foundation model invoked
               through prompts, those statements either become trivially true
               (“it processes natural language”) or trivially false (“we
@@ -96,19 +96,19 @@ export default function SR117Page() {
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
               The second place it strains is ongoing monitoring. SR 11-7
               expects the model risk function to detect drift, retrain on
-              schedule, and document each change. With prompt-based agents
+              schedule and document each change. With prompt-based agents
               the change cadence is daily, the “retraining” is a prompt
-              rewrite, and the population is shifting under your feet because
+              rewrite and the population is shifting under your feet because
               user behaviour adapts to the agent. The bank needs a monitoring
               substrate that captures every prompt-version, every feature
-              snapshot, and every outcome — and produces drift evidence on
+              snapshot and every outcome - and produces drift evidence on
               the schema your examiner reads.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
               The third place it strains is independent validation. SR 11-7
               requires a third-party model validation function that can
-              opine on the model&apos;s fitness. The standard answer — hire a
-              Big 4 firm — is a six-month, half-million-dollar engagement
+              opine on the model&apos;s fitness. The standard answer - hire a
+              Big 4 firm - is a six-month, half-million-dollar engagement
               that scales poorly when your bank has fifty agents under
               review. A productized validator network, bonded and trained on
               a common evidence model, is the only economically viable

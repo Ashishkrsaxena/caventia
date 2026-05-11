@@ -13,10 +13,10 @@ type Props = {
  * Caventia wordmark. v3 pairs the architectural-column sigil with
  * lowercase Fraunces "caventia."
  *
- * - `nav` — sigil 14×22 + 22px Fraunces, gap 12px. Ink color.
- * - `display` — sigil 24×38 + clamp(40-56px) Fraunces. For oversized
+ * - `nav` - sigil 14×22 + 22px Fraunces, gap 12px. Ink color.
+ * - `display` - sigil 24×38 + clamp(40-56px) Fraunces. For oversized
  *    presentations (currently unused but kept symmetrical).
- * - `footer` — sigil 18×28 + 28px Fraunces, gap 14px. Parchment color
+ * - `footer` - sigil 18×28 + 28px Fraunces, gap 14px. Parchment color
  *    on the deep-ink footer with terracotta sigil shaft for visibility.
  */
 export function Wordmark({ variant = "nav", href = "/", className = "" }: Props) {
@@ -40,7 +40,7 @@ export function Wordmark({ variant = "nav", href = "/", className = "" }: Props)
       </span>
     );
     return href ? (
-      <Link href={href} aria-label="Caventia — home" className="inline-flex">
+      <Link href={href} aria-label="Caventia - home" className="inline-flex">
         {inner}
       </Link>
     ) : (
@@ -63,7 +63,7 @@ export function Wordmark({ variant = "nav", href = "/", className = "" }: Props)
       </span>
     );
     return href ? (
-      <Link href={href} aria-label="Caventia — home" className="inline-flex">
+      <Link href={href} aria-label="Caventia - home" className="inline-flex">
         {inner}
       </Link>
     ) : (
@@ -86,7 +86,7 @@ export function Wordmark({ variant = "nav", href = "/", className = "" }: Props)
     </span>
   );
   return href ? (
-    <Link href={href} aria-label="Caventia — home" className="inline-flex">
+    <Link href={href} aria-label="Caventia - home" className="inline-flex">
       {inner}
     </Link>
   ) : (
