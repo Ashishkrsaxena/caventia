@@ -12,12 +12,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
 };
 
+// Frontmatter dates are already ISO (YYYY-MM-DD). Display as-is to avoid
+// timezone-shift bugs and to keep dates locale-stable.
 function formatDate(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  return dateStr;
 }
 
 export default function BlogIndex() {

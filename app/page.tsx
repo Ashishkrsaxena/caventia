@@ -3,6 +3,7 @@ import ProblemSection from "@/components/ProblemSection";
 import PullQuote from "@/components/PullQuote";
 import SpineDiagram from "@/components/SpineDiagram";
 import FounderBlock from "@/components/FounderBlock";
+import LatestNotes from "@/components/LatestNotes";
 import StatFrame from "@/components/StatFrame";
 import LetterFromFounder from "@/components/LetterFromFounder";
 
@@ -26,6 +27,7 @@ export default function Home() {
       </PullQuote>
       <SpineDiagram />
       <FounderBlock />
+      <LatestNotes />
       <StatFrame
         number="226"
         title="Peer-reviewed citations. h-index 8. Two bestselling books on AI ethics."
