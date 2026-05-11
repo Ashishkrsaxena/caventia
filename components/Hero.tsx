@@ -33,17 +33,19 @@ export default function Hero() {
 
         {/* Massive headline */}
         <h1
-          className="anim-fade-up delay-200 font-display font-normal relative max-w-[1100px] mb-12 md:mb-12"
+          className="anim-fade-up delay-200 font-display font-normal relative max-w-[1040px] mb-12 md:mb-12"
           style={{
             fontSize: "clamp(40px, 11vw, 144px)",
             lineHeight: 0.95,
             letterSpacing: "-0.035em",
             color: "var(--color-ink)",
             fontVariationSettings: '"opsz" 144, "SOFT" 30, "WONK" 0',
+            textWrap: "balance",
           }}
         >
-          The audit-trail spine for
+          The audit-trail spine
           <br />
+          for{" "}
           <em
             className="text-accent"
             style={{
