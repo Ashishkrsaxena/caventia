@@ -34,12 +34,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-parchment/10 flex flex-col md:flex-row justify-between gap-4">
-          <p className="font-mono text-[12px] text-parchment/50">
-            © {new Date().getFullYear()} Caventia Inc. All rights reserved.
+        <div className="mt-14 pt-8 border-t border-parchment/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+          <p className="font-mono text-[12px] text-parchment/50 tracking-[0.05em]">
+            © {new Date().getFullYear()} Caventia Inc.
           </p>
-          <p className="font-mono text-[12px] text-parchment/50">
-            Built for regulated AI. Designed in the editorial register.
+          <p className="font-mono text-[12px] text-parchment/50 tracking-[0.05em]">
+            <Link href="/legal/privacy" className="hover:text-parchment transition-colors">
+              Privacy
+            </Link>
+            <span className="mx-3 text-parchment/30">·</span>
+            <Link href="/legal/terms" className="hover:text-parchment transition-colors">
+              Terms
+            </Link>
           </p>
         </div>
       </div>
