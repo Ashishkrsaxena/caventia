@@ -52,7 +52,9 @@ export default function Hero() {
               fontVariationSettings: '"opsz" 144, "SOFT" 100, "WONK" 1',
             }}
           >
-            regulated AI&nbsp;agents.
+            regulated
+            <br />
+            AI&nbsp;agents.
           </em>
         </h1>
 
