@@ -232,7 +232,7 @@ export default function ResearchPage() {
             ))}
           </div>
           <p className="mt-12 text-center md:text-left font-mono text-[12px] tracking-[0.06em] text-ink-light max-w-[1080px] mx-auto">
-            Last verified May 2026.{" "}
+            Last verified 2026.{" "}
             <a
               href={SCHOLAR_URL}
               target="_blank"
