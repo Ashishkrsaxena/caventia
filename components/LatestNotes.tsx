@@ -4,7 +4,7 @@ import { getCategory } from "@/lib/blog-types";
 
 // Frontmatter dates are already ISO (YYYY-MM-DD). Display as-is to avoid
 // timezone-shift bugs from `new Date(...)` parsing UTC midnight as the
-// previous local day, and to keep dates locale-stable.
+// previous local day. Also keeps dates locale-stable.
 function formatDate(dateStr: string): string {
   return dateStr;
 }
