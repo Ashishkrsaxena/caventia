@@ -55,6 +55,7 @@ export default function Footer() {
             </p>
             <Link href="/sr117" className={linkClass}>SR 11-7 Whitepaper</Link>
             <Link href="/fda" className={linkClass}>FDA Q-Sub Whitepaper</Link>
+            <Link href="/blog" className={linkClass}>Notes</Link>
             <Link href="/research" className={linkClass}>Founder Research</Link>
             <Link href="/about" className={linkClass}>About</Link>
           </div>

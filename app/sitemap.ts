@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getAllPosts } from "@/lib/mdx";
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://caventia.com";
 
@@ -9,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/platform", priority: 0.9 },
     { path: "/sr117", priority: 0.9 },
     { path: "/fda", priority: 0.9 },
+    { path: "/blog", priority: 0.8 },
     { path: "/about", priority: 0.8 },
     { path: "/research", priority: 0.7 },
     { path: "/contact", priority: 0.8 },
@@ -16,10 +18,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal/terms", priority: 0.3 },
   ];
 
-  return routes.map(({ path, priority }) => ({
+  const staticEntries = routes.map(({ path, priority }) => ({
     url: `${SITE}${path}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority,
   }));
+
+  const postEntries = getAllPosts().map((post) => ({
+    url: `${SITE}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...postEntries];
 }
