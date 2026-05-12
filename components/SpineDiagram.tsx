@@ -258,11 +258,27 @@ export default function SpineDiagram() {
 
             {/* Spine bone with vertebrae - desktop only */}
             <div className="hidden md:flex flex-col items-center justify-around py-3 relative">
-              {/* Vertical bone */}
-              <span
-                aria-hidden="true"
-                className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-ink -translate-x-1/2"
-              />
+              {/* Vertical bone - SVG line that draws on reveal per design system §6 */}
+              {revealed && (
+                <svg
+                  aria-hidden="true"
+                  className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 text-ink overflow-visible"
+                  width="2"
+                  height="100%"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 2 400"
+                >
+                  <line
+                    x1="1"
+                    y1="0"
+                    x2="1"
+                    y2="400"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="spine-draw"
+                  />
+                </svg>
+              )}
               {/* Top label */}
               <span
                 className="absolute left-1/2 -top-3 -translate-x-1/2 bg-paper px-2 py-1 border border-rule font-mono uppercase text-ink-mute z-[3] whitespace-nowrap"
