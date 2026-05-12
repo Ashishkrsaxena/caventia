@@ -19,6 +19,7 @@ const organization = {
       "Amazon FinTech alum. Amazon-bestselling author of two books on AI ethics. IJSR peer reviewer with 42 papers reviewed. h-index 8 with 226 citations on Google Scholar. 2024 Best Technical Researcher of AI award.",
     sameAs: [
       "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
+      "https://www.linkedin.com/in/ashish-k-saxena/",
     ],
   },
   foundingDate: foundingDate(),

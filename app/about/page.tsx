@@ -88,7 +88,7 @@ export default function AboutPage() {
 
               <div className="flex flex-wrap gap-x-8 gap-y-3">
                 <Link
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/ashish-k-saxena/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-[14px] font-medium text-accent border-b border-accent pb-[2px] hover:text-link-hover hover:border-link-hover transition-colors"
