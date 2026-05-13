@@ -520,6 +520,12 @@ html, body {
   color: var(--parchment);
   font-weight: 500;
 }
+.content .cta a {
+  color: #C4948E;
+  border-bottom: 1px solid #C4948E;
+  text-decoration: none;
+  font-weight: 500;
+}
 
 /* Trailing legal disclaimer paragraph */
 .content > p:last-child em {

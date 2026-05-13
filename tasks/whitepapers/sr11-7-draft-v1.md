@@ -382,7 +382,7 @@ If your institution cannot answer any of the above within the five-business-day 
 
 The first conversation is thirty minutes. No purchase obligation. The agenda is your specific examiner readiness, not a product pitch.
 
-Email **ashish@caventia.com** or schedule directly at **caventia.com/contact**.
+Email [ashish@caventia.com](mailto:ashish@caventia.com) or schedule directly at [caventia.com/contact](https://caventia.com/contact).
 
 </div>
 
@@ -392,7 +392,7 @@ Email **ashish@caventia.com** or schedule directly at **caventia.com/contact**.
 
 Ashish K. Saxena is the founder of Caventia. He spent six years in financial technology, including time at Amazon's FinTech division, where he worked on fraud and lending systems serving millions of consumer-credit decisions per day. He worked inside the first line of defense as a model owner before founding Caventia. He is the author of two Amazon-bestselling books on AI ethics: *Society and the Machine* (2024 London Book Festival, first place) and *The Ethics of Artificial Intelligence*. He is a peer reviewer for the International Journal of Scientific Research, with 42 papers reviewed. He has 226 peer-reviewed citations across the literature and an h-index of 8. He was named the 2024 Best Technical Researcher of AI by the Business Innovation Awards and is listed in Marquis Who's Who.
 
-He writes at caventia.com.
+He writes at [caventia.com](https://caventia.com).
 
 ---
 
