@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ThreeLinesFilm() {
   return (
-    <section className="relative bg-paper border-b border-rule">
+    <section id="three-lines" className="relative bg-paper border-b border-rule scroll-mt-24">
       <div className="relative max-w-[1080px] mx-auto px-6 md:px-10 py-24 md:py-32">
         <div className="text-center max-w-[720px] mx-auto mb-12 md:mb-16">
           <p

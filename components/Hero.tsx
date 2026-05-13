@@ -117,6 +117,15 @@ export default function Hero() {
             <span aria-hidden="true">→</span>
           </Link>
         </div>
+        <div className="anim-fade-in delay-800 mt-5">
+          <Link
+            href="/sr117#three-lines"
+            className="font-body text-[14px] text-ink-mute border-b border-rule pb-[2px] hover:text-accent hover:border-accent transition-colors"
+          >
+            Or watch the 75-second film
+            <span aria-hidden="true"> →</span>
+          </Link>
+        </div>
       </div>
     </section>
   );
