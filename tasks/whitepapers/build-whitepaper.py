@@ -33,7 +33,7 @@ def md_to_html(body: str) -> str:
     """Convert body markdown to HTML with the extensions we need."""
     return markdown.markdown(
         body,
-        extensions=["tables", "fenced_code", "attr_list", "sane_lists"],
+        extensions=["tables", "fenced_code", "attr_list", "sane_lists", "md_in_html"],
         output_format="html5",
     )
 
@@ -446,6 +446,81 @@ html, body {
   margin: 32pt 0;
 }
 
+/* Definition box (the behavioral envelope, etc.) */
+.content .definition {
+  background: var(--parchment-warm);
+  border-left: 3px solid var(--pompeii);
+  padding: 14pt 18pt;
+  margin: 16pt 0;
+  page-break-inside: avoid;
+}
+.content .definition p {
+  margin: 0;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  color: var(--ink);
+  text-align: left;
+  font-variation-settings: "opsz" 36, "SOFT" 30;
+}
+.content .definition strong {
+  font-weight: 500;
+  color: var(--pompeii);
+}
+
+/* Ask-your-second-line callout */
+.content .ask {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 10pt 0;
+  margin: 18pt 0 6pt 0;
+  page-break-inside: avoid;
+}
+.content .ask p {
+  margin: 0;
+  text-align: center;
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-size: 11.5pt;
+  color: var(--ink-soft);
+  font-variation-settings: "opsz" 36, "SOFT" 80;
+}
+.content .ask em {
+  color: var(--pompeii);
+  font-style: italic;
+}
+
+/* Closing CTA box */
+.content .cta {
+  background: var(--ink);
+  color: var(--parchment);
+  padding: 22pt 26pt;
+  margin: 18pt 0;
+  border-left: 4px solid var(--pompeii);
+  page-break-inside: avoid;
+}
+.content .cta p {
+  color: var(--parchment);
+  text-align: left;
+  margin-bottom: 9pt;
+  font-size: 11pt;
+  line-height: 1.55;
+}
+.content .cta p:last-child { margin-bottom: 0; }
+.content .cta p:first-child {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 14pt;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--parchment);
+  margin-bottom: 12pt;
+  font-variation-settings: "opsz" 60, "SOFT" 40;
+}
+.content .cta strong {
+  color: var(--parchment);
+  font-weight: 500;
+}
+
 /* Trailing legal disclaimer paragraph */
 .content > p:last-child em {
   display: block;
@@ -491,9 +566,8 @@ html, body {
     <div class="cover-eyebrow">A practical framework</div>
     <h1 class="cover-title">SR 11-7 compliance for <em>regulated AI agents.</em></h1>
     <p class="cover-subtitle">
-      The three pillars of SR 11-7 hold. The implementation artifacts do not.
-      Here are the five places the 2011 guidance strains under AI agents,
-      with the concrete artifact that closes each gap.
+      The framework holds. The artifacts do not. Here are the five places
+      SR 11-7 strains under AI agents, and the artifact that closes each gap.
     </p>
     <div class="cover-byline">
       <div><span class="author">Ashish K. Saxena</span></div>
