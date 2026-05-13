@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
 import PullQuote from "@/components/PullQuote";
 import SpineDiagram from "@/components/SpineDiagram";
+import SpineInMotion from "@/components/SpineInMotion";
 import FounderBlock from "@/components/FounderBlock";
 import LatestNotes from "@/components/LatestNotes";
 import StatFrame from "@/components/StatFrame";
@@ -26,6 +27,7 @@ export default function Home() {
         disparate-impact reports, 510(k) submissions - hangs off it.&rdquo;
       </PullQuote>
       <SpineDiagram />
+      <SpineInMotion />
       <FounderBlock />
       <LatestNotes />
       <StatFrame

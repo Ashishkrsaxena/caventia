@@ -1,14 +1,15 @@
 type VignetteProps = {
   slug: string;
   title: string;
+  topic?: string;
   numeral?: string;
   duration?: string;
 };
 
-export default function Vignette({ slug, title, numeral, duration }: VignetteProps) {
-  const src = `/animations/sr117/${slug}.mp4`;
-  const poster = `/animations/sr117/${slug}-poster.jpg`;
-  const captions = `/animations/sr117/${slug}.vtt`;
+export default function Vignette({ slug, title, topic = "sr117", numeral, duration }: VignetteProps) {
+  const src = `/animations/${topic}/${slug}.mp4`;
+  const poster = `/animations/${topic}/${slug}-poster.jpg`;
+  const captions = `/animations/${topic}/${slug}.vtt`;
   const ariaLabel = numeral ? `Vignette ${numeral}: ${title}` : title;
 
   return (
