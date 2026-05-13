@@ -18,7 +18,7 @@ This paper names the five specific places SR 11-7's expected artifacts strain wh
 
 The five breakdowns are non-determinism, prompt-as-feature, tool use and emergent behavior, model provider opacity and continuous capability evolution. The fixes share a common data substrate: a versioned, replayable audit log of every agent decision. This paper calls it the audit-trail spine. Once the spine exists, all five SR 11-7 artifacts assemble from it.
 
-This paper is for the Chief Model Risk Officer at a $10B+ AUM US bank who is being asked to approve AI agents into production while the next OCC exam is twelve months out. It is a practical framework. The appendices include an examiner-readiness checklist, a section-by-section SR 11-7 mapping and a glossary of the terms introduced.
+This paper is for the Chief Model Risk Officer at an OCC-supervised national bank or federal savings association with $10B or more in assets, who is being asked to approve AI agents into production. The framework also applies to FDIC-supervised state banks under the Federal Reserve's parallel guidance, with examiner-culture differences. It is a practical framework. The appendices include an examiner-readiness checklist, a section-by-section SR 11-7 mapping, a glossary of terms and a sample of likely examiner questions with the artifact each one maps to.
 
 ---
 
@@ -36,6 +36,7 @@ This paper is for the Chief Model Risk Officer at a $10B+ AUM US bank who is bei
 - Appendix A: Examiner Readiness Checklist
 - Appendix B: SR 11-7 Section Mapping
 - Appendix C: Glossary
+- Appendix D: Likely Examiner Questions
 - Talk to the Founder
 - About the Author
 - References
@@ -48,7 +49,7 @@ Your business unit walked in this quarter with a new AI agent. The next OCC exam
 
 This is the problem this paper addresses.
 
-SR 11-7 was written in April 2011. The OCC published the parallel bulletin, OCC 2011-12, the same day. Together they constitute the senior supervisory guidance on how US banks manage the risk of using models in decisions. The guidance has held with minor refinements through three regulatory administrations.
+SR 11-7 was written in April 2011. The OCC published the parallel bulletin, OCC 2011-12, the same day. Together they constitute the senior supervisory guidance on how US banks manage the risk of using models in decisions.
 
 It rests on three pillars.
 
@@ -64,7 +65,9 @@ The translation breaks not at the pillar level. It breaks at the artifact level.
 
 SR 11-7's expectations were calibrated to a specific class of model: one with a documented input space, an inspectable algorithm, a reproducible output and a stable behavior surface. Traditional statistical and machine learning models satisfy all four properties. AI agents satisfy none of them.
 
-The implications are not theoretical. Model risk failures cost real money. The Wells Fargo 2018 consent order specifically cited "deficiencies in its enterprise-wide compliance and operational risk management program," including failures in model risk governance. Knight Capital's 2012 $440 million loss in 45 minutes was downstream of an inadequately validated deployment of automated decisioning logic. An AI agent operating in production today with no SR 11-7-compliant documentation pack is exactly the kind of exposure those incidents teach against.
+The implications are not theoretical. Model risk failures cost real money. The Wells Fargo 2018 enforcement carried roughly $1 billion in combined OCC and CFPB penalties tied to a consent order that explicitly cited deficiencies in enterprise risk management, including model risk governance. JPMorgan's 2012 "London Whale" loss of more than $6 billion was traced in the Senate Permanent Subcommittee on Investigations report to specific failures in the validation and approval of a Value-at-Risk model, which the OCC subsequently cited in its enforcement actions. Both cases are model-risk-governance teaching moments. An AI agent operating in production today with no SR 11-7-compliant documentation pack is exactly the kind of exposure those incidents teach against.
+
+The risk-tier discipline matters at large institutions in particular. The OCC's heightened standards (12 CFR Part 30, Appendix D) require national banks with $50 billion or more in assets to classify decisioning models into explicit risk tiers and apply governance proportional to tier. AI agents making customer-facing credit, fraud or compliance decisions land in the highest tier almost by default. The five-artifact pack this paper describes is the minimum supporting evidence the heightened-standards framework anticipates for that tier.
 
 This paper is about that gap. It names five places in SR 11-7's expected artifacts where the agent context breaks the underlying assumption. For each, it describes what an OCC examiner will write in a finding and what artifact the bank should be producing instead.
 
@@ -182,19 +185,21 @@ The artifact is a layered model card with version pins on both layers and a defi
 
 ### 5. Continuous Capability Evolution
 
-**The expectation.** SR 11-7 Section IV's ongoing-monitoring expectations require that material model behavior changes be detected and trigger re-validation. The implementation assumes the bank decides when material changes occur. The bank deploys a new feature. The bank retrains the model. The bank changes the data pipeline. The bank is the actor.
+The first four breakdowns share a property: the bank's model risk function can address them with engineering decisions inside the bank. The fifth is different. The actor is outside the bank. That changes the framing.
 
-**The breakdown.** Foundation-model providers ship updates the bank did not author. Some of those updates change behavior on identical inputs. Providers have, on multiple occasions, released production model updates that materially shifted agent behavior across regulated workflows. The bank did not initiate the change. The bank did not test for it. The bank found out by reading the provider's release notes or, less ideally, by observing production drift.
+**Who is the actor when the model changes?** With a traditionally developed model, the bank decides when material change occurs. The bank deploys a new feature. The bank retrains. The bank changes the data pipeline. SR 11-7 Section IV's ongoing-monitoring expectations were written assuming the bank is in control of when re-validation fires.
 
-**Examiner exposure.** The institution's "validated" stamp ages quickly. An examiner reading the validation date in the model card sees "validated 2026-01-15." The model has since received three provider updates. The examiner asks for re-validation evidence on each update. There is none. Finding on Section IV ongoing monitoring.
+Foundation-model providers ship updates the bank did not author and did not test for. Some of those updates change behavior on identical inputs. Providers have, on multiple occasions, released production model updates that materially shifted agent behavior across regulated workflows. The bank found out by reading the provider's release notes or, less ideally, by observing production drift. The bank is no longer the actor.
 
-**The fix: version pinning and contractual notification.** Two complementary controls.
+An examiner reading the validation date in the model card sees "validated 2026-01-15." The model has since received three provider updates. The examiner asks for re-validation evidence on each update. There is none. Finding on Section IV ongoing monitoring.
 
-First, **version pinning**. Agents in production are bound to specific provider model versions through the API call configuration. Updates do not auto-propagate. The bank's deployment pipeline holds the version pin and enforces it at every request.
+**How do you keep your validation valid?** Two complementary controls. Both are required; neither is sufficient alone.
 
-Second, **behavior-change notification clauses**. The bank's vendor contract requires the provider to notify the bank of behavior-impacting model updates with sufficient lead time for re-validation. The lead time is contractually specified; thirty days is a reasonable floor. This is a procurement control that requires legal-team participation.
+First, **version pinning**. Agents in production are bound to specific provider model versions through the API call configuration. Updates do not auto-propagate. The bank's deployment pipeline holds the version pin and enforces it at every request. This is an engineering control.
 
-Combined, the bank can hold its validated state until it has chosen to re-validate against a new vendor version. The artifact is a version-pinned validation record. Each record carries: model version (your layer and vendor layer), validation date, validator signature, validation methodology reference and expiration trigger (a date or a vendor-version change event).
+Second, **behavior-change notification clauses**. The bank's vendor contract requires the provider to notify the bank of behavior-impacting model updates with sufficient lead time for re-validation. The lead time is contractually specified; thirty days is a reasonable floor. This is a procurement control that requires legal-team participation, not just an engineering decision.
+
+Combined, the bank can hold its validated state until it has chosen to re-validate against a new vendor version. The artifact is a version-pinned validation record. Each record carries: model version (your layer and vendor layer), validation date, validator signature, validation methodology reference and expiration trigger (a date or a vendor-version change event). When the vendor notifies the bank of a behavior-impacting update, the record's expiration trigger fires and re-validation begins. The validated state never silently becomes stale.
 
 <div class="ask" markdown="1">
 
@@ -279,7 +284,7 @@ Roll out the five-artifact pack to all production AI agents. Risk-tier the rollo
 
 Establish the ongoing-monitoring cadence. Behavioral envelope drift, prompt-version changes and vendor-version updates all flow into the spine and trigger automated alerts. Tune the thresholds against the first ninety days of production data.
 
-Engage the third line of defense for an end-to-end audit walkthrough. The third line reviews the spine architecture, the artifact pack for at least three agents across risk tiers and the monitoring cadence.
+Engage the third line of defense for an end-to-end audit walkthrough. Internal audit's review is not a duplicate of the second line's validation; it is a separate exercise focused on the soundness of the governance itself. Specifically, internal audit reviews: the integrity of the audit-trail spine as immutable storage with logged access, the independence of the second-line validation function from model owners, the change-control record for prompt-versioning and vendor-version pins, evidence that envelope violations actually triggered re-validation when they occurred and the third-line's own access to all of the above on request. The deliverable is an internal audit report that names the spine architecture as the basis for SR 11-7 compliance and confirms the governance structure around it is functioning. That report is itself an examiner-ready artifact.
 
 Prepare the examiner pack. The pack is a single document that explains the spine architecture and points at the five artifacts for each in-scope agent. The examiner who arrives in the door reads this first, then walks through the artifact pack for the agents they choose to review.
 
@@ -290,6 +295,8 @@ Iterate on the envelope specifications as production data accumulates. Envelopes
 Update the model-inventory governance committee charter to include AI agent decisions. Risk-tier classification rules may need refinement once the institution has lived with AI agents for a year.
 
 Begin influencing vendor procurement. Behavior-change notification clauses become a required term in foundation-model contracts. Failure-to-notify SLAs become a procurement negotiation point. The institution's voice on this matters; foundation-model providers are still calibrating what regulated customers will accept.
+
+*The roadmap above is what a bank implements with or without Caventia. The alternative to buying it is staffing a year of in-house build across MRM, ML platform engineering and procurement. The dedicated outreach details at the end of this paper are for institutions where the comparison is worth a thirty-minute conversation.*
 
 ---
 
@@ -346,6 +353,27 @@ The mapping is not one-to-one. Several SR 11-7 expectations collapse onto the sp
 
 ---
 
+## Appendix D: Likely Examiner Questions
+
+The questions below are a representative sample of what an OCC examiner is likely to ask about an AI agent in a 2026 exam, with the artifact in the spine framework that answers each. Use this list as a self-assessment: an institution that can produce all ten artifacts on request is well-positioned.
+
+| # | Examiner question | Spine artifact |
+|---|---|---|
+| 1 | What is this agent's risk tier under your institution's classification? Who classified it and when? | Model inventory entry with risk-tier and classification audit log |
+| 2 | Who is the model owner? Show me their signed accountability statement. | Two-layer model card, owner-of-record field |
+| 3 | Where does your layer end and the vendor's begin? Which controls live where? | Two-layer model card, layered controls table |
+| 4 | What is the behavioral envelope for this agent? When was it last validated? | Behavioral envelope specification with validation date and validator signature |
+| 5 | Reproduce the agent's decision on this specific transaction. | Spine record retrieval plus tool-call trace for the cited decision |
+| 6 | Show me the tool-call trace for that decision. What tools did the agent call, in what order? | Tool-call trace structure document plus the specific trace |
+| 7 | What system prompt was in production at the time of that decision? Give me the hash. | Versioned prompt artifact with hash chain |
+| 8 | When did the vendor last update the foundation model? How did your re-validation respond? | Vendor-layer version log plus re-validation record for each version event |
+| 9 | Show me the most recent population-level disparate impact analysis for this agent. | Population-level bias report, current quarter, signed by second line |
+| 10 | Who has signed the current validation record? When does it expire and what triggers expiration? | Version-pinned validation record with expiration trigger field |
+
+If your institution cannot answer any of the above within the five-business-day examiner response window, that gap is itself a finding risk. The mapping is intentional: every question is designed to be answerable by retrieving one record from the spine.
+
+---
+
 ## Talk to the Founder
 
 <div class="cta" markdown="1">
@@ -362,7 +390,7 @@ Email **ashish@caventia.com** or schedule directly at **caventia.com/contact**.
 
 ## About the Author
 
-Ashish K. Saxena is the founder of Caventia. He spent six years in financial technology, including time at Amazon's FinTech division, where he worked on fraud and lending systems serving millions of consumer-credit decisions per day. He is the author of two Amazon-bestselling books on AI ethics: *Society and the Machine* (2024 London Book Festival, first place) and *The Ethics of Artificial Intelligence*. He is a peer reviewer for the International Journal of Scientific Research, with 42 papers reviewed. He has 226 peer-reviewed citations across the literature and an h-index of 8. He was named the 2024 Best Technical Researcher of AI by the Business Innovation Awards and is listed in Marquis Who's Who.
+Ashish K. Saxena is the founder of Caventia. He spent six years in financial technology, including time at Amazon's FinTech division, where he worked on fraud and lending systems serving millions of consumer-credit decisions per day. He worked inside the first line of defense as a model owner before founding Caventia. He is the author of two Amazon-bestselling books on AI ethics: *Society and the Machine* (2024 London Book Festival, first place) and *The Ethics of Artificial Intelligence*. He is a peer reviewer for the International Journal of Scientific Research, with 42 papers reviewed. He has 226 peer-reviewed citations across the literature and an h-index of 8. He was named the 2024 Best Technical Researcher of AI by the Business Innovation Awards and is listed in Marquis Who's Who.
 
 He writes at caventia.com.
 
@@ -386,6 +414,6 @@ Caventia is the audit-trail spine for regulated AI agents. The platform ships SR
 
 ---
 
-*This whitepaper is published by Caventia, Inc. (in formation). It is current as of the publication date and reflects the author's interpretation of the cited regulatory guidance. It is not legal advice, regulatory advice or examiner-specific guidance. Institutions should validate the framework against their own counsel and their own examiners.*
+*This whitepaper is published by Caventia, Inc. (in formation). It is current as of the publication date and reflects the author's interpretation of the cited regulatory guidance. Apply this framework against your own counsel, your own MRM function and the specific examiner you have. The five gaps are durable; the artifacts that close them in your institution will look different from the ones described here. This paper is not legal advice, regulatory advice or examiner-specific guidance.*
 
 *© 2026 Caventia, Inc. All rights reserved. Reproduction permitted for internal use at regulated institutions; external republication requires written permission.*
