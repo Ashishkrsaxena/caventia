@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import WhitepaperGate from "@/components/WhitepaperGate";
 import ThreeLinesFilm from "@/components/ThreeLinesFilm";
+import ExaminerFilm from "@/components/ExaminerFilm";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
@@ -239,6 +240,9 @@ export default function SR117Page() {
           </div>
         </div>
       </section>
+
+      {/* What the examiner sees - closing film */}
+      <ExaminerFilm />
     </>
   );
 }
