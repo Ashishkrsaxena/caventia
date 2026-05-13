@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import WhitepaperGate from "@/components/WhitepaperGate";
+import ThreeLinesFilm from "@/components/ThreeLinesFilm";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
@@ -128,12 +129,15 @@ export default function SR117Page() {
                 Written by Ashish K. Saxena · Founder, Caventia
               </p>
             </div>
-            <div className="lg:sticky lg:top-8">
+            <div id="whitepaper-gate" className="lg:sticky lg:top-8 scroll-mt-24">
               <WhitepaperGate paperId="sr117" />
             </div>
           </div>
         </div>
       </section>
+
+      {/* Three lines, one spine - film */}
+      <ThreeLinesFilm />
 
       {/* Excerpt */}
       <section className="bg-paper">

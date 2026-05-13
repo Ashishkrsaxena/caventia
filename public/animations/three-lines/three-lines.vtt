@@ -1,0 +1,33 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.171
+Three lines of defense have governed bank risk for fifteen years.
+
+2
+00:00:04.200 --> 00:00:14.931
+First line owns the model. Second line validates it. Third line audits the whole pipeline. Three signatures on every model that goes into production.
+
+3
+00:00:14.933 --> 00:00:21.984
+Then the model became an A I agent. The framework survives the move. The workflows do not.
+
+4
+00:00:22.000 --> 00:00:31.571
+First-line documentation breaks when the model's behavior shifts between releases. The owner asks: what changed since yesterday? And no one can answer.
+
+5
+00:00:31.600 --> 00:00:43.211
+Second-line validation breaks when reproducibility breaks. Same prompt, same temperature, two different answers. The validator says: we cannot validate a moving target.
+
+6
+00:00:43.233 --> 00:00:52.964
+Third-line audit breaks when the production artifact is a chat transcript. The auditor says: this is a screenshot. This is not an audit artifact.
+
+7
+00:00:52.967 --> 00:00:59.818
+Caventia is the audit-trail spine. It slides under the three lines, and the cracks close from the bottom up.
+
+8
+00:00:59.833 --> 00:01:15.324
+It holds the three lines together when the model under them is no longer deterministic. A behavioral envelope for the first line. A tool-call trace for the second. A version-pinned attestation for the third. Three lines, held together by one spine.
