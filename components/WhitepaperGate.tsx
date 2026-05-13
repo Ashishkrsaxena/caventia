@@ -10,11 +10,13 @@ export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState<string | null>(null);
+  const [pdfUrl, setPdfUrl] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
     setMessage(null);
+    setPdfUrl(null);
 
     try {
       const res = await fetch("/api/whitepaper", {
@@ -30,6 +32,7 @@ export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string
       }
       setStatus("success");
       setMessage(data.message ?? "Check your inbox.");
+      setPdfUrl(data.pdfUrl ?? null);
     } catch {
       setStatus("error");
       setMessage("Network error. Try again in a moment.");
@@ -41,13 +44,32 @@ export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string
       <div className="bg-paper border border-rule rounded-[2px] p-8">
         <p className="type-label text-success mb-3">Confirmed</p>
         <h3 className="font-display text-[24px] font-medium leading-tight mb-3 text-ink">
-          {message ?? "Whitepaper sent - check your inbox."}
+          {pdfUrl ? "Your whitepaper is ready." : message ?? "Whitepaper sent - check your inbox."}
         </h3>
-        <p className="font-body text-[15px] text-ink-mute leading-[1.55]">
-          The PDF is on its way. If you don&apos;t see it within a few minutes,
-          check spam - and if you&apos;d like to discuss your specific exam,
-          reply to that email directly. The founder reads every reply.
-        </p>
+        {pdfUrl ? (
+          <>
+            <p className="font-body text-[15px] text-ink-mute leading-[1.55] mb-5">
+              We&apos;ve emailed you the link as well. If you&apos;d like to
+              discuss your specific exam, reply to that email directly. The
+              founder reads every reply.
+            </p>
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-[10px] bg-accent text-parchment px-7 py-[14px] font-body font-medium text-[14px] tracking-[0.01em] rounded-[2px] hover:bg-accent-deep transition-colors"
+            >
+              Download the PDF
+              <span aria-hidden="true">↓</span>
+            </a>
+          </>
+        ) : (
+          <p className="font-body text-[15px] text-ink-mute leading-[1.55]">
+            The PDF is on its way. If you don&apos;t see it within a few minutes,
+            check spam. If you&apos;d like to discuss your specific exam,
+            reply to that email directly. The founder reads every reply.
+          </p>
+        )}
       </div>
     );
   }
