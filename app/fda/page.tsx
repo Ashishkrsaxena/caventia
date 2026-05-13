@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import WhitepaperGate from "@/components/WhitepaperGate";
+import FDA510kFilm from "@/components/FDA510kFilm";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
@@ -118,12 +119,15 @@ export default function FDAPage() {
                 Written by Ashish K. Saxena · Founder, Caventia
               </p>
             </div>
-            <div className="lg:sticky lg:top-8">
+            <div id="whitepaper-gate" className="lg:sticky lg:top-8 scroll-mt-24">
               <WhitepaperGate paperId="fda" />
             </div>
           </div>
         </div>
       </section>
+
+      {/* Substantial equivalence film */}
+      <FDA510kFilm />
 
       {/* Excerpt */}
       <section className="bg-paper">
