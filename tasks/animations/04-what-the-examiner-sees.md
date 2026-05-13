@@ -1,4 +1,4 @@
-# Animation 04 — What the examiner sees
+# Animation 04: What the examiner sees
 
 **Placement:** `/sr117` page near the bottom, just before the email gate. Or alternatively on `/platform` next to the Auditor Bridge product description.
 **Total length:** 14 seconds.

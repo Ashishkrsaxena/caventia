@@ -58,7 +58,7 @@ export default function SpineInMotion() {
             >
               Your browser does not support embedded video. The animation shows
               an agent processing a loan application, the decision landing as a
-              row in the audit-trail spine, and four artifacts assembling from
+              row in the audit-trail spine and four artifacts assembling from
               that single row: model card, validation report, NIST AI RMF
               mapping and examiner pack.
             </video>

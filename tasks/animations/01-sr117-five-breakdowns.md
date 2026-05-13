@@ -1,4 +1,4 @@
-# Animation 01 — The five places SR 11-7 breaks down
+# Animation 01: The five places SR 11-7 breaks down
 
 **Placement:** Inline in `/blog/five-places-sr11-7-breaks-down`. One vignette under each numbered section heading.
 **Total length:** ~100 seconds across five vignettes (~18 to 22s each).
@@ -40,7 +40,7 @@ Fraunces, 84pt, deep ink. Parchment background. Hairline rule at the bottom. Bel
 
 ---
 
-## Vignette I — Non-determinism (~22s)
+## Vignette I: Non-determinism (~22s)
 
 ### Voiceover (read straight through)
 
@@ -62,7 +62,7 @@ Fraunces, 84pt, deep ink. Parchment background. Hairline rule at the bottom. Bel
 
 ---
 
-## Vignette II — Prompt as feature (~20s)
+## Vignette II: Prompt as feature (~20s)
 
 ### Voiceover
 
@@ -84,7 +84,7 @@ Fraunces, 84pt, deep ink. Parchment background. Hairline rule at the bottom. Bel
 
 ---
 
-## Vignette III — Tool use and emergent behavior (~22s)
+## Vignette III: Tool use and emergent behavior (~22s)
 
 ### Voiceover
 
@@ -106,11 +106,11 @@ Fraunces, 84pt, deep ink. Parchment background. Hairline rule at the bottom. Bel
 
 ---
 
-## Vignette IV — Model provider opacity (~18s)
+## Vignette IV: Model provider opacity (~18s)
 
 ### Voiceover
 
-> When you train your own model, you write the model card. Training data, hyperparameters, validation methodology, all yours. When you use a foundation model behind an API, your view ends at the API boundary. Documentation completeness breaks. The fix is to document your layer and the vendor layer separately, and to treat a vendor model version change as a model change.
+> When you train your own model, you write the model card. Training data, hyperparameters, validation methodology, all yours. When you use a foundation model behind an API, your view ends at the API boundary. Documentation completeness breaks. The fix is to document your layer and the vendor layer separately and to treat a vendor model version change as a model change.
 
 ### Shot list
 
@@ -126,11 +126,11 @@ Fraunces, 84pt, deep ink. Parchment background. Hairline rule at the bottom. Bel
 
 ---
 
-## Vignette V — Continuous capability evolution (~22s)
+## Vignette V: Continuous capability evolution (~22s)
 
 ### Voiceover
 
-> Foundation model providers ship updates. Sometimes those updates meaningfully change agent behavior. Validated against which version? This week's? Or the one that ships next Tuesday? Version becomes a first-class governance control. The fix is to pin specific versions, require re-validation before upgrades, and negotiate behavior-change notification into the provider contract.
+> Foundation model providers ship updates. Sometimes those updates meaningfully change agent behavior. Validated against which version? This week's? Or the one that ships next Tuesday? Version becomes a first-class governance control. The fix is to pin specific versions, require re-validation before upgrades and negotiate behavior-change notification into the provider contract.
 
 ### Shot list
 

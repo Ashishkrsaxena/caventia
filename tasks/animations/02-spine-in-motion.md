@@ -1,4 +1,4 @@
-# Animation 02 — The spine in motion
+# Animation 02: The spine in motion
 
 **Placement:** Home page, immediately below the existing SpineDiagram component.
 **Total length:** 18 seconds.
@@ -8,7 +8,7 @@
 
 ## Intent
 
-The shipped SpineDiagram says, "these four products exist." This animation says, "watch one prompt become four examiner-ready documents." The viewer should leave understanding that the spine is the unit of work, and the four artifacts are downstream views into the same canonical record.
+The shipped SpineDiagram says, "these four products exist." This animation says, "watch one prompt become four examiner-ready documents." The viewer should leave understanding that the spine is the unit of work and the four artifacts are downstream views into the same canonical record.
 
 This is the conversion moment on the home page. It should feel inevitable, not flashy.
 
@@ -20,7 +20,7 @@ This is the conversion moment on the home page. It should feel inevitable, not f
 
 **Shot 1 (0:00 to 0:02). The incoming request.**
 
-A clean parchment frame. From the left, a small document slides in. It is a loan application. Visible at the top: `Application #4729 — $42,000 personal loan`. Below: three fields with sample values, all set in body. The document settles in the upper-left quadrant.
+A clean parchment frame. From the left, a small document slides in. It is a loan application. Visible at the top: `Application #4729: $42,000 personal loan`. Below: three fields with sample values, all set in body. The document settles in the upper-left quadrant.
 
 VO: "Every decision your agent makes..."
 
@@ -32,11 +32,11 @@ VO: "...becomes a row in the spine."
 
 **Shot 3 (0:04 to 0:06). The decision renders.**
 
-A small decision card slides out the right side of the agent. Title: `Decision — Approve, 4.9% APR`. Below: a single line `confidence: 0.94`. The card is bordered in ink, hairline. No accent yet.
+A small decision card slides out the right side of the agent. Title: `Decision: Approve, 4.9% APR`. Below: a single line `confidence: 0.94`. The card is bordered in ink, hairline. No accent yet.
 
 **Shot 4 (0:06 to 0:08). The row drops into the spine.**
 
-Center frame, a vertical line draws downward: this is the spine. The decision card flies toward the spine, compresses into a single thin row, and inserts itself into the spine at the current timestamp. The row is rendered in Pompeii red for one beat, then settles into ink. Soft stamp sound.
+Center frame, a vertical line draws downward: this is the spine. The decision card flies toward the spine, compresses into a single thin row and inserts itself into the spine at the current timestamp. The row is rendered in Pompeii red for one beat, then settles into ink. Soft stamp sound.
 
 The spine now shows three earlier rows (rendered in muted gray, dated yesterday and earlier) and the new row in ink.
 
@@ -62,7 +62,7 @@ VO: "...four artifacts assemble themselves."
 
 **Shot 6 (0:13 to 0:16). The bundle.**
 
-The four artifact stacks fly toward the center and arrange into a single neat documentation bundle. The bundle is bound with a hairline. Title at the top of the bundle: `Decision #4729 — Documentation pack`. Below: `Generated 2026-05-11 14:22 UTC`.
+The four artifact stacks fly toward the center and arrange into a single neat documentation bundle. The bundle is bound with a hairline. Title at the top of the bundle: `Decision #4729: Documentation pack`. Below: `Generated 2026-05-11 14:22 UTC`.
 
 VO: "Examiner-ready. Audit-ready."
 

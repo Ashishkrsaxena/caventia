@@ -43,7 +43,7 @@ export default function ThreeLinesFilm() {
           >
             The three-lines-of-defense framework has governed bank risk for
             fifteen years. The framework survives the move to AI agents. The
-            workflows do not. Watch where it breaks, and what Caventia adds.
+            workflows do not. Watch where it breaks and what Caventia adds.
           </p>
         </div>
 
@@ -56,13 +56,13 @@ export default function ThreeLinesFilm() {
               controls
               preload="metadata"
               playsInline
-              aria-label="Three lines, one spine: where the three-lines-of-defense framework strains under AI agents, and what Caventia bridges"
+              aria-label="Three lines, one spine: where the three-lines-of-defense framework strains under AI agents and what Caventia bridges"
               aria-describedby="three-lines-transcript-link"
             >
               Your browser does not support embedded video. The animation walks
               through the three lines of defense as they govern traditional
               models, where each line strains under AI agents (first-line
-              documentation, second-line validation, third-line audit), and how
+              documentation, second-line validation, third-line audit) and how
               Caventia&apos;s audit-trail spine produces the artifact each line
               needs to keep working.
             </video>

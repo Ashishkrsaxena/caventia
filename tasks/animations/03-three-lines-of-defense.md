@@ -1,4 +1,4 @@
-# Animation 03 — Three lines of defense
+# Animation 03: Three lines of defense
 
 **Placement:** `/sr117` page, immediately above the whitepaper email gate.
 **Total length:** 35 seconds.
@@ -10,7 +10,7 @@
 
 The three-lines-of-defense model has been the backbone of bank risk management for fifteen years. It survives, conceptually, when AI agents enter the picture. The specific workflows do not.
 
-This animation makes that visible. It shows the traditional flow working. It shows the same flow breaking at three specific moments under AI agents. Then it shows where Caventia bridges the gap. The viewer leaves understanding why traditional MRM functions are quietly nervous about agents, and what the structural fix looks like.
+This animation makes that visible. It shows the traditional flow working. It shows the same flow breaking at three specific moments under AI agents. Then it shows where Caventia bridges the gap. The viewer leaves understanding why traditional MRM functions are quietly nervous about agents and what the structural fix looks like.
 
 Tone: respectful. The traditional framework is not wrong; it is incomplete. The animation should not feel like a takedown of MRM. It should feel like a renovation by someone who respects the original architect.
 
@@ -18,7 +18,7 @@ Tone: respectful. The traditional framework is not wrong; it is incomplete. The 
 
 > Three lines of defense have governed bank risk for fifteen years. First line owns the model. Second line validates it. Third line audits the whole pipeline. The framework survives the move to AI agents. The workflows do not. First-line documentation breaks when the model's behavior shifts between releases. Second-line validation breaks when reproducibility breaks. Third-line audit breaks when the production artifact is a chat transcript. Caventia is the audit-trail spine that holds the three lines together when the model under them is no longer deterministic.
 
-## Act 1 — The framework as designed (0:00 to 0:11)
+## Act 1: The framework as designed (0:00 to 0:11)
 
 **Shot 1 (0:00 to 0:03). Three pillars rise.**
 
@@ -34,7 +34,7 @@ VO: "Three lines of defense have governed bank risk for fifteen years."
 
 **Shot 2 (0:03 to 0:11). The document flows.**
 
-A small document appears at the base of pillar 1. It is labeled `Model documentation — credit scorecard v2.3`.
+A small document appears at the base of pillar 1. It is labeled `Model documentation: credit scorecard v2.3`.
 
 The document moves to the top of pillar 1. A stamp lands: `Owned, signed`. The document moves to the top of pillar 2. A stamp lands: `Validated, signed`. The document moves to the top of pillar 3. A stamp lands: `Audited, signed`.
 
@@ -42,7 +42,7 @@ The document is now triple-stamped. It settles cleanly in front of the third pil
 
 VO: "First line owns the model. Second line validates it. Third line audits the whole pipeline."
 
-## Act 2 — The breakdown under AI agents (0:11 to 0:26)
+## Act 2: The breakdown under AI agents (0:11 to 0:26)
 
 **Shot 3 (0:11 to 0:13). The agent enters.**
 
@@ -78,7 +78,7 @@ All three pillars now stand with visible Pompeii red cracks running top to base.
 
 VO: "Third-line audit breaks when the production artifact is a chat transcript."
 
-## Act 3 — The bridge (0:26 to 0:35)
+## Act 3: The bridge (0:26 to 0:35)
 
 **Shot 7 (0:26 to 0:30). Caventia spine arrives.**
 

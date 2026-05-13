@@ -1,4 +1,4 @@
-# Animation 05 — FDA 510(k) substantial equivalence
+# Animation 05: FDA 510(k) substantial equivalence
 
 **Placement:** `/fda` page, above the email gate.
 **Total length:** 26 seconds.
