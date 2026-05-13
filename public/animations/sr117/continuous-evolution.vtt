@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.411
+Foundation model providers ship updates. Sometimes those updates meaningfully change agent behavior.
+
+2
+00:00:06.433 --> 00:00:11.204
+Validated against which version? This week's? Or the one that ships next Tuesday?
+
+3
+00:00:11.233 --> 00:00:14.524
+Version becomes a first-class governance control.
+
+4
+00:00:14.533 --> 00:00:20.264
+The fix is to pin specific versions, require re-validation before upgrades,
+
+5
+00:00:20.267 --> 00:00:24.998
+and negotiate behavior-change notification into the provider contract.

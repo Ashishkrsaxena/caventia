@@ -4,8 +4,11 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { LinkButton } from "@/components/ui/Button";
+import Vignette from "@/components/Vignette";
 import { getAllPosts, getPostBySlug } from "@/lib/mdx";
 import { getCategory } from "@/lib/blog-types";
+
+const mdxComponents = { Vignette };
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -142,6 +145,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         <div className="prose-caventia">
           <MDXRemote
             source={post.content}
+            components={mdxComponents}
             options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
           />
         </div>

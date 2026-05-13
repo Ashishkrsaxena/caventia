@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.251
+Agents pick their own paths.
+
+2
+00:00:02.267 --> 00:00:06.678
+Same input on Monday, a different tool call on Tuesday.
+
+3
+00:00:06.700 --> 00:00:13.391
+Provider updates can change tool selection. A small rewording of the system prompt can change tool selection.
+
+4
+00:00:13.400 --> 00:00:17.411
+You cannot enumerate every execution path in advance.
+
+5
+00:00:17.400 --> 00:00:23.851
+The fix is to capture the actual production trace, and make the trace itself the audit artifact.

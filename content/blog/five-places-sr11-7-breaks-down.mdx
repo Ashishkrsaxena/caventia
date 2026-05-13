@@ -16,6 +16,8 @@ The three pillars of SR 11-7 (development, validation, ongoing monitoring) trans
 
 ## I. Non-determinism
 
+<Vignette slug="non-determinism" title="Non-determinism" numeral="I" duration="0:32" />
+
 Traditional models produce identical outputs for identical inputs. You can replay a decision exactly six months later and get the same answer.
 
 That property is what makes back-testing possible. LLMs don't have it.
@@ -27,6 +29,8 @@ What breaks: reproducibility-based validation. You can no longer say "we tested 
 The fix: shift from "model produces deterministic decisions" to "model produces decisions within a behavioral envelope, monitored for drift." Validate the envelope, not the exact output. The envelope is the set of outputs the agent should produce on a representative input distribution.
 
 ## II. Prompt-as-feature
+
+<Vignette slug="prompt-as-feature" title="Prompt as feature" numeral="II" duration="0:31" />
 
 In a traditional model, your features are well-defined numerical or categorical inputs. Income, credit utilization, months on book.
 
@@ -44,6 +48,8 @@ Pin a specific hash to each production deployment. Track decision outputs agains
 
 ## III. Tool use and emergent behavior
 
+<Vignette slug="tool-use" title="Tool use and emergent behavior" numeral="III" duration="0:28" />
+
 Modern AI agents call tools. APIs, databases, other models, vector stores.
 
 The agent decides which tool to call, with what arguments, in what order. Here's the awkward part for SR 11-7: the same agent on the same input might use different tools on different days as the model's reasoning shifts.
@@ -57,6 +63,8 @@ The fix: instrument the actual production execution. Capture every tool call wit
 Make the tool-call trace itself an audit artifact. When an examiner asks "how did this agent arrive at the decision", you produce the trace. Validation shifts from predicting behavior to making behavior auditable after the fact.
 
 ## IV. Model provider opacity
+
+<Vignette slug="provider-opacity" title="Model provider opacity" numeral="IV" duration="0:29" />
 
 When you train your own model, you can document training data, hyperparameters and validation methodology. You wrote it. The model card is your model card.
 
@@ -73,6 +81,8 @@ That part is fully documentable. It's also, frankly, where your actual proprieta
 The vendor model is what's behind the API. Document each separately. Treat vendor model version changes as model changes requiring re-validation.
 
 ## V. Continuous capability evolution
+
+<Vignette slug="continuous-evolution" title="Continuous capability evolution" numeral="V" duration="0:29" />
 
 OpenAI, Anthropic and AWS Bedrock all ship updates frequently. They sometimes ship updates that meaningfully change agent behavior on identical inputs.
 

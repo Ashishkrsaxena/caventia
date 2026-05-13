@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.411
+S R eleven dash seven expects identical inputs to produce identical decisions.
+
+2
+00:00:06.433 --> 00:00:10.884
+Traditional models honor that. They are deterministic by construction.
+
+3
+00:00:10.900 --> 00:00:18.871
+A I agents are not. The same prompt today and tomorrow can produce different answers — even with temperature pinned to zero.
+
+4
+00:00:18.900 --> 00:00:22.351
+What breaks is reproducibility-based validation.
+
+5
+00:00:22.367 --> 00:00:27.898
+The fix is to validate the behavioral envelope, not the exact output.

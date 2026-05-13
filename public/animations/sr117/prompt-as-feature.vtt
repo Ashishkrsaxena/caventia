@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.891
+Traditional models had features. Income, utilization, months on book. Each one had a distribution you could monitor.
+
+2
+00:00:07.900 --> 00:00:16.271
+A I agents do not. The system prompt is a feature. The user input is a feature. Both are paragraphs of text.
+
+3
+00:00:16.300 --> 00:00:19.031
+Feature-importance analysis breaks.
+
+4
+00:00:19.033 --> 00:00:22.764
+The fix is to treat the prompt as a versioned component,
+
+5
+00:00:22.767 --> 00:00:26.698
+and track outputs against demographics at the population level.

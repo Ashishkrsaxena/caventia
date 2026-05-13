@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.131
+When you train your own model, you write the model card. Training data, hyperparameters, validation methodology — all yours.
+
+2
+00:00:08.133 --> 00:00:14.504
+When you use a foundation model behind an A P I, your view ends at the A P I boundary.
+
+3
+00:00:14.533 --> 00:00:17.264
+Documentation completeness breaks.
+
+4
+00:00:17.267 --> 00:00:25.118
+The fix is to document your layer and the vendor layer separately, and to treat a vendor model version change as a model change.
