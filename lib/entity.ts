@@ -1,33 +1,30 @@
 /**
  * Single source of truth for Caventia's legal entity information.
  *
- * Pre-incorporation, INCORPORATED is false and longForm() surfaces
- * "Caventia (in formation as a Delaware C-Corp)" language. Once Stripe
- * Atlas confirms the Delaware certificate of incorporation:
+ * Caventia, Inc. is a Delaware C corporation. Certificate of
+ * incorporation filed 2026-05-12 via Stripe Atlas (file number
+ * 10619896). EIN issuance is pending (expected 2026-05-14 to 17).
  *
- *   1. Flip INCORPORATED to true
- *   2. Fill FORMATION_DATE with the ISO date on the certificate
- *   3. Add EIN and DELAWARE_FILE_NUMBER (kept here for centralized
- *      reference; not surfaced publicly)
- *
- * Every component that reads from this file updates in that one commit.
+ * Every component that surfaces entity language to a user reads
+ * from longForm() or foundingDate(), so future entity-state
+ * changes (e.g., reincorporation, name change) propagate through
+ * a single edit here.
  */
 
-// Flip to true after Stripe Atlas confirms Delaware certificate of
-// incorporation. Until then, public pages render "in formation" language.
-export const INCORPORATED = false;
+// Flipped after Stripe Atlas confirmed the Delaware certificate of
+// incorporation. Public pages now render the standard "Caventia, Inc., a
+// Delaware corporation" language via longForm().
+export const INCORPORATED = true;
 
 // ISO date (YYYY-MM-DD) on the Delaware certificate of incorporation.
-// Set when INCORPORATED flips to true.
-export const FORMATION_DATE = "";
+export const FORMATION_DATE = "2026-05-12";
 
 // Delaware-issued file number on the certificate of incorporation. Not
 // surfaced publicly. Kept here for internal reference.
-export const DELAWARE_FILE_NUMBER = "";
+export const DELAWARE_FILE_NUMBER = "10619896";
 
-// EIN issued by the IRS. Not surfaced publicly. Kept here for internal
-// reference and to be used by lib/email.ts and other server-side modules
-// that may need it.
+// EIN issued by the IRS. Pending issuance (expected 2026-05-14 to 17 per
+// Atlas). Update once received. Not surfaced publicly.
 export const EIN = "";
 
 /**
@@ -35,7 +32,8 @@ export const EIN = "";
  * data legalName. Same string pre- and post-incorporation; the difference
  * is whether the entity is legally formed.
  */
-export const SHORT = "Caventia Inc.";
+// Matches the entity name on the Delaware certificate of incorporation.
+export const SHORT = "Caventia, Inc.";
 
 /**
  * Conversational reference, used in body prose where the long legal form
@@ -44,14 +42,15 @@ export const SHORT = "Caventia Inc.";
 export const CONVERSATIONAL = "Caventia";
 
 /**
- * Long form used in the opening paragraph of legal pages. Pre-incorporation
- * uses "in formation" language so the page isn't misrepresenting a
- * non-existent entity. Post-incorporation uses the standard Delaware
- * corporation phrasing.
+ * Long form used in the opening paragraph of legal pages. Post-
+ * incorporation renders the standard Delaware corporation phrasing.
+ * The pre-incorporation fallback is kept for completeness and would
+ * surface again only if the legal entity were ever wound down or
+ * replaced.
  */
 export function longForm(): string {
   return INCORPORATED
-    ? "Caventia Inc., a Delaware corporation"
+    ? "Caventia, Inc., a Delaware corporation"
     : "Caventia (in formation as a Delaware C-Corp)";
 }
 

@@ -1,0 +1,23 @@
+# The marketing site at caventia.com lives at the repo root. The
+# product engineering code lives under apps/, packages/, infra/ and
+# tools/ for the (in-progress) monorepo migration. Excluding those
+# trees from the Vercel build prevents the marketing TypeScript pass
+# from trying to type-check files that depend on workspace packages
+# the marketing site does not install.
+#
+# See docs/MONOREPO.md for the full migration plan. Once the
+# marketing site is moved into apps/marketing/, this file goes away
+# and Vercel deploys from apps/marketing/ specifically.
+
+apps/
+packages/
+infra/
+tools/
+
+# Working drafts and rendered intermediates
+tasks/whitepapers/sr11-7-rendered.html
+tasks/animations/
+
+# IDE / OS noise
+.idea/
+.DS_Store
