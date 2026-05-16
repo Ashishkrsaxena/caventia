@@ -16,7 +16,7 @@ const organization = {
     name: "Ashish K. Saxena",
     jobTitle: "Founder & CEO",
     description:
-      "Amazon FinTech alum. Amazon-bestselling author of two books on AI ethics. IJSR peer reviewer with 42 papers reviewed. h-index 8 with 226 citations on Google Scholar. 2024 Best Technical Researcher of AI award.",
+      "Fifteen years shipping AI inside large institutions. Two Amazon-bestselling books on AI ethics. IEEE Senior Member and Fellow of the British Computer Society. h-index 8 with 226 citations on Google Scholar. Recognized as Best Technical Researcher of AI.",
     sameAs: [
       "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
       "https://www.linkedin.com/in/ashish-k-saxena/",

@@ -10,7 +10,7 @@ type Credential = {
 const CREDENTIALS: Credential[] = [
   {
     num: "I.",
-    text: "Amazon FinTech - 40% fraud reduction, 75% processing-error reduction at scale",
+    text: "Amazon FinTech - led Project Vault ($250B payment platform), Project Orion (billions of events per day) and the Intercompany Engine (1,450 global entities). 40% fraud reduction at scale.",
     meta: "Amazon",
   },
   {
@@ -19,10 +19,10 @@ const CREDENTIALS: Credential[] = [
       <>
         Author, <em className="italic">Society and the Machine</em> and{" "}
         <em className="italic">The Ethics of Artificial Intelligence</em>{" "}
-        - Amazon bestsellers, London Book Festival 2024 first place
+        - Amazon bestsellers, London Book Festival winner
       </>
     ),
-    meta: "2024",
+    meta: "Bestseller",
   },
   {
     num: "III.",
@@ -31,13 +31,13 @@ const CREDENTIALS: Credential[] = [
   },
   {
     num: "IV.",
-    text: "IJSR peer reviewer (42 papers reviewed) · IEEE TEMSCON ASPAC and ISTAS 2024 contributor",
-    meta: "Ongoing",
+    text: "IEEE Senior Member (top 10% of 400,000) and Fellow of the British Computer Society",
+    meta: "Member",
   },
   {
     num: "V.",
-    text: 'Best Technical Researcher of AI 2024, Business Innovation Awards · Marquis Who\'s Who',
-    meta: "2024",
+    text: "Best Technical Researcher of AI, Marquis Who's Who",
+    meta: "Award",
   },
 ];
 
@@ -119,7 +119,7 @@ export default function FounderBlock() {
                 fontVariationSettings: '"opsz" 36, "SOFT" 50',
               }}
             >
-              Amazon FinTech alum · Bestselling AI ethics author · IJSR peer reviewer · 226 citations
+              Fifteen years shipping AI inside large institutions. Two AI-ethics bestsellers. IEEE Senior Member. BCS Fellow.
             </p>
 
             <p
@@ -128,10 +128,10 @@ export default function FounderBlock() {
             >
               Caventia exists because the people building AI in banks and
               hospitals don&apos;t have what they need from horizontal AI
-              platforms. After fifteen years deploying machine learning in
-              regulated industries - at Amazon FinTech, in hospital management
-              systems and in published frameworks read by the field - the
-              gap became impossible to ignore.
+              platforms. After fifteen years deploying machine learning at
+              scale, including the platform engineering behind some of
+              Amazon&apos;s largest financial systems, the gap between AI
+              capability and AI accountability became impossible to ignore.
             </p>
 
             <ul className="list-none p-0 m-0 pt-8 border-t border-rule">
