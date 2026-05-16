@@ -50,13 +50,13 @@ export const FOUNDER = {
     "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
   credentials: [
     "Amazon FinTech alum: led Project Vault ($250B payment platform), Project Orion (billions of events/day) and the Intercompany Engine (1,450 global entities). Earlier: Morgan Stanley IT/Risk",
-    'Author, "Society and the Machine" (first place, 2024 London Book Festival) and "The Ethics of Artificial Intelligence" - Amazon bestsellers in the US and UK',
+    'Author, "Society and the Machine" (first place, London Book Festival) and "The Ethics of Artificial Intelligence" - Amazon bestsellers in the US and UK',
     "IEEE Senior Member (top 10% of 400,000 members) and Fellow of the British Computer Society",
     "h-index 8 on Google Scholar; 226 citations across fraud detection, healthcare AI, AI policy and machine learning",
-    "Published in Q2 and Q3 SCOPUS-indexed journals, including Intellectual Economics (Q2); IEEE TEMSCON ASPAC and ISTAS 2024 contributor",
+    "Published in Q2 and Q3 SCOPUS-indexed journals, including Intellectual Economics (Q2); IEEE TEMSCON ASPAC and ISTAS contributor",
     "Editorial review board for an international CS journal; peer reviewer with 42 papers reviewed",
-    "Best Technical Researcher of AI 2024, Marquis Who's Who",
-    "Judge: ASJA Writing Awards, Stratus Cloud Computing Awards, 2024 Sustainability Awards",
+    "Best Technical Researcher of AI, Marquis Who's Who",
+    "Judge: ASJA Writing Awards, Stratus Cloud Computing Awards, Sustainability Awards",
     "Fifty-plus AI professionals mentored",
   ],
 } as const;

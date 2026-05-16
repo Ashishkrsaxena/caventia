@@ -7,7 +7,7 @@ import Marginalia from "@/components/Marginalia";
 export const metadata: Metadata = {
   title: "About - The AI Audit-Trail Company for Regulated AI Agents",
   description:
-    "Caventia is the audit-trail spine for regulated AI agents. Founded by Ashish K. Saxena: Amazon FinTech alum, two Amazon-bestselling books on AI ethics, h-index 8 with 226 Google Scholar citations, 2024 Best Technical Researcher of AI award. Delaware C-Corp. Ten design-partner conversations open.",
+    "Caventia is the audit-trail spine for regulated AI agents. Founded by Ashish K. Saxena: Amazon FinTech alum, two Amazon-bestselling books on AI ethics, h-index 8 with 226 Google Scholar citations, Best Technical Researcher of AI awardee. Delaware C-Corp. Ten design-partner conversations open.",
   keywords: [
     "Caventia AI audit trail",
     "AI governance company",
@@ -26,10 +26,10 @@ const CREDENTIALS = [
   "Amazon FinTech: led Project Vault (payment platform handling up to $250B in transactions), Project Orion (financial communications platform supporting billions of events per day) and the Intercompany Engine (automated pricing and tax across 1,450 global entities). 40% fraud reduction, 75% processing-error reduction at scale.",
   "Earlier: Morgan Stanley, IT and Risk.",
   "IEEE Senior Member (top 10% of 400,000 IEEE members) and British Computer Society Fellow. Editorial review board member for an international computer science journal; peer reviewer with 42 papers reviewed across international research venues.",
-  'Author of "Society and the Machine" (first place, 2024 London Book Festival; second place, 2024 PenCraft Book Awards) and "The Ethics of Artificial Intelligence". Both Amazon bestsellers in the US and UK.',
+  'Author of "Society and the Machine" (first place, London Book Festival; second place, PenCraft Book Awards) and "The Ethics of Artificial Intelligence". Both Amazon bestsellers in the US and UK.',
   "h-index 8 on Google Scholar; 226 citations across fraud detection, healthcare AI, AI policy and machine learning. Published in Q2 and Q3 SCOPUS-indexed journals, including Intellectual Economics (Q2).",
-  "2024 Best Technical Researcher of AI. Marquis Who's Who.",
-  "Judge: ASJA Writing Awards, Stratus Cloud Computing Awards and the 2024 Sustainability Awards. Speaker, Data Science Salon San Francisco.",
+  "Best Technical Researcher of AI. Marquis Who's Who.",
+  "Judge: ASJA Writing Awards, Stratus Cloud Computing Awards and the Sustainability Awards. Speaker, Data Science Salon San Francisco.",
   "Fifty-plus AI professionals mentored.",
 ];
 
@@ -54,12 +54,12 @@ const STANDING: StandingCategory[] = [
   {
     label: "Awards and recognition",
     items: [
-      { primary: "Best Technical Researcher of AI, 2024" },
-      { primary: "London Book Festival, 2024 winner (General Nonfiction)", sub: "for Society and the Machine" },
-      { primary: "PenCraft Book Awards, 2024 (second place, Non-Fiction Education)" },
-      { primary: "Page Turner Book Awards 2024, finalist" },
+      { primary: "Best Technical Researcher of AI" },
+      { primary: "London Book Festival winner, General Nonfiction", sub: "for Society and the Machine" },
+      { primary: "PenCraft Book Awards, second place (Non-Fiction Education)" },
+      { primary: "Page Turner Book Awards, finalist" },
       { primary: "Marquis Who's Who" },
-      { primary: "American Library Association Featured Author Catalog, 2024" },
+      { primary: "American Library Association Featured Author Catalog" },
     ],
   },
   {
@@ -67,7 +67,7 @@ const STANDING: StandingCategory[] = [
     items: [
       { primary: "ASJA Writing Awards, judge" },
       { primary: "Stratus Cloud Computing Awards, judge" },
-      { primary: "2024 Sustainability Awards, judge" },
+      { primary: "Sustainability Awards, judge" },
       { primary: "Peer reviewer, international research journal (42 papers reviewed)" },
       { primary: "Editorial review board, international CS journal" },
       { primary: "Global Research Gateway, recognized reviewer in ethical AI" },
@@ -77,10 +77,10 @@ const STANDING: StandingCategory[] = [
     label: "Speaking and press",
     items: [
       { primary: "Data Science Salon, San Francisco, expert panel" },
-      { primary: "IEEE TEMSCON ASPAC 2024 (paper accepted)" },
-      { primary: "IEEE ISTAS 2024 (paper presented)" },
+      { primary: "IEEE TEMSCON ASPAC (paper accepted)" },
+      { primary: "IEEE ISTAS (paper presented)" },
       { primary: "Ritz Herald, Hudson Weekly, International Business Times India" },
-      { primary: "Joel's Top 8+ AI Ethics Books for 2024" },
+      { primary: "Joel's Top 8+ AI Ethics Books" },
     ],
   },
 ];
@@ -286,9 +286,9 @@ export default function AboutPage() {
               >
                 <em className="italic">Society and the Machine</em>
               </a>{" "}
-              (first place, General Nonfiction, 2024 London Book Festival;
-              second place, Non-Fiction Education, 2024 PenCraft Book
-              Awards; finalist, 2024 Page Turner Book Awards) and{" "}
+              (first place, General Nonfiction, London Book Festival;
+              second place, Non-Fiction Education, PenCraft Book Awards;
+              finalist, Page Turner Book Awards) and{" "}
               <a
                 href="https://www.amazon.com/dp/B0CWCGN2R3"
                 target="_blank"
@@ -310,7 +310,7 @@ export default function AboutPage() {
             </p>
             <p>
               His peer-reviewed work appears in IEEE conferences (TEMSCON
-              ASPAC 2024, ISTAS 2024) and in SCOPUS-indexed journals at the
+              ASPAC and ISTAS) and in SCOPUS-indexed journals at the
               Q2 and Q3 tiers. His Q2 paper,{" "}
               <em className="italic">
                 Impact of Industry 4.0 on green intellectual capital and
@@ -339,11 +339,11 @@ export default function AboutPage() {
               editorial review board of an international computer science
               journal and has peer-reviewed 42 papers across international
               research venues. He judges the ASJA Writing Awards, the
-              Stratus Cloud Computing Awards and the 2024 Sustainability
-              Awards. He has been recognized as the 2024 Best Technical
-              Researcher of AI. His work has been featured in Ritz Herald,
-              Hudson Weekly, International Business Times India and
-              Joel&apos;s Top 8+ AI Ethics Books for 2024.
+              Stratus Cloud Computing Awards and the Sustainability Awards.
+              He has been recognized as Best Technical Researcher of AI.
+              His work has been featured in Ritz Herald, Hudson Weekly,
+              International Business Times India and Joel&apos;s Top 8+ AI
+              Ethics Books list.
             </p>
             <p>
               He has mentored more than fifty AI professionals and spoken
