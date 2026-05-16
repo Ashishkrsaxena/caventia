@@ -15,12 +15,12 @@ type Kind = "design-partner" | "press";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const AUM_TIERS = [
-  "$10B-$50B AUM",
-  "$50B-$100B AUM",
-  "$100B-$500B AUM",
-  "$500B+ AUM",
-  "Series B+ fintech",
-  "Health system ($1B+ revenue)",
+  "Bank, $250M-$1B AUM",
+  "Bank, $1B-$10B AUM",
+  "Bank, $10B-$50B AUM",
+  "Bank, $50B+ AUM",
+  "Non-bank FinTech with compliance function",
+  "Health system or digital health (any size)",
   "Other regulated industry",
 ];
 

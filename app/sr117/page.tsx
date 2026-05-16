@@ -139,7 +139,7 @@ export default function SR117Page() {
                 risk management guidance applies to the LLM-based AI agents
                 your business units are now deploying. Written for Chief
                 Model Risk Officers, Heads of Model Validation and AI
-                Governance leads at banks $10B+ AUM.
+                Governance leads at banks and FinTech with active AI deployment.
               </p>
               <p className="mt-6 font-mono text-[12px] tracking-[0.06em] uppercase text-ink-mute">
                 Written by Ashish K. Saxena · Founder, Caventia

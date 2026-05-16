@@ -160,7 +160,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             If this resonates, talk to the founder directly.
           </h2>
           <p className="font-body text-[17px] text-ink-mute leading-[1.65] mb-8 max-w-[600px]">
-            Caventia is taking ten design partners in 2026. Conversations are
+            Caventia is taking five design partners in 2026. Conversations are
             with Ashish K. Saxena, not a sales team. Thirty minutes, your
             specific regulator gap, no purchase obligation.
           </p>

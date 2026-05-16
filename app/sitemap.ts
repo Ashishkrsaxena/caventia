@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/platform", priority: 0.9 },
     { path: "/sr117", priority: 0.9 },
     { path: "/fda", priority: 0.9 },
+    { path: "/design-partners", priority: 0.9 },
     { path: "/blog", priority: 0.8 },
     { path: "/about", priority: 0.8 },
     { path: "/research", priority: 0.7 },

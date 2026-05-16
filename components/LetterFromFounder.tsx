@@ -73,10 +73,11 @@ export default function LetterFromFounder() {
                 fontVariationSettings: '"opsz" 60, "SOFT" 100, "WONK" 1',
               }}
             >
-              ten design partners
+              five design partners
             </em>{" "}
-            in 2026. US banks at $10B+ AUM. Series B+ fintechs with lending or
-            fraud products. Health systems planning clinical AI rollouts.
+            in 2026. Banks $250M+ in assets. FinTech with a named
+            compliance officer. Health systems planning clinical AI rollouts.
+            Size flexible for right-fit teams.
           </p>
 
           {/* Fine print */}

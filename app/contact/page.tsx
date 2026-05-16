@@ -6,7 +6,7 @@ import Marginalia from "@/components/Marginalia";
 export const metadata: Metadata = {
   title: "Contact - Design partner inquiry",
   description:
-    "Caventia is taking 10 design partners in 2026. US banks $10B+ AUM, Series B+ fintechs and health systems planning clinical AI rollouts. Conversations are with the founder directly.",
+    "Caventia is taking five design partners in 2026. Banks $250M+ in assets, FinTech with a named compliance officer and health systems planning clinical AI rollouts. Size flexible for right-fit teams. Conversations are with the founder directly.",
 };
 
 export default function ContactPage() {
@@ -28,7 +28,7 @@ export default function ContactPage() {
             Conversations are with the founder. Not a sales team.
           </h1>
           <p className="type-body-lg mt-8 max-w-[640px] text-ink-mute font-light">
-            We&apos;re taking ten design partners in 2026. If you are a Chief
+            We&apos;re taking five design partners in 2026. If you are a Chief
             Model Risk Officer, Chief Medical Information Officer or a
             founder shipping AI into a regulated workflow - write to us.
             Thirty-minute discovery calls; no decks.

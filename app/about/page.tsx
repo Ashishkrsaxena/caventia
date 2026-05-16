@@ -7,7 +7,7 @@ import Marginalia from "@/components/Marginalia";
 export const metadata: Metadata = {
   title: "About - The AI Audit-Trail Company for Regulated AI Agents",
   description:
-    "Caventia is the audit-trail spine for regulated AI agents. Founded by Ashish K. Saxena: Amazon FinTech alum, two Amazon-bestselling books on AI ethics, h-index 8 with 226 Google Scholar citations, Best Technical Researcher of AI awardee. Delaware C-Corp. Ten design-partner conversations open.",
+    "Caventia is the audit-trail spine for regulated AI agents. Founded by Ashish K. Saxena: Amazon FinTech alum, two Amazon-bestselling books on AI ethics, h-index 8 with 226 Google Scholar citations, Best Technical Researcher of AI awardee. Delaware C-Corp. Five design partner slots open.",
   keywords: [
     "Caventia AI audit trail",
     "AI governance company",
