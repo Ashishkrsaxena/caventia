@@ -61,6 +61,29 @@ export default function Hero() {
           </em>
         </h1>
 
+        {/* SEO-anchored deck. The AI audit trail your examiner will ask for. */}
+        <h2
+          className="anim-fade-up delay-400 font-display text-ink max-w-[820px] mb-2"
+          style={{
+            fontSize: "clamp(22px, 2.6vw, 30px)",
+            lineHeight: 1.35,
+            letterSpacing: "-0.01em",
+            fontVariationSettings: '"opsz" 36, "SOFT" 30',
+          }}
+        >
+          The <em className="text-accent not-italic font-medium">AI audit trail</em> your examiner will ask for.
+        </h2>
+        <p
+          className="anim-fade-up delay-500 font-display italic text-ink-mute max-w-[760px]"
+          style={{
+            fontSize: "18px",
+            lineHeight: 1.55,
+            fontVariationSettings: '"opsz" 24, "SOFT" 50',
+          }}
+        >
+          Tamper-evident capture for every prompt, tool call and decision your AI agents make. Built for SR 11-7 model risk reviews at banks and FDA 510(k) submissions in healthcare.
+        </p>
+
         {/* Hero meta - For FinTech / For Healthcare */}
         <div
           className="anim-fade-in delay-600 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 max-w-[880px] mt-16 md:mt-20 pt-10 md:pt-12 border-t border-rule"

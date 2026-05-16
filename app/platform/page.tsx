@@ -6,9 +6,22 @@ import SpineDiagram from "@/components/SpineDiagram";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "Platform - Four products, one audit-trail spine",
+  title: "The Platform - Four Products, One AI Audit Trail Spine",
   description:
-    "Caventia's four-product architecture: AgentGuard, Audit Trail, Compliance Passport, Auditor Bridge. Built around a single audit-log spine for SR 11-7 and FDA 510(k) examiner readiness.",
+    "The Caventia platform captures every AI agent decision in a tamper-evident chain. SDK, ingestion API, examiner console and verification CLI. Four products on one audit-trail spine, built for SR 11-7 and FDA 510(k) examiner readiness.",
+  keywords: [
+    "AI audit trail platform",
+    "AI agent audit trail",
+    "AI governance platform",
+    "SR 11-7 compliance platform",
+    "FDA 510(k) AI platform",
+    "tamper-evident AI logs",
+    "AI examiner console",
+    "regulated AI agents",
+  ],
+  alternates: {
+    canonical: "/platform",
+  },
 };
 
 type Product = {

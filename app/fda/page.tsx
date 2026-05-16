@@ -5,20 +5,36 @@ import FDA510kFilm from "@/components/FDA510kFilm";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "FDA Q-Sub Strategy for AI Agent Governance Platforms",
+  title: "FDA 510(k) AI Audit Trail - Q-Sub Strategy for Clinical AI Agents",
   description:
-    "A practical framework for using the FDA Pre-Submission program to lock in regulatory classification before deploying clinical AI agents. Written for Chief Medical Information Officers and Heads of Clinical AI at $1B+ health systems and digital health companies.",
+    "The FDA 510(k) audit trail and clinical decision support evidence reviewers want for AI-enabled medical devices. A practical Q-Sub framework for Chief Medical Information Officers and Heads of Clinical AI at health systems and digital health companies. Built for predetermined change control plans.",
+  keywords: [
+    "FDA 510(k) AI audit",
+    "FDA 510(k) AI",
+    "AI 510(k) audit trail",
+    "clinical AI audit trail",
+    "AI medical device audit",
+    "predetermined change control plan AI",
+    "FDA Q-Sub AI",
+    "AI governance for healthcare",
+    "Software as a Medical Device AI",
+    "AI examiner ready healthcare",
+  ],
   openGraph: {
-    title: "FDA Q-Sub Strategy for AI Agent Governance Platforms",
+    title: "FDA 510(k) AI Audit Trail - Q-Sub Strategy for Clinical AI Agents",
     description:
-      "A framework for FDA Pre-Submission strategy on clinical AI agents.",
+      "The audit trail and CDS evidence FDA 510(k) reviewers want for AI-enabled medical devices. Built for predetermined change control plans.",
     images: [
       {
-        url: "/api/og?title=FDA+Q-Sub+Strategy&desc=for+AI+Agent+Governance+Platforms",
+        url: "/api/og?title=FDA+510(k)+AI+Audit+Trail&desc=Q-Sub+strategy+for+clinical+AI+agents",
         width: 1200,
         height: 630,
+        alt: "FDA 510(k) AI audit trail Q-Sub strategy",
       },
     ],
+  },
+  alternates: {
+    canonical: "/fda",
   },
 };
 

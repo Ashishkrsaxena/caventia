@@ -5,9 +5,21 @@ import { LinkButton } from "@/components/ui/Button";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "About - Ashish K. Saxena, founder",
+  title: "About - The AI Audit-Trail Company for Regulated AI Agents",
   description:
-    "Caventia is founded by Ashish K. Saxena: Amazon FinTech alum, Amazon-bestselling author of two books on AI ethics, IJSR peer reviewer, h-index 8 with 226 citations on Google Scholar and the 2024 Best Technical Researcher of AI award.",
+    "Caventia is the audit-trail spine for regulated AI agents. Founded by Ashish K. Saxena: Amazon FinTech alum, two Amazon-bestselling books on AI ethics, h-index 8 with 226 Google Scholar citations, 2024 Best Technical Researcher of AI award. Delaware C-Corp. Ten design-partner conversations open.",
+  keywords: [
+    "Caventia AI audit trail",
+    "AI governance company",
+    "Ashish K. Saxena founder",
+    "AI audit trail company",
+    "regulated AI agents company",
+    "AI ethics author",
+    "AI model risk founder",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const CREDENTIALS = [
@@ -18,7 +30,7 @@ const CREDENTIALS = [
   "Peer reviewer at the International Journal of Science and Research (IJSR); 42 papers reviewed",
   "IEEE TEMSCON ASPAC and IEEE ISTAS 2024 contributor",
   '2024 "Best Technical Researcher of AI", Business Innovation Awards · Marquis Who\'s Who',
-  "Founder, MindBytesAI. Creator, ImpactLens AI. Fifty-plus AI professionals mentored.",
+  "Fifty-plus AI professionals mentored",
 ];
 
 export default function AboutPage() {
@@ -122,17 +134,32 @@ export default function AboutPage() {
           <div className="mt-12 max-w-[720px] mx-auto md:mx-0 font-body text-[17px] text-ink leading-[1.75] space-y-6">
             <p>
               Ashish K. Saxena is the founder of Caventia. He has fifteen
-              years of AI deployment experience, including financial fraud
-              detection at Amazon (40% fraud reduction, 75% processing-error
-              reduction) and AI-driven hospital resource allocation research
-              (30% wait-time reduction, 20% equipment utilization gain).
+              years of AI deployment experience spanning IT/Risk at Morgan
+              Stanley, financial fraud detection at Amazon (40% fraud
+              reduction, 75% processing-error reduction) and AI-driven
+              hospital resource allocation research (30% wait-time
+              reduction, 20% equipment utilization gain).
             </p>
             <p>
               He is the author of{" "}
-              <em className="italic">Society and the Machine</em> (winner,
-              2024 London Book Festival; second place Non-Fiction Education
-              at the 2024 PenCraft Book Awards) and{" "}
-              <em className="italic">The Ethics of Artificial Intelligence</em>.
+              <a
+                href="https://www.amazon.com/dp/B0CWDTZZVH"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent border-b border-accent pb-[1px] hover:text-link-hover hover:border-link-hover transition-colors"
+              >
+                <em className="italic">Society and the Machine</em>
+              </a>{" "}
+              (winner, 2024 London Book Festival; second place Non-Fiction
+              Education at the 2024 PenCraft Book Awards) and{" "}
+              <a
+                href="https://www.amazon.com/dp/B0CWCGN2R3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent border-b border-accent pb-[1px] hover:text-link-hover hover:border-link-hover transition-colors"
+              >
+                <em className="italic">The Ethics of Artificial Intelligence</em>
+              </a>.
               He serves as a reviewer for the International Journal of
               Science and Research (IJSR), has peer-reviewed 42 research
               papers and received the 2024 &ldquo;Best Technical Researcher

@@ -4,9 +4,21 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "Research - Peer-reviewed papers and books by the founder",
+  title: "Research on AI Governance, AI Ethics and Model Risk",
   description:
-    "Ashish K. Saxena's published research: 226 citations across machine learning, fraud detection, healthcare AI, AI ethics and policy. h-index 8.",
+    "Books, papers and field notes on AI governance, AI ethics and model risk. 226 citations across machine learning, fraud detection, healthcare AI, AI ethics and policy. Two Amazon bestsellers. h-index 8 on Google Scholar.",
+  keywords: [
+    "AI governance research",
+    "AI ethics research",
+    "AI model risk research",
+    "Ashish K. Saxena",
+    "AI ethics books",
+    "AI policy research",
+    "responsible AI research",
+  ],
+  alternates: {
+    canonical: "/research",
+  },
 };
 
 const SCHOLAR_URL =
@@ -59,14 +71,14 @@ const BOOKS: Paper[] = [
       "2024 London Book Festival, first place. PenCraft Book Awards, second place Non-Fiction Education.",
     year: 2024,
     type: "book",
-    href: SCHOLAR_URL,
+    href: "https://www.amazon.com/dp/B0CWDTZZVH",
   },
   {
     title: "The Ethics of Artificial Intelligence",
     venue: "Independent press. Bestseller status on Amazon US and UK.",
     year: 2024,
     type: "book",
-    href: SCHOLAR_URL,
+    href: "https://www.amazon.com/dp/B0CWCGN2R3",
   },
 ];
 

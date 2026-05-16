@@ -41,33 +41,53 @@ const PLAUSIBLE_DOMAIN = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Caventia - The audit-trail spine for regulated AI agents",
-    template: "%s · Caventia",
+    default:
+      "AI Audit Trail for Regulated AI Agents - SR 11-7 - FDA 510(k) - Caventia",
+    template: "%s - Caventia",
   },
   description:
-    "Caventia is the vertical TRiSM platform that ships SR 11-7 model risk artifacts for banks and FDA 510(k)-ready governance artifacts for health systems.",
+    "The tamper-evident AI audit trail banks and health systems use to make AI agents examiner-ready. SR 11-7 model risk artifacts for banks. FDA 510(k) audit evidence for healthcare. Cryptographically verifiable.",
+  keywords: [
+    "AI audit trail",
+    "AI agent audit trail",
+    "SR 11-7 AI agents",
+    "FDA 510(k) AI audit",
+    "AI examiner ready",
+    "agentic AI compliance",
+    "AI model risk management",
+    "regulated AI agents",
+    "AI governance",
+    "tamper-evident AI logs",
+  ],
   openGraph: {
-    title: "Caventia - The audit-trail spine for regulated AI agents",
+    title:
+      "AI Audit Trail for Regulated AI Agents - SR 11-7 - FDA 510(k) - Caventia",
     description:
-      "Vertical AI governance for regulated industries. SR 11-7 for banks, FDA 510(k) for health systems.",
+      "Tamper-evident AI audit trail for regulated AI agents. SR 11-7 for banks. FDA 510(k) for health systems. Examiner-verifiable.",
     siteName: "Caventia",
     type: "website",
     url: SITE_URL,
     images: [
       {
-        url: "/api/og?title=Caventia&desc=The+audit-trail+spine+for+regulated+AI+agents",
+        url: "/api/og?title=AI+Audit+Trail+for+Regulated+AI+Agents&desc=SR+11-7+for+banks.+FDA+510(k)+for+health+systems.",
         width: 1200,
         height: 630,
-        alt: "Caventia",
+        alt: "Caventia - AI audit trail for regulated AI agents",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Caventia - The audit-trail spine for regulated AI agents",
+    title:
+      "AI Audit Trail for Regulated AI Agents - SR 11-7 - FDA 510(k) - Caventia",
     description:
-      "Vertical AI governance for regulated industries. SR 11-7 for banks, FDA 510(k) for health systems.",
-    images: ["/api/og?title=Caventia&desc=The+audit-trail+spine+for+regulated+AI+agents"],
+      "Tamper-evident AI audit trail for regulated AI agents. SR 11-7 for banks. FDA 510(k) for health systems. Examiner-verifiable.",
+    images: [
+      "/api/og?title=AI+Audit+Trail+for+Regulated+AI+Agents&desc=SR+11-7+for+banks.+FDA+510(k)+for+health+systems.",
+    ],
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
   robots: {
     index: true,

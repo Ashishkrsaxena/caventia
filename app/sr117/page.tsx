@@ -6,20 +6,35 @@ import ExaminerFilm from "@/components/ExaminerFilm";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "Applying SR 11-7 to AI Agents - A Practical Framework",
+  title: "SR 11-7 for AI Agents - A Practical Framework for Model Risk Officers",
   description:
-    "A 12-page whitepaper on applying the Federal Reserve's SR 11-7 model risk management guidance to LLM-based AI agents. Written by Ashish K. Saxena. Free for banking and fintech model risk professionals.",
+    "How to apply SR 11-7 model risk management to AI agents. Five places the framework breaks. Five fixes that pass an OCC examination. Free 12-page whitepaper by Ashish K. Saxena. No signup.",
+  keywords: [
+    "SR 11-7 AI agents",
+    "SR 11-7 AI",
+    "SR 11-7 model risk",
+    "AI model risk management",
+    "OCC AI examination",
+    "AI audit trail",
+    "model risk management AI",
+    "AI governance for banks",
+    "regulated AI agents",
+  ],
   openGraph: {
-    title: "Applying SR 11-7 to AI Agents - A Practical Framework",
+    title: "SR 11-7 for AI Agents - A Practical Framework for Model Risk Officers",
     description:
-      "12 pages on SR 11-7 applied to AI agents. Free for model risk officers.",
+      "How to apply SR 11-7 to AI agents. Five places it breaks. Five fixes. Free whitepaper, no signup.",
     images: [
       {
-        url: "/api/og?title=Applying+SR+11-7+to+AI+Agents&desc=A+practical+framework+for+model+risk+officers",
+        url: "/api/og?title=SR+11-7+for+AI+Agents&desc=A+practical+framework+for+model+risk+officers",
         width: 1200,
         height: 630,
+        alt: "SR 11-7 for AI Agents whitepaper",
       },
     ],
+  },
+  alternates: {
+    canonical: "/sr117",
   },
 };
 
