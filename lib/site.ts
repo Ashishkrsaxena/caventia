@@ -49,12 +49,12 @@ export const FOUNDER = {
   scholarUrl:
     "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
   credentials: [
-    "Amazon FinTech alum",
+    "Amazon FinTech alum (earlier: Morgan Stanley, IT/Risk)",
     'Author, "Society and the Machine" (2024 London Book Festival first place) and "The Ethics of Artificial Intelligence" - Amazon bestsellers',
     "h-index 8 on Google Scholar; 226 citations across the literature",
     "IJSR peer reviewer (42 papers reviewed); IEEE TEMSCON ASPAC and ISTAS 2024 contributor",
     'Best Technical Researcher of AI 2024, Business Innovation Awards · Marquis Who\'s Who',
-    "Founder, MindBytesAI. Creator, ImpactLens AI. Fifty-plus AI professionals mentored.",
+    "Fifty-plus AI professionals mentored",
   ],
 } as const;
 

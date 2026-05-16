@@ -3,7 +3,9 @@
  *
  * Caventia, Inc. is a Delaware C corporation. Certificate of
  * incorporation filed 2026-05-12 via Stripe Atlas (file number
- * 10619896). EIN issuance is pending (expected 2026-05-14 to 17).
+ * 10619896). EIN is on file; the value is stored outside the repo
+ * (see ~/Documents/Caventia-Corporate/) and is not committed to
+ * source control.
  *
  * Every component that surfaces entity language to a user reads
  * from longForm() or foundingDate(), so future entity-state
@@ -23,9 +25,12 @@ export const FORMATION_DATE = "2026-05-12";
 // surfaced publicly. Kept here for internal reference.
 export const DELAWARE_FILE_NUMBER = "10619896";
 
-// EIN issued by the IRS. Pending issuance (expected 2026-05-14 to 17 per
-// Atlas). Update once received. Not surfaced publicly.
-export const EIN = "";
+// EIN is intentionally NOT stored in source control. When a runtime
+// code path needs the EIN (W-9 generation, contracts, terms-page fine
+// print), read it from CAVENTIA_EIN at request time. The value lives
+// in the deployment environment, not the repo. Local development
+// shows an empty string; no public surface depends on it today.
+export const EIN: string = process.env["CAVENTIA_EIN"] ?? "";
 
 /**
  * Short form, used in footers, byline meta, copyright lines, structured
