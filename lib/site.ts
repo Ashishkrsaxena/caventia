@@ -45,15 +45,18 @@ export const FOUR_PRODUCTS = [
 export const FOUNDER = {
   name: "Ashish K. Saxena",
   shortBio:
-    "Amazon FinTech alum · Bestselling AI ethics author · IJSR peer reviewer · 226 citations on Google Scholar",
+    "Fifteen years shipping AI inside large institutions. Two Amazon-bestselling books on AI ethics. IEEE Senior Member. BCS Fellow. h-index 8 with 226 Google Scholar citations.",
   scholarUrl:
     "https://scholar.google.com/citations?user=4x5gOa4AAAAJ&hl=en",
   credentials: [
-    "Amazon FinTech alum (earlier: Morgan Stanley, IT/Risk)",
-    'Author, "Society and the Machine" (2024 London Book Festival first place) and "The Ethics of Artificial Intelligence" - Amazon bestsellers',
-    "h-index 8 on Google Scholar; 226 citations across the literature",
-    "IJSR peer reviewer (42 papers reviewed); IEEE TEMSCON ASPAC and ISTAS 2024 contributor",
-    'Best Technical Researcher of AI 2024, Business Innovation Awards · Marquis Who\'s Who',
+    "Amazon FinTech alum: led Project Vault ($250B payment platform), Project Orion (billions of events/day) and the Intercompany Engine (1,450 global entities). Earlier: Morgan Stanley IT/Risk",
+    'Author, "Society and the Machine" (first place, 2024 London Book Festival) and "The Ethics of Artificial Intelligence" - Amazon bestsellers in the US and UK',
+    "IEEE Senior Member (top 10% of 400,000 members) and Fellow of the British Computer Society",
+    "h-index 8 on Google Scholar; 226 citations across fraud detection, healthcare AI, AI policy and machine learning",
+    "Published in Q2 and Q3 SCOPUS-indexed journals, including Intellectual Economics (Q2); IEEE TEMSCON ASPAC and ISTAS 2024 contributor",
+    "Editorial review board for an international CS journal; peer reviewer with 42 papers reviewed",
+    "Best Technical Researcher of AI 2024, Marquis Who's Who",
+    "Judge: ASJA Writing Awards, Stratus Cloud Computing Awards, 2024 Sustainability Awards",
     "Fifty-plus AI professionals mentored",
   ],
 } as const;

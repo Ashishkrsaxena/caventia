@@ -23,14 +23,127 @@ export const metadata: Metadata = {
 };
 
 const CREDENTIALS = [
-  "Amazon FinTech: 40% fraud reduction and 75% processing-error reduction at scale; 20% false-positive reduction",
-  "Hospital management AI research: 30% wait-time reduction and 20% equipment utilization gain",
-  'Author: "Society and the Machine" (2024 London Book Festival first place) and "The Ethics of Artificial Intelligence" - Amazon bestsellers in the US and UK',
-  "h-index 8 on Google Scholar; 226 total citations spanning fraud detection, healthcare AI, AI policy and machine learning",
-  "Peer reviewer at the International Journal of Science and Research (IJSR); 42 papers reviewed",
-  "IEEE TEMSCON ASPAC and IEEE ISTAS 2024 contributor",
-  '2024 "Best Technical Researcher of AI", Business Innovation Awards · Marquis Who\'s Who',
-  "Fifty-plus AI professionals mentored",
+  "Amazon FinTech: led Project Vault (payment platform handling up to $250B in transactions), Project Orion (financial communications platform supporting billions of events per day) and the Intercompany Engine (automated pricing and tax across 1,450 global entities). 40% fraud reduction, 75% processing-error reduction at scale.",
+  "Earlier: Morgan Stanley, IT and Risk.",
+  "IEEE Senior Member (top 10% of 400,000 IEEE members) and British Computer Society Fellow. Editorial review board member for an international computer science journal; peer reviewer with 42 papers reviewed across international research venues.",
+  'Author of "Society and the Machine" (first place, 2024 London Book Festival; second place, 2024 PenCraft Book Awards) and "The Ethics of Artificial Intelligence". Both Amazon bestsellers in the US and UK.',
+  "h-index 8 on Google Scholar; 226 citations across fraud detection, healthcare AI, AI policy and machine learning. Published in Q2 and Q3 SCOPUS-indexed journals, including Intellectual Economics (Q2).",
+  "2024 Best Technical Researcher of AI. Marquis Who's Who.",
+  "Judge: ASJA Writing Awards, Stratus Cloud Computing Awards and the 2024 Sustainability Awards. Speaker, Data Science Salon San Francisco.",
+  "Fifty-plus AI professionals mentored.",
+];
+
+type StandingCategory = {
+  label: string;
+  items: { primary: string; sub?: string }[];
+};
+
+const STANDING: StandingCategory[] = [
+  {
+    label: "Professional memberships",
+    items: [
+      { primary: "IEEE Senior Member", sub: "Top 10% of 400,000 IEEE members" },
+      { primary: "British Computer Society Fellow", sub: "UK chartered institute for IT" },
+      { primary: "IEEE Computational Intelligence Society" },
+      { primary: "IEEE Society on Social Implications of Technology" },
+      { primary: "American Society of Journalists and Authors (ASJA), Associate" },
+      { primary: "National Association of Science Writers (NASW)" },
+      { primary: "Editorial review board, international CS journal" },
+    ],
+  },
+  {
+    label: "Awards and recognition",
+    items: [
+      { primary: "Best Technical Researcher of AI, 2024" },
+      { primary: "London Book Festival, 2024 winner (General Nonfiction)", sub: "for Society and the Machine" },
+      { primary: "PenCraft Book Awards, 2024 (second place, Non-Fiction Education)" },
+      { primary: "Page Turner Book Awards 2024, finalist" },
+      { primary: "Marquis Who's Who" },
+      { primary: "American Library Association Featured Author Catalog, 2024" },
+    ],
+  },
+  {
+    label: "Judging and review",
+    items: [
+      { primary: "ASJA Writing Awards, judge" },
+      { primary: "Stratus Cloud Computing Awards, judge" },
+      { primary: "2024 Sustainability Awards, judge" },
+      { primary: "Peer reviewer, international research journal (42 papers reviewed)" },
+      { primary: "Editorial review board, international CS journal" },
+      { primary: "Global Research Gateway, recognized reviewer in ethical AI" },
+    ],
+  },
+  {
+    label: "Speaking and press",
+    items: [
+      { primary: "Data Science Salon, San Francisco, expert panel" },
+      { primary: "IEEE TEMSCON ASPAC 2024 (paper accepted)" },
+      { primary: "IEEE ISTAS 2024 (paper presented)" },
+      { primary: "Ritz Herald, Hudson Weekly, International Business Times India" },
+      { primary: "Joel's Top 8+ AI Ethics Books for 2024" },
+    ],
+  },
+];
+
+type SelectedWork = {
+  title: string;
+  venue: string;
+  meta: string;
+  italic?: boolean;
+  href?: string;
+};
+
+const SELECTED_WORK: SelectedWork[] = [
+  {
+    title: "The Ethics of Artificial Intelligence: Challenges and Opportunities",
+    venue: "Book, 2024",
+    meta: "Amazon",
+    italic: true,
+    href: "https://www.amazon.com/dp/B0CWCGN2R3",
+  },
+  {
+    title: "Society and the Machine: Navigating Ethics in the Age of Artificial Intelligence",
+    venue: "Book, 2024",
+    meta: "Amazon",
+    italic: true,
+    href: "https://www.amazon.com/dp/B0CWDTZZVH",
+  },
+  {
+    title:
+      "Impact of Industry 4.0 on green intellectual capital and sustainable development: the moderating role of managerial emotional intelligence",
+    venue: "Intellectual Economics (Q2 SCOPUS), 2024",
+    meta: "Vol. 18, 7-33",
+  },
+  {
+    title:
+      "An LSTM Neural Network Approach to Resource Allocation in Hospital Management Systems",
+    venue: "IJAHCA, 2022",
+    meta: "29 citations",
+  },
+  {
+    title:
+      "The Influence of AI: The Revolutionary Effects of Artificial Intelligence in the Healthcare Sector",
+    venue: "JERR, 2024",
+    meta: "27 citations",
+  },
+  {
+    title:
+      "Machine Learning and Big Data Analytics for Fraud Detection in the U.S. FinTech Industry",
+    venue: "ETMIBD, 2019",
+    meta: "19 citations",
+  },
+  {
+    title:
+      "Decoding Socioeconomic Influence on AI Integration and Trust in the U.S.: A Decadal Perspective",
+    venue: "IEEE TEMSCON ASPAC, 2024",
+    meta: "accepted",
+  },
+  {
+    title:
+      "Quantitative Measurement of Bias in AI-Generated Content: A Comprehensive Narrative Literature Review",
+    venue: "IEEE ISTAS, 2024",
+    meta: "presented",
+  },
 ];
 
 export default function AboutPage() {
@@ -77,8 +190,9 @@ export default function AboutPage() {
                 Ashish K. Saxena
               </h2>
               <p className="font-display italic text-[20px] md:text-[22px] text-ink-mute mb-8 leading-[1.4]">
-                Amazon FinTech alum. Bestselling AI ethics author. IJSR peer
-                reviewer. 226 citations across the literature.
+                Fifteen years shipping AI inside large institutions. Two
+                Amazon-bestselling books on AI ethics. IEEE Senior Member.
+                BCS Fellow.
               </p>
 
               <ul className="space-y-1 mb-8">
@@ -133,12 +247,34 @@ export default function AboutPage() {
 
           <div className="mt-12 max-w-[720px] mx-auto md:mx-0 font-body text-[17px] text-ink leading-[1.75] space-y-6">
             <p>
-              Ashish K. Saxena is the founder of Caventia. He has fifteen
-              years of AI deployment experience spanning IT/Risk at Morgan
-              Stanley, financial fraud detection at Amazon (40% fraud
-              reduction, 75% processing-error reduction) and AI-driven
-              hospital resource allocation research (30% wait-time
-              reduction, 20% equipment utilization gain).
+              Ashish K. Saxena is the founder of Caventia. His career has
+              been a single thread, deploying AI inside institutions that
+              cannot afford to be wrong about it, and writing about what
+              that experience taught him about the gap between AI
+              capability and AI accountability.
+            </p>
+            <p>
+              He spent eleven years at Amazon, leading the platform
+              engineering behind some of the company&apos;s largest
+              financial systems. Project Vault, a scalable payment
+              processing platform built on Amazon EC2, SQS and S3, handles
+              up to $250 billion in transactions with advanced fraud
+              detection. Project Orion, a global financial communications
+              platform built on AWS, supports billions of events per day.
+              The Intercompany Engine automated pricing and tax calculations
+              across 1,450 global Amazon entities, taking compliance error
+              and operational risk out of a process that used to consume
+              teams of accountants. The fraud detection systems he
+              developed cut financial fraud by 40 percent and processing
+              errors by 75 percent at scale.
+            </p>
+            <p>
+              Before Amazon, he was at Morgan Stanley in IT and Risk,
+              working on the kind of model-and-control problems that became
+              the early shape of what is now SR 11-7 model risk management.
+              His academic foundation goes back to the IITD-IBMIRL
+              question-answering system, which placed ninth worldwide at
+              the 2007 Text REtrieval Conference (TREC).
             </p>
             <p>
               He is the author of{" "}
@@ -150,38 +286,162 @@ export default function AboutPage() {
               >
                 <em className="italic">Society and the Machine</em>
               </a>{" "}
-              (winner, 2024 London Book Festival; second place Non-Fiction
-              Education at the 2024 PenCraft Book Awards) and{" "}
+              (first place, General Nonfiction, 2024 London Book Festival;
+              second place, Non-Fiction Education, 2024 PenCraft Book
+              Awards; finalist, 2024 Page Turner Book Awards) and{" "}
               <a
                 href="https://www.amazon.com/dp/B0CWCGN2R3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent border-b border-accent pb-[1px] hover:text-link-hover hover:border-link-hover transition-colors"
               >
-                <em className="italic">The Ethics of Artificial Intelligence</em>
-              </a>.
-              He serves as a reviewer for the International Journal of
-              Science and Research (IJSR), has peer-reviewed 42 research
-              papers and received the 2024 &ldquo;Best Technical Researcher
-              of AI&rdquo; award at the Business Innovation Awards.
+                <em className="italic">
+                  The Ethics of Artificial Intelligence: Challenges and
+                  Opportunities
+                </em>
+              </a>
+              . Both have been Amazon bestsellers in the US and UK. He has
+              also written a sci-fi series,{" "}
+              <em className="italic">Ava&apos;s New World</em>, whose
+              screenplay adaptation has been a finalist at the Indo Dubai
+              International Film Festival, the Swedish International Film
+              Festival and the FrameFusion International Film Festival in
+              Glasgow.
             </p>
             <p>
-              His published research spans machine learning fraud detection
-              (Emerging Trends in Machine Intelligence and Big Data, 2019),
-              healthcare AI (an LSTM resource-allocation paper in the
-              International Journal of Applied Health Care Analytics, 2022)
-              and AI policy.
+              His peer-reviewed work appears in IEEE conferences (TEMSCON
+              ASPAC 2024, ISTAS 2024) and in SCOPUS-indexed journals at the
+              Q2 and Q3 tiers. His Q2 paper,{" "}
+              <em className="italic">
+                Impact of Industry 4.0 on green intellectual capital and
+                sustainable development: the moderating role of managerial
+                emotional intelligence
+              </em>
+              , appears in{" "}
+              <em className="italic">Intellectual Economics</em>, Vol. 18,
+              Issue 1, pages 7-33. Other work appears in{" "}
+              <em className="italic">
+                Emerging Trends in Machine Intelligence and Big Data
+              </em>{" "}
+              and the{" "}
+              <em className="italic">
+                International Journal of Applied Health Care Analytics
+              </em>
+              . Google Scholar reports an h-index of 8 with 226 citations
+              across machine-learning fraud detection, healthcare AI, AI
+              policy and bias measurement.
             </p>
             <p>
-              His paper on AI integration (&ldquo;Decoding Socioeconomic
-              Influence on AI Integration and Trust in the U.S.&rdquo;) was
-              accepted at the 2024 IEEE TEMSCON ASPAC. His work on bias
-              measurement in AI-generated content was presented at the 2024
-              IEEE International Symposium on Technology and Society (ISTAS).
+              He is an IEEE Senior Member, a distinction held by only the
+              top 10 percent of IEEE&apos;s 400,000 members globally, and a
+              Fellow of the British Computer Society, the UK&apos;s
+              chartered institute for IT professionals. He serves on the
+              editorial review board of an international computer science
+              journal and has peer-reviewed 42 papers across international
+              research venues. He judges the ASJA Writing Awards, the
+              Stratus Cloud Computing Awards and the 2024 Sustainability
+              Awards. He has been recognized as the 2024 Best Technical
+              Researcher of AI. His work has been featured in Ritz Herald,
+              Hudson Weekly, International Business Times India and
+              Joel&apos;s Top 8+ AI Ethics Books for 2024.
             </p>
             <p>
-              Google Scholar reports an h-index of 8 with 226 citations
-              across the literature.
+              He has mentored more than fifty AI professionals and spoken
+              at the Data Science Salon in San Francisco on the
+              intersection of AI capability and ethical deployment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Standing in the field - 4-card grid of memberships, awards,
+          judging, speaking + press */}
+      <section className="bg-paper border-t border-rule">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28">
+          <SectionLabel numeral="II.">Standing in the field</SectionLabel>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
+            {STANDING.map((cat) => (
+              <div key={cat.label} className="border-t border-ink pt-5">
+                <p
+                  className="font-body font-medium uppercase text-accent mb-3"
+                  style={{ fontSize: "11px", letterSpacing: "0.18em" }}
+                >
+                  {cat.label}
+                </p>
+                <ul className="space-y-0">
+                  {cat.items.map((item) => (
+                    <li
+                      key={item.primary}
+                      className="font-body text-[15px] leading-[1.55] text-ink py-[7px] border-b border-rule last:border-b-0"
+                    >
+                      {item.primary}
+                      {item.sub && (
+                        <span className="block font-body italic text-[14px] text-ink-mute mt-[2px]">
+                          {item.sub}
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Selected work - books + most-cited / most-recent papers */}
+      <section className="bg-parchment border-t border-rule">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28">
+          <SectionLabel numeral="III.">Selected work</SectionLabel>
+
+          <div className="mt-12 max-w-[920px]">
+            {SELECTED_WORK.map((work) => (
+              <div
+                key={work.title}
+                className="grid grid-cols-1 md:grid-cols-[1fr_10em_9em] gap-x-6 gap-y-1 py-3 border-b border-rule"
+              >
+                <span className="font-display text-[16px] md:text-[17px] text-ink leading-[1.4]">
+                  {work.italic ? (
+                    <em className="italic">{work.title}</em>
+                  ) : (
+                    work.title
+                  )}
+                </span>
+                <span
+                  className="font-body text-ink-mute leading-[1.4]"
+                  style={{ fontSize: "12px" }}
+                >
+                  {work.venue}
+                </span>
+                <span
+                  className="font-body font-medium text-accent leading-[1.4] md:text-right"
+                  style={{ fontSize: "12px" }}
+                >
+                  {work.href ? (
+                    <a
+                      href={work.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-b border-accent pb-[1px] hover:text-link-hover hover:border-link-hover transition-colors"
+                    >
+                      {work.meta} -&gt;
+                    </a>
+                  ) : (
+                    work.meta
+                  )}
+                </span>
+              </div>
+            ))}
+            <p className="mt-8 font-body italic text-[14px] text-ink-mute">
+              Full publication list and citation graph on{" "}
+              <Link
+                href="/research"
+                className="text-accent border-b border-accent pb-[1px] hover:text-link-hover hover:border-link-hover transition-colors not-italic"
+              >
+                Research
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -190,7 +450,7 @@ export default function AboutPage() {
       {/* "Why Caventia exists" - personal essay with drop cap */}
       <section className="bg-paper border-t border-rule">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-24 md:py-32">
-          <SectionLabel numeral="II.">Why Caventia exists</SectionLabel>
+          <SectionLabel numeral="IV.">Why Caventia exists</SectionLabel>
 
           <div className="mt-12 max-w-[720px] mx-auto md:mx-0">
             <p className="dropcap font-body text-[19px] md:text-[20px] text-ink leading-[1.65] mb-6">
