@@ -122,7 +122,7 @@ export default function ContactForm() {
                 name="title"
                 type="text"
                 required
-                placeholder="Chief Model Risk Officer"
+                placeholder="Chief Risk Officer"
               />
             </div>
             <div className="md:col-span-1">
@@ -150,7 +150,7 @@ export default function ContactForm() {
                 id="pain"
                 name="pain"
                 rows={5}
-                placeholder="What's the SR 11-7, ECOA or examiner-readiness gap you're trying to close?"
+                placeholder="What's the AI governance, ECOA or examiner-defensibility gap you're trying to close?"
               />
             </div>
             <div className="md:col-span-2">
@@ -203,7 +203,7 @@ export default function ContactForm() {
 
         <div className="md:col-span-2 pt-2">
           <Button type="submit" variant="primary" disabled={status === "submitting"}>
-            {status === "submitting" ? "Sending…" : "Send to the founder →"}
+            {status === "submitting" ? "Sending..." : "Send to the founder →"}
           </Button>
         </div>
       </form>

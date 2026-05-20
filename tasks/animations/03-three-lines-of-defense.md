@@ -1,5 +1,7 @@
 # Animation 03: Three lines of defense
 
+> **Supersession note, May 2026.** The April 17, 2026 revised "Supervisory Guidance on Model Risk Management" (which rescinded SR 11-7) dropped the branded "three lines of defense" terminology. The conceptual substance survives: the new guidance still expects independence, effective challenge and roles-and-responsibilities clarity (§VI Governance and Controls). For new renders, keep the structural argument but reframe the framing: rename the three pillars as "Owners / Validators / Auditors," and reword the voiceover line "Three lines of defense have governed bank risk for fifteen years" to "Independent challenge has governed bank risk for fifteen years." The animation's thesis - that the framework survives the move to AI agents but the workflows do not - is now publicly validated by the agencies themselves via footnote 3.
+
 **Placement:** `/sr117` page, immediately above the whitepaper email gate.
 **Total length:** 35 seconds.
 **Aspect:** 1920 × 1080.

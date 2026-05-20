@@ -6,7 +6,7 @@ type VignetteProps = {
   duration?: string;
 };
 
-export default function Vignette({ slug, title, topic = "sr117", numeral, duration }: VignetteProps) {
+export default function Vignette({ slug, title, topic = "mrm", numeral, duration }: VignetteProps) {
   const src = `/animations/${topic}/${slug}.mp4`;
   const poster = `/animations/${topic}/${slug}-poster.jpg`;
   const captions = `/animations/${topic}/${slug}.vtt`;
@@ -26,7 +26,7 @@ export default function Vignette({ slug, title, topic = "sr117", numeral, durati
           aria-describedby={`${slug}-transcript-link`}
         >
           Your browser does not support embedded video. The vignette describes how
-          SR 11-7 strains under {title.toLowerCase()}.
+          model risk management strains under {title.toLowerCase()}.
         </video>
       </div>
       <a

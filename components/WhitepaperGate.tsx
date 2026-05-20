@@ -6,7 +6,12 @@ import { Button } from "@/components/ui/Button";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string }) {
+type Props = {
+  paperId?: string;
+  comingSoon?: boolean;
+};
+
+export default function WhitepaperGate({ paperId = "sr117", comingSoon = false }: Props) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState<string | null>(null);
@@ -40,6 +45,21 @@ export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string
   }
 
   if (status === "success") {
+    if (comingSoon) {
+      return (
+        <div className="bg-paper border border-rule rounded-[2px] p-8">
+          <p className="type-label text-success mb-3">On the list</p>
+          <h3 className="font-display text-[24px] font-medium leading-tight mb-3 text-ink">
+            We&apos;ll send it the morning we ship.
+          </h3>
+          <p className="font-body text-[15px] text-ink-mute leading-[1.55]">
+            The new edition lands later this quarter. If you&apos;d like to talk
+            before then, reply to the confirmation email - the founder reads
+            every reply.
+          </p>
+        </div>
+      );
+    }
     return (
       <div className="bg-paper border border-rule rounded-[2px] p-8">
         <p className="type-label text-success mb-3">Confirmed</p>
@@ -50,7 +70,7 @@ export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string
           <>
             <p className="font-body text-[15px] text-ink-mute leading-[1.55] mb-5">
               We&apos;ve emailed you the link as well. If you&apos;d like to
-              discuss your specific exam, reply to that email directly. The
+              discuss your specific exposure, reply to that email directly. The
               founder reads every reply.
             </p>
             <a
@@ -66,7 +86,7 @@ export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string
         ) : (
           <p className="font-body text-[15px] text-ink-mute leading-[1.55]">
             The PDF is on its way. If you don&apos;t see it within a few minutes,
-            check spam. If you&apos;d like to discuss your specific exam,
+            check spam. If you&apos;d like to discuss your specific exposure,
             reply to that email directly. The founder reads every reply.
           </p>
         )}
@@ -76,14 +96,30 @@ export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string
 
   return (
     <form onSubmit={handleSubmit} className="bg-paper border border-rule rounded-[2px] p-8">
-      <p className="type-label mb-3">Download · Free</p>
-      <h3 className="font-display text-[24px] md:text-[28px] font-medium leading-tight mb-2 text-ink">
-        Get the SR 11-7 framework.
-      </h3>
-      <p className="font-body text-[15px] text-ink-mute mb-6 leading-[1.55]">
-        A 12-page whitepaper written by the founder. Work email only - no
-        gmail.com, yahoo.com, outlook.com.
-      </p>
+      {comingSoon ? (
+        <>
+          <p className="type-label mb-3">Whitepaper · Coming soon</p>
+          <h3 className="font-display text-[24px] md:text-[28px] font-medium leading-tight mb-2 text-ink">
+            AI Agent Governance After SR 11-7.
+          </h3>
+          <p className="font-body text-[15px] text-ink-mute mb-6 leading-[1.55]">
+            A new edition for the generative and agentic AI agents the 2026
+            MRM Guidance left to banks. Work email only - no gmail.com,
+            yahoo.com, outlook.com.
+          </p>
+        </>
+      ) : (
+        <>
+          <p className="type-label mb-3">Download · Free</p>
+          <h3 className="font-display text-[24px] md:text-[28px] font-medium leading-tight mb-2 text-ink">
+            Get the whitepaper.
+          </h3>
+          <p className="font-body text-[15px] text-ink-mute mb-6 leading-[1.55]">
+            Written by the founder. Work email only - no gmail.com, yahoo.com,
+            outlook.com.
+          </p>
+        </>
+      )}
 
       <FieldLabel htmlFor="email" required>
         Work email
@@ -105,12 +141,18 @@ export default function WhitepaperGate({ paperId = "sr117" }: { paperId?: string
 
       <div className="mt-6">
         <Button type="submit" variant="primary" disabled={status === "submitting"}>
-          {status === "submitting" ? "Sending…" : "Send me the PDF →"}
+          {status === "submitting"
+            ? "Sending..."
+            : comingSoon
+              ? "Notify me on launch →"
+              : "Send me the PDF →"}
         </Button>
       </div>
 
       <p className="mt-4 font-mono text-[11px] tracking-[0.06em] text-ink-light">
-        We&apos;ll email you the PDF. We do not sell, share or rent the email.
+        {comingSoon
+          ? "We'll email you the moment it ships. We do not sell, share or rent the email."
+          : "We'll email you the PDF. We do not sell, share or rent the email."}
       </p>
     </form>
   );

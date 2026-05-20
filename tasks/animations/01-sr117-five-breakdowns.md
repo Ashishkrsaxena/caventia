@@ -1,5 +1,7 @@
 # Animation 01: The five places SR 11-7 breaks down
 
+> **Supersession note, May 2026.** On April 17, 2026 the Federal Reserve, OCC and FDIC rescinded SR 11-7 and replaced it with a non-prescriptive guidance that explicitly excludes generative and agentic AI (footnote 3). The five breakdowns this animation dramatizes are exactly why the agencies carved those models out. The script stays usable: the on-screen label "SR 11-7 / breakdown" can stand as a historical anchor, or be relabeled "MRM / breakdown" if reshooting. The voiceover lines that name "SR 11-7" should be re-read as "the SR 11-7 era" for any new render.
+
 **Placement:** Inline in `/blog/five-places-sr11-7-breaks-down`. One vignette under each numbered section heading.
 **Total length:** ~100 seconds across five vignettes (~18 to 22s each).
 **Aspect:** 1920 × 1080.

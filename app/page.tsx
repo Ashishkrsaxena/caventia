@@ -14,9 +14,9 @@ export default function Home() {
       <Hero />
       <ProblemSection />
       <PullQuote
-        cite="From the SR 11-7 whitepaper · Ashish K. Saxena"
+        cite="From AI Agent Governance After SR 11-7 · Ashish K. Saxena"
       >
-        &ldquo;The audit log isn&apos;t a feature. It&apos;s the{" "}
+        &quot;The audit log isn&apos;t a feature. It&apos;s the{" "}
         <em
           className="italic text-accent"
           style={{ fontVariationSettings: '"opsz" 96, "SOFT" 100, "WONK" 1' }}
@@ -24,7 +24,7 @@ export default function Home() {
           spine
         </em>
         . Every other artifact regulators require - model cards,
-        disparate-impact reports, 510(k) submissions - hangs off it.&rdquo;
+        disparate-impact reports, 510(k) submissions - hangs off it&quot;.
       </PullQuote>
       <SpineDiagram />
       <SpineInMotion />

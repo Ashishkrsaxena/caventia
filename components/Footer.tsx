@@ -54,7 +54,7 @@ export default function Footer() {
             >
               Resources
             </p>
-            <Link href="/sr117" className={linkClass}>SR 11-7 Whitepaper</Link>
+            <Link href="/sr117" className={linkClass}>AI Agents After SR 11-7</Link>
             <Link href="/fda" className={linkClass}>FDA Q-Sub Whitepaper</Link>
             <Link href="/blog" className={linkClass}>Notes</Link>
             <Link href="/research" className={linkClass}>Founder Research</Link>

@@ -6,30 +6,31 @@ import ExaminerFilm from "@/components/ExaminerFilm";
 import Marginalia from "@/components/Marginalia";
 
 export const metadata: Metadata = {
-  title: "SR 11-7 for AI Agents - A Practical Framework for Model Risk Officers",
+  title: "AI Agent Governance After SR 11-7 - A Practical Framework for Banks",
   description:
-    "How to apply SR 11-7 model risk management to AI agents. Five places the framework breaks. Five fixes that pass an OCC examination. Free 12-page whitepaper by Ashish K. Saxena. No signup.",
+    "On April 17 2026 the agencies rescinded SR 11-7 and excluded generative and agentic AI from the replacement guidance. This is the framework banks adopt instead. Free whitepaper by Ashish K. Saxena. Coming soon.",
   keywords: [
-    "SR 11-7 AI agents",
-    "SR 11-7 AI",
-    "SR 11-7 model risk",
-    "AI model risk management",
-    "OCC AI examination",
-    "AI audit trail",
+    "AI agent governance",
+    "AI Agent Governance After SR 11-7",
+    "2026 Interagency MRM Guidance",
+    "generative AI governance banks",
+    "agentic AI governance banks",
     "model risk management AI",
+    "AI audit trail",
     "AI governance for banks",
     "regulated AI agents",
+    "FIL-15-2026",
   ],
   openGraph: {
-    title: "SR 11-7 for AI Agents - A Practical Framework for Model Risk Officers",
+    title: "AI Agent Governance After SR 11-7 - A Practical Framework for Banks",
     description:
-      "How to apply SR 11-7 to AI agents. Five places it breaks. Five fixes. Free whitepaper, no signup.",
+      "The agencies excluded generative and agentic AI from the 2026 MRM Guidance. They didn't excuse banks from governing them. Free whitepaper. Coming soon.",
     images: [
       {
-        url: "/api/og?title=SR+11-7+for+AI+Agents&desc=A+practical+framework+for+model+risk+officers",
+        url: "/api/og?title=AI+Agent+Governance+After+SR+11-7&desc=The+framework+banks+adopt+for+the+models+regulators+excluded",
         width: 1200,
         height: 630,
-        alt: "SR 11-7 for AI Agents whitepaper",
+        alt: "AI Agent Governance After SR 11-7 whitepaper",
       },
     ],
   },
@@ -47,33 +48,33 @@ type Section = {
 const SECTIONS: Section[] = [
   {
     num: "I.",
-    title: "Why SR 11-7 Still Matters in 2026",
-    body: "The Fed has confirmed in supervisory letters throughout 2024 and 2025 that LLM-based decisions fit squarely inside SR 11-7's model definition. Banks treating AI agents as automation face MRA findings.",
+    title: "What the April 2026 MRM Rewrite says (and doesn't)",
+    body: "The non-prescriptive replacement guidance applies most to banks over $30B. Footnote 3 explicitly excludes generative and agentic AI from scope - while telling banks they still must govern them.",
   },
   {
     num: "II.",
-    title: "Where the framework maps cleanly",
-    body: "SR 11-7's three pillars (development, validation, ongoing monitoring) translate to AI agents without modification. The principles are durable. The artifacts are not.",
+    title: "Why the principles outlived the letter",
+    body: "Model inventory, validation, outcomes analysis, ongoing monitoring, effective challenge, vendor oversight. The surviving principles map cleanly onto AI agents. The branded artifacts no longer do.",
   },
   {
     num: "III.",
-    title: "Five places it breaks down",
-    body: "Non-determinism. Prompt-as-feature. Tool use and emergent behavior. Model provider opacity. Continuous capability evolution. Each gets a specific fix.",
+    title: "Five places the old framework broke down",
+    body: "Non-determinism. Prompt-as-feature. Tool use and emergent behavior. Model provider opacity. Continuous capability evolution. Each is precisely why the agencies carved gen AI and agentic AI out.",
   },
   {
     num: "IV.",
-    title: "A five-step practical framework",
-    body: "Inventory and classify. Document each agent. Validate before deployment. Capture production decisions. Monitor and re-validate. Pressure-tested against examiner conversations.",
+    title: "A five-step framework banks adopt",
+    body: "Inventory and classify. Document each agent. Validate before deployment. Capture production decisions. Monitor and re-validate. Pressure-tested against post-rewrite examiner conversations.",
   },
   {
     num: "V.",
-    title: "Documentation artifacts you need",
-    body: "Per-agent (Model Identity Document, validation reports, monitoring history, exception log). Program-level (inventory, policy, independence policy, provider risk assessment).",
+    title: "Documentation artifacts you still need",
+    body: "Per-agent (Model Identity Document, validation reports, monitoring history, exception log). Program-level (inventory, policy, independence policy, provider risk assessment). Names change. Substance doesn't.",
   },
   {
     num: "VI.",
     title: "Architectural requirements for capture",
-    body: "Reproducibility. Tamper evidence. Independence from agent operator. Retention. Demographic capture for ECOA. Replay queries. Minimum bars for examiner-credible evidence.",
+    body: "Reproducibility. Tamper evidence. Independence from agent operator. Retention. Demographic capture for ECOA. Replay queries. Minimum bars for examiner-defensible evidence.",
   },
   {
     num: "VII.",
@@ -83,27 +84,27 @@ const SECTIONS: Section[] = [
   {
     num: "VIII.",
     title: "Seven pitfalls banks are making in 2026",
-    body: "Treating AI as automation. Documenting the LLM as the model. Validating once, never again. No demographic capture. Capture in logs engineers can modify. Among others.",
+    body: "Reading 'non-prescriptive' as 'unaccountable'. Treating AI as automation. Documenting the LLM as the model. Validating once, never again. No demographic capture. Capture in logs engineers can modify. Among others.",
   },
   {
     num: "IX.",
     title: "Implementation roadmap",
-    body: "Days 1-90 (inventory, classify, pattern build). Days 91-180 (capture layer rollout, monitoring). Days 181-365 (full coverage, re-validation cycle).",
+    body: "Days 1-90 (inventory, classify, pattern build). Days 91-180 (capture layer rollout, monitoring). Days 181-365 (full coverage, re-validation cycle). Aligned to the new guidance's risk-based tailoring.",
   },
   {
     num: "X.",
     title: "Independence: the quiet advantage",
-    body: "Counterintuitive: AI agents make independence requirements easier to satisfy than traditional models. Validators no longer need scarce quant PhDs.",
+    body: "Counterintuitive: AI agents make independent validation easier to satisfy than traditional models. Validators no longer need scarce quant PhDs. Effective challenge survives the rewrite intact.",
   },
   {
     num: "XI.",
-    title: "Provider risk: a specific concern",
-    body: "LLM providers ship updates that meaningfully change agent behavior. Contractual, operational, strategic and documentary controls for managing the dependency.",
+    title: "Provider risk: the section that just got sharper",
+    body: "LLM providers ship updates that meaningfully change agent behavior. The new guidance's Section VII on vendor and third-party products applies in full. Contractual, operational, strategic and documentary controls.",
   },
   {
     num: "App.",
     title: "Appendices",
-    body: "SR 11-7 to AI agent mapping table. Glossary covering agent, capture layer, decision drift, feature snapshot, hash chain, Merkle root, MRA, prompt drift and tamper evidence.",
+    body: "The 2026 MRM Guidance to AI agent mapping table. Glossary covering agent, capture layer, decision drift, feature snapshot, hash chain, Merkle root, prompt drift and tamper evidence.",
   },
 ];
 
@@ -116,7 +117,7 @@ export default function SR117Page() {
         <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 pt-20 md:pt-28 pb-16 md:pb-24">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-16 items-start">
             <div>
-              <SectionLabel>Whitepaper · Free download</SectionLabel>
+              <SectionLabel>Whitepaper · Coming soon</SectionLabel>
               <h1
                 className="font-display font-normal text-ink mt-6"
                 style={{
@@ -126,27 +127,29 @@ export default function SR117Page() {
                   fontVariationSettings: '"opsz" 96, "SOFT" 30',
                 }}
               >
-                Applying SR 11-7 to AI Agents:{" "}
+                AI Agent Governance{" "}
                 <em
                   className="italic text-accent font-display"
                   style={{ fontVariationSettings: '"opsz" 96, "SOFT" 100, "WONK" 1' }}
                 >
-                  a practical framework.
+                  after SR 11-7.
                 </em>
               </h1>
               <p className="type-body-lg mt-8 max-w-[620px] text-ink-mute font-light">
-                12 pages on how the Federal Reserve&apos;s SR 11-7 model
-                risk management guidance applies to the LLM-based AI agents
-                your business units are now deploying. Written for Chief
-                Model Risk Officers, Heads of Model Validation and AI
-                Governance leads at banks and FinTech with active AI deployment.
+                On April 17 2026 the Federal Reserve, OCC and FDIC jointly
+                rescinded SR 11-7 and issued a non-prescriptive replacement
+                that explicitly excludes generative and agentic AI from its
+                scope. This whitepaper is the framework banks adopt instead.
+                Written for Chief Risk Officers, Heads of Model Validation
+                and AI Governance leads at banks and FinTech with active AI
+                deployment.
               </p>
               <p className="mt-6 font-mono text-[12px] tracking-[0.06em] uppercase text-ink-mute">
                 Written by Ashish K. Saxena · Founder, Caventia
               </p>
             </div>
             <div id="whitepaper-gate" className="lg:sticky lg:top-8 scroll-mt-24">
-              <WhitepaperGate paperId="sr117" />
+              <WhitepaperGate paperId="sr117" comingSoon />
             </div>
           </div>
         </div>
@@ -160,67 +163,75 @@ export default function SR117Page() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28">
           <SectionLabel numeral="I.">An excerpt</SectionLabel>
           <h2 className="type-display-md mt-6 mb-10 max-w-[820px]">
-            The principles hold up. The artifacts don&apos;t.
+            The letter is gone. The principles aren&apos;t.
           </h2>
 
           <div className="max-w-[720px]">
             <p className="dropcap font-body text-[19px] text-ink leading-[1.65] mb-6">
-              SR 11-7 was written in 2011, three years before GPT-2 and seven
-              years before the term &ldquo;AI agent&rdquo; entered common
-              usage. Today, banks are deploying AI agents in fraud detection,
-              KYC adjudication, credit underwriting and customer service
-              while still wrestling with whether traditional model risk
-              frameworks apply.
+              On April 17 2026 the Federal Reserve, OCC and FDIC jointly
+              rescinded SR 11-7 and replaced it with a 12-page principles-based
+              &quot;Supervisory Guidance on Model Risk Management&quot;.
+              The new guidance is non-prescriptive, most relevant to banks
+              above $30B in total assets and footnote 3 contains the
+              sentence that defines the next decade of AI governance in
+              banking.
+            </p>
+            <blockquote
+              className="border-l-2 border-accent pl-6 py-2 my-8 font-display italic text-ink"
+              style={{
+                fontSize: "20px",
+                lineHeight: 1.55,
+                fontVariationSettings: '"opsz" 36, "SOFT" 60',
+              }}
+            >
+              &quot;Generative AI and agentic AI models are novel and
+              rapidly evolving. As such, they are not within the scope of
+              this guidance. Nonetheless, a banking organization&apos;s risk
+              management and governance practices should guide the
+              determination of appropriate governance and controls for any
+              tools, processes, or systems not covered in this document.&quot;
+              <footer className="not-italic mt-3 font-mono text-[12px] tracking-[0.06em] uppercase text-ink-mute">
+                Footnote 3, Supervisory Guidance on Model Risk Management,
+                April 17 2026
+              </footer>
+            </blockquote>
+            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
+              The agencies named the gap. They said: we will not tell you
+              how to govern AI agents. Figure it out yourselves.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              The honest answer: SR 11-7&apos;s principles hold up better
-              than you&apos;d expect. The artifacts and workflows it implies
-              break down quickly when applied to LLM-based agents.
+              This is not a relief. It is an obligation. Footnote 1 of the
+              same document preserves the escape hatch the agencies left
+              themselves: &quot;supervisory action may result for any
+              violations of law or unsafe or unsound practices stemming from
+              insufficient management of model risk.&quot; Banks can still
+              be cited. They just no longer have a checklist to point at.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              An LLM-based fraud detector that produces a fraud_score from a
-              transaction prompt fits squarely inside SR 11-7&apos;s model
-              definition. So does an AI agent that synthesizes a KYC verdict
-              from multiple data sources. The Fed has confirmed this
-              position in supervisory letters and OCC examiner training
-              materials throughout 2024 and 2025.
+              The surviving principles - model inventory, validation,
+              outcomes analysis, ongoing monitoring, effective challenge,
+              vendor oversight, model materiality, aggregate risk - all map
+              cleanly onto generative and agentic AI. The branded artifacts
+              of the SR 11-7 era (&quot;model risk pack&quot;,
+              &quot;three lines of defense&quot;) do not. The vocabulary
+              changed; the work didn&apos;t.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              Yet many banks are still treating AI agents as
-              &ldquo;automation&rdquo; rather than as models. This creates
-              two risks.
-            </p>
-            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              First, examiner findings: the OCC and Fed increasingly ask
-              explicitly about AI/ML model governance. Banks without an
-              answer face Matters Requiring Attention.
-            </p>
-            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              Second, disparate impact exposure: AI agents making
-              credit-adjacent decisions without ECOA-compliant validation
-              are creating CFPB enforcement risk.
-            </p>
-            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              The whitepaper organizes the response in three layers. The
-              three pillars of SR 11-7 (robust development, independent
-              validation, ongoing monitoring) translate to AI agents without
-              modification.
-            </p>
-            <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
-              The breakdowns happen in five specific places: non-determinism,
-              prompt-as-feature, tool use, model provider opacity and
-              continuous capability evolution. The fix is a five-step
-              practical framework: inventory and classify, document each
-              agent, validate before deployment, capture production
-              decisions, monitor and re-validate.
+              This whitepaper is the framework banks adopt for the AI agents
+              the 2026 MRM Guidance left to them. Five places the old SR
+              11-7 framework broke down for agentic AI - each, as it turns
+              out, is precisely why the agencies carved gen AI and agentic
+              AI out. A five-step practical framework banks build instead.
+              Per-agent documentation artifacts that satisfy what examiners
+              still expect.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75]">
               The opportunity: banks that build AI agent governance
               correctly in 2026 have a 12 to 24 month head start on
-              competitors who will be forced to retrofit it under examiner
-              pressure.{" "}
+              competitors who will be forced to retrofit it under board,
+              regulator or first-incident pressure.{" "}
               <span className="font-mono text-[14px] text-ink-mute">
-                [Download to continue reading.]
+                [Leave your email to get the new edition on launch.]
               </span>
             </p>
           </div>

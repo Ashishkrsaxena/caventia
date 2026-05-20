@@ -29,7 +29,11 @@ export interface BlogCategory {
 // generic "Frameworks" bucket for cross-cutting posts and a "Notes"
 // bucket for founder commentary.
 export const BLOG_CATEGORIES: BlogCategory[] = [
-  { id: "sr11-7", name: "SR 11-7", slug: "sr11-7" },
+  // Slug kept as "sr11-7" so any inbound links survive; display name
+  // is now "Model Risk" since SR 11-7 itself was rescinded on
+  // 2026-04-17 and the durable category is the discipline, not the
+  // letter.
+  { id: "sr11-7", name: "Model Risk", slug: "sr11-7" },
   { id: "fda", name: "FDA", slug: "fda" },
   { id: "ecoa", name: "ECOA & fair lending", slug: "ecoa" },
   { id: "frameworks", name: "Frameworks", slug: "frameworks" },

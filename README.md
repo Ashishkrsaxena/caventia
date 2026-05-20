@@ -1,6 +1,6 @@
 # Caventia.com
 
-The marketing site and design-partner pipeline for Caventia - the vertical TRiSM platform for regulated AI agents.
+The marketing site and design-partner pipeline for Caventia - the vertical AI governance platform banks adopt for the generative and agentic AI agents the 2026 Interagency Model Risk Management Guidance leaves to them. FDA 510(k)-ready governance for health systems.
 
 Built with Next.js 16 (App Router), TypeScript, Tailwind v4 and `next/font`. Reads its design system from `CAVENTIA_DESIGN_SYSTEM.md` and its content/architecture from `CAVENTIA_PRODUCT_PLAN.md`.
 
@@ -62,7 +62,7 @@ caventia-homepage.html  # canonical homepage prototype (kept for reference)
 Asset / integration items the founder must wire up before going live:
 
 - [ ] `public/founder.jpg` - 600x600 minimum professional headshot. Replaces the gradient placeholder in `components/FounderBlock.tsx` and `app/about/page.tsx`.
-- [ ] `public/whitepaper-sr117.pdf` - the 24-page SR 11-7 whitepaper. Wire its public URL into `app/api/whitepaper/route.ts`.
+- [ ] `public/whitepaper-sr117.pdf` - the "AI Agent Governance After SR 11-7" whitepaper (v2; rewritten after the April 17 2026 MRM Rewrite, which rescinded SR 11-7 and excluded gen and agentic AI from the replacement). `/sr117` currently runs in coming-soon mode; flip the `comingSoon` flag in `app/api/whitepaper/route.ts` PAPERS entry once the PDF is ready and set `pdfPath` accordingly.
 - [ ] `RESEND_API_KEY` + verified sender domain.
 - [ ] `NEXT_PUBLIC_CALENDLY_URL` + surface it inside the whitepaper success state and the final CTA.
 - [ ] `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` (or leave blank to skip analytics).

@@ -12,7 +12,7 @@ You shipped an AI agent. It works. Then someone on the risk team asks how you'd 
 
 The room goes quiet. That moment is what TRiSM was supposed to prevent.
 
-TRiSM stands for Trust, Risk and Security Management for AI. Gartner coined it in 2023. Three years later, most teams who use the term still mean "we run an observability dashboard on our LLM calls."
+TRiSM stands for Trust, Risk and Security Management for AI. Gartner coined it in 2023. Three years later, most teams who use the term still mean "we run an observability dashboard on our LLM calls".
 
 That's not what it is. This post breaks the framework down to four parts and tells you what each one is actually for. By the end you'll be able to look at your AI deployment and say, with specifics, which of the four you have and which you don't.
 
@@ -22,14 +22,14 @@ The framework has four pieces. They're sequential. Each one's output feeds the n
 
 1. **Pre-deployment validation.** Did this agent ship with known failure modes mapped? Did anyone test it against the adversarial inputs your industry sees?
 2. **Runtime capture.** Is every decision, every prompt, every tool call being captured in a way you could reconstruct later?
-3. **Governance documentation.** Can you produce the artifact your specific regulator expects? Not "a report." The specific format that examiner reads.
+3. **Governance documentation.** Can you produce the artifact your specific regulator expects? Not "a report". The specific format that examiner reads.
 4. **Independent attestation.** Has a third party with no incentive in the outcome signed off?
 
-Skip any one and the chain breaks. You can have the best runtime logging in the world and still fail an SR 11-7 examination because you don't have the documentation pack. You can have an immaculate model card and lose a CFPB inquiry because your runtime capture can't reconstruct individual decisions.
+Skip any one and the chain breaks. You can have the best runtime logging in the world and still fail an examiner conversation because you don't have the documentation pack. You can have an immaculate model card and lose a CFPB inquiry because your runtime capture can't reconstruct individual decisions.
 
 ## Why "observability" isn't TRiSM
 
-Observability tools track latency, cost, error rates and maybe a vague notion of "quality." They were built for engineering teams who want to know if the system is up.
+Observability tools track latency, cost, error rates and maybe a vague notion of "quality". They were built for engineering teams who want to know if the system is up.
 
 Examiners don't ask if the system is up. They ask things like:
 
@@ -54,7 +54,7 @@ Each cell on the left looks fine in a slide deck. Each cell on the right is what
 
 ## What "vertical TRiSM" means
 
-Horizontal AI governance tools treat regulators as a generic abstraction. "We support compliance reporting." Vertical TRiSM means the artifact you ship is shaped exactly like the document the specific regulator reads.
+Horizontal AI governance tools treat regulators as a generic abstraction. "We support compliance reporting". Vertical TRiSM means the artifact you ship is shaped exactly like the document the specific regulator reads.
 
 SR 11-7's model risk documentation pack has a structure. The OCC examiner team knows that structure. Ship them something else and you'll spend the rest of the examination explaining why your evidence doesn't map.
 

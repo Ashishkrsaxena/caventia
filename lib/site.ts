@@ -3,7 +3,7 @@ export const SITE = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://caventia.com",
   tagline: "The audit-trail spine for regulated AI agents.",
   description:
-    "Caventia is the vertical TRiSM platform that ships SR 11-7 model risk artifacts for banks and FDA 510(k)-ready governance artifacts for health systems.",
+    "Caventia is the vertical AI governance platform banks adopt for the generative and agentic AI agents the 2026 Interagency Model Risk Management Guidance leaves to them. FDA 510(k)-ready governance for health systems.",
   contactEmail: "ashish@caventia.com",
   calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? "",
 } as const;
@@ -21,25 +21,25 @@ export const FOUR_PRODUCTS = [
     name: "AgentGuard",
     hook: "Pre-deployment validation",
     description:
-      "Validate every AI agent against SR 11-7, ECOA and HIPAA constraints before it reaches production.",
+      "Validate every AI agent against the principles examiners still expect, fair-lending obligations and clinical-safety constraints before it reaches production.",
   },
   {
     name: "Audit Trail",
     hook: "The spine",
     description:
-      "Immutable, examiner-ready log of every model decision, input and outcome. The single source of truth.",
+      "Immutable, examiner-defensible log of every model decision, input and outcome. The single source of truth.",
   },
   {
     name: "Compliance Passport",
     hook: "Continuous attestation",
     description:
-      "Every agent ships with a portable, signed compliance record. Pass audits in days, not quarters.",
+      "Every agent ships with a portable, signed governance record. Pass exams and board reviews in days, not quarters.",
   },
   {
     name: "Auditor Bridge",
     hook: "Examiner workflow",
     description:
-      "Direct read-only access for OCC, FDA and internal auditors. No screenshots, no email chains.",
+      "Direct read-only access for OCC, FDA, internal audit and board risk committees. No screenshots, no email chains.",
   },
 ] as const;
 

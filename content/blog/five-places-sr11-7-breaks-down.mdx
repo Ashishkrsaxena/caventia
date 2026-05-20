@@ -8,6 +8,8 @@ tags: ["sr11-7", "model-risk", "ai-governance", "validation"]
 featured: true
 ---
 
+> **Editor's note, May 2026.** Five days after this post went up, the Federal Reserve, OCC and FDIC jointly rescinded SR 11-7 (and OCC 2011-12, FIL-22-2017, FIL-27-2021) and replaced them with a non-prescriptive "Supervisory Guidance on Model Risk Management" dated April 17, 2026. Footnote 3 of the replacement guidance explicitly excludes generative and agentic AI from scope - which validates the thesis below. The five breakdowns this post catalogs are precisely why the agencies carved gen AI and agentic AI out. The post stays up unchanged as a record of the argument; a follow-up titled "AI Agent Governance After SR 11-7" applies the new principles-based regime and is in draft.
+
 Your bank's model validators trained on decision trees, logistic regression and the occasional gradient-boosted ensemble. SR 11-7 was written with that toolkit in mind.
 
 Now your business unit ships a customer-facing agent built on GPT-4o or Claude Opus. Same SR 11-7 expectations apply. Same examiner is going to read the documentation pack next year.
@@ -26,7 +28,7 @@ Even with temperature pinned to zero, identical prompts can produce different ou
 
 What breaks: reproducibility-based validation. You can no longer say "we tested the model and it produced output X on input Y" with full confidence.
 
-The fix: shift from "model produces deterministic decisions" to "model produces decisions within a behavioral envelope, monitored for drift." Validate the envelope, not the exact output. The envelope is the set of outputs the agent should produce on a representative input distribution.
+The fix: shift from "model produces deterministic decisions" to "model produces decisions within a behavioral envelope, monitored for drift". Validate the envelope, not the exact output. The envelope is the set of outputs the agent should produce on a representative input distribution.
 
 ## II. Prompt-as-feature
 
@@ -74,7 +76,7 @@ The training data is proprietary. The fine-tuning details are proprietary. Repro
 
 What breaks: documentation completeness. SR 11-7 anticipates a full model card. You cannot produce one for the LLM layer of the stack.
 
-The fix: maintain a clear delineation between "your model" and "vendor model." Your model is the prompts, the tools, the retrieval architecture and the post-processing logic.
+The fix: maintain a clear delineation between "your model" and "vendor model". Your model is the prompts, the tools, the retrieval architecture and the post-processing logic.
 
 That part is fully documentable. It's also, frankly, where your actual proprietary intellectual property lives.
 

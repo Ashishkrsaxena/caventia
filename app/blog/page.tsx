@@ -8,7 +8,7 @@ import { getCategory } from "@/lib/blog-types";
 export const metadata: Metadata = {
   title: "Notes - Vertical AI governance, written down",
   description:
-    "Founder notes and frameworks on SR 11-7, FDA, ECOA and the vertical AI governance work behind Caventia.",
+    "Founder notes and frameworks on the 2026 MRM Guidance, FDA, ECOA and the vertical AI governance work behind Caventia.",
   alternates: { canonical: "/blog" },
 };
 

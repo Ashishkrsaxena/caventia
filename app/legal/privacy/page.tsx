@@ -84,9 +84,9 @@ export default function PrivacyPage() {
         <div className="font-body text-[17px] text-ink leading-[1.75] space-y-6">
           <p>
             This policy describes how {longForm()} (together with its
-            affiliates, &ldquo;Caventia&rdquo;, &ldquo;we&rdquo; or
-            &ldquo;our&rdquo;) collects, uses and discloses personal
-            information through caventia.com (the &ldquo;Site&rdquo;). It
+            affiliates, &quot;Caventia&quot;, &quot;we&quot; or
+            &quot;our&quot;) collects, uses and discloses personal
+            information through caventia.com (the &quot;Site&quot;). It
             applies to anyone who visits the Site or submits a form on it.
           </p>
           <p>
@@ -319,7 +319,7 @@ export default function PrivacyPage() {
           </h2>
           <p>
             We may update this policy as our practices change. The
-            &ldquo;Effective&rdquo; date at the top reflects the most recent
+            &quot;Effective&quot; date at the top reflects the most recent
             revision. Material changes will be flagged at the top of this
             page for at least thirty days.
           </p>

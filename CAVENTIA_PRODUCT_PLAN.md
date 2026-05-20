@@ -1,8 +1,66 @@
-# Caventia.com — The Vertical AI Governance Platform
+# Caventia.com - The Vertical AI Governance Platform
 
-## One-Liner
-**"The audit-trail spine for regulated AI agents."**
-Caventia.com is the marketing site and design-partner pipeline for Caventia, a vertical TRiSM platform that ships SR 11-7 model risk artifacts for banks and FDA 510(k)-ready governance artifacts for health systems. The site converts a tightly-defined buyer (Chief Model Risk Officers at $10B+ AUM banks; Chief Medical Information Officers at $1B+ health systems) into design-partner conversations.
+> **Canonical messaging canon (locked 2026-05-20, post-MRM-rewrite).** Every page, component, blog post, animation script, OG image and outbound email reads from this canon. When the prose in this file conflicts with a downstream artifact, this file wins. Pair this with the prototype precedence rule: when [`caventia-homepage.html`](caventia-homepage.html) and [`CAVENTIA_DESIGN_SYSTEM.md`](CAVENTIA_DESIGN_SYSTEM.md) disagree on visuals, the prototype wins; when copy disagrees, this canon wins.
+
+## 0. Canonical Copy Bank (post-MRM-rewrite)
+
+### Regulatory trigger
+On April 17, 2026 the Federal Reserve, OCC and FDIC jointly rescinded SR 11-7, OCC 2011-12, FIL-22-2017 and FIL-27-2021 and issued a 12-page principles-based "Supervisory Guidance on Model Risk Management" (FIL-15-2026). The new guidance is non-prescriptive, "most relevant" to banks above $30B in total assets, and footnote 3 explicitly **excludes generative and agentic AI from scope** while telling banks they still must govern them.
+
+### Source-of-truth quote
+Footnote 3, page 3, of the joint guidance (verbatim, do not paraphrase in any artifact that cites it):
+
+> "Generative AI and agentic AI models are novel and rapidly evolving. As such, they are not within the scope of this guidance. Nonetheless, a banking organization's risk management and governance practices should guide the determination of appropriate governance and controls for any tools, processes, or systems not covered in this document."
+
+### Counter-weight quote
+Footnote 1, page 2, used when arguing enforcement risk persists despite non-prescriptive framing:
+
+> "supervisory action may result for any violations of law or unsafe or unsound practices stemming from insufficient management of model risk."
+
+### Lead hero sentence (homepage, OG, social)
+> Federal regulators just excluded *generative and agentic AI* from model risk management. They didn't excuse banks from governing them. Caventia is the framework banks adopt.
+
+The italic Pompeii-red accent lands on *generative and agentic AI* - the verbatim phrase from footnote 3, so the visual hook is the regulatory language itself.
+
+### Brand-level taglines
+
+| Surface | Copy |
+|---|---|
+| `SITE.tagline` (unchanged) | The audit-trail spine for regulated AI agents. |
+| `SITE.description` (new) | Caventia is the vertical AI governance platform banks adopt for the generative and agentic AI agents the 2026 Interagency Model Risk Management Guidance leaves to them. FDA 510(k)-ready governance for health systems. |
+| Whitepaper title (new) | AI Agent Governance After SR 11-7 |
+| OG/Twitter title | AI Agent Governance for the Models Regulators Excluded - Caventia |
+| OG/Twitter description | Banks now own AI agent governance. We are the framework they adopt. FDA 510(k)-ready for health systems. Examiner-defensible. |
+
+### Phrases we keep saying
+- "audit-trail spine" (brand metaphor, survives intact)
+- "AI agent governance" (the category)
+- "examiner-defensible" (replaces "examiner-ready")
+- "principles still expected" - model inventory, validation, outcomes analysis, ongoing monitoring, effective challenge, vendor oversight, model materiality, aggregate risk
+- "fair-lending obligations" - ECOA/Reg B apply by law independent of MRM; surface where lending decisions are at issue
+- "FDA 510(k)", "PCCP", "HIPAA" - healthcare leg fully intact
+- "$30B" - the new threshold, but described as "most relevant," not as a cliff
+- "2026 Interagency MRM Guidance" or "the 2026 MRM Rewrite" as the short name
+
+### Phrases we stop saying
+- "SR 11-7 examiner-ready" / "SR 11-7-compliant" - the letter no longer exists
+- "Three lines of defense" as a branded framework label - the new guidance dropped the terminology (the underlying concept of independence and effective challenge survives, just unbranded)
+- "OCC examiner expects" as a fixed external standard - examiner expectations are now bank-by-bank
+- "SR 11-7 §IV / §V / §VII" section-number citations - no replacement letter section numbering yet
+- "Federal Reserve's SR 11-7 model risk management framework" used as if it were active law
+
+### Buyer persona refresh
+- **Primary (banks):** Chief Risk Officer / Chief Model Risk Officer at banks above $30B in total assets, plus complex sub-$30B fintechs with material model exposure. Title set widens to include board risk committee chairs, because principles-based supervision pushes accountability up the org chart.
+- **Secondary (health):** Chief Medical Information Officer / Chief Clinical Informatics Officer at $1B+ health systems, plus Series B+ digital health with diagnostic/triage product. Unchanged by the rewrite.
+- **Tertiary (capital):** VC / corp dev during diligence. The reframe gives them a sharper "why now" - the agencies just named the gap.
+
+### What the rewrite did NOT change
+- Caventia's four-product architecture (AgentGuard / Audit Trail / Compliance Passport / Auditor Bridge).
+- The "audit-trail spine" metaphor.
+- The FDA 510(k) / PCCP positioning for healthcare.
+- ECOA, Reg B, NIST AI RMF, NYC Local Law 144, EU AI Act - all surface where they make sense.
+- The founder's credibility stack (books, citations, IEEE Senior, BCS Fellow, Amazon FinTech track record).
+- The Stripe Atlas Delaware C-Corp incorporation facts in `lib/entity.ts`.
 
 ---
 
@@ -10,11 +68,11 @@ Caventia.com is the marketing site and design-partner pipeline for Caventia, a v
 
 Caventia is pre-revenue, pre-product, founder-led. The website's job is **not** to sell a product. There is no product to sell yet. The website's job is to:
 
-1. Establish credibility with a Chief Model Risk Officer in 90 seconds
+1. Establish credibility with a Chief Risk Officer or Chief Model Risk Officer in 90 seconds, on the post-MRM-rewrite ground that they themselves now stand on
 2. Convert that credibility into a design-partner discovery call
-3. Provide a downloadable SR 11-7 whitepaper as the soft-conversion offer
+3. Capture email for the "AI Agent Governance After SR 11-7" whitepaper, currently in coming-soon state
 4. Make the founder's authority (books, IJSR reviewer status, Amazon FinTech track record, IEEE awards) immediately visible
-5. Differentiate from horizontal competitors (Credo AI, Fiddler, Arthur, Robust Intelligence) by leading with vertical regulatory depth
+5. Differentiate from horizontal competitors (Credo AI, Fiddler, Arthur, Robust Intelligence) by leading with vertical regulatory depth - sharpened by the agencies' explicit exclusion of generative and agentic AI from their guidance
 
 ### What This Site Is NOT
 - Not a product login page
@@ -48,12 +106,12 @@ If the site fails any of those three, the buyer closes the tab. There is no seco
 
 ## 2. The Buyer Personas (Who We're Designing For)
 
-### Primary: Chief Model Risk Officer (FinTech)
-- Title variants: Head of Model Risk Management, Chief Risk Officer, Director of Model Validation
-- Institution: US bank $10B–$500B AUM, OR Series B+ fintech with lending/fraud product
-- Reads: American Banker, Risk.net, Federal Reserve guidance, SR 11-7 examiner notes
-- Pain: Manual SR 11-7 documentation, AI agents proliferating across business units, examiners asking new questions about AI, no playbook
-- Trigger phrases that resonate: "SR 11-7," "model validation," "examiner exam," "third-party model risk," "OCC bulletin," "fair lending," "ECOA," "model inventory"
+### Primary: Chief Risk Officer / Chief Model Risk Officer (FinTech)
+- Title variants: Chief Risk Officer, Head of Model Risk Management, Director of Model Validation, Board Risk Committee Chair (newly relevant post-rewrite)
+- Institution: US bank above $30B in total assets (the threshold of the 2026 MRM Guidance), OR complex sub-$30B fintech with material model exposure or activities outside traditional community banking
+- Reads: American Banker, Risk.net, Federal Reserve guidance, FIL-15-2026 commentary
+- Pain: Principles-based supervision with no checklist, AI agents proliferating across business units, footnote 3 explicitly excludes gen AI and agentic AI from MRM but examiners still ask, no playbook
+- Trigger phrases that resonate: "2026 MRM Guidance," "model validation," "effective challenge," "model materiality," "model inventory," "vendor model risk," "fair lending," "ECOA," "unsafe or unsound practices"
 - Hostile to: generic AI hype, "AI for everyone" positioning, demo videos, gamified UX
 - Friendly to: PDFs with citations, peer-reviewed papers, regulatory whitepapers, plain-spoken founders with bank experience
 
@@ -79,35 +137,36 @@ If the site fails any of those three, the buyer closes the tab. There is no seco
 
 | Route | Purpose | Primary CTA |
 |---|---|---|
-| `/` | Home — credibility + thesis + CTA | Book discovery call |
-| `/sr117` | SR 11-7 whitepaper landing | Download (email gated) |
+| `/` | Home - credibility + thesis + CTA | Book discovery call |
+| `/sr117` | AI Agents After SR 11-7 whitepaper landing (slug preserved post-rewrite) | Email captured for launch |
 | `/fda` | FDA 510(k) / PCCP positioning page | Download (email gated) |
 | `/platform` | The four-product architecture | Book discovery call |
 | `/about` | Founder bio + authority signals | LinkedIn / email |
 | `/research` | Published papers, books, IJSR | External links |
 | `/contact` | Design-partner inquiry form | Submit form |
-| `/legal/privacy` | Privacy policy (required for forms) | — |
-| `/legal/terms` | Terms (legal cover) | — |
+| `/legal/privacy` | Privacy policy (required for forms) | - |
+| `/legal/terms` | Terms (legal cover) | - |
 
 ### Story Each Page Tells
 
 **Home (`/`)**
-- Hero: "The audit-trail spine for regulated AI agents." Single sentence. Single button: "Talk to the founder."
-- Below hero: 3-line problem statement — banks deploying AI agents face a compliance gauntlet they're not ready for; horizontal AI tools don't ship the SR 11-7 artifact regulators expect; we built the vertical platform that does.
-- Four-product strip: AgentGuard / Audit Trail / Compliance Passport / Auditor Bridge — each with a one-line description and the regulator hook it satisfies.
+- Hero H1 (brand, unchanged): "The audit-trail spine for regulated AI agents."
+- Hero subhead (post-rewrite, footnote-3-anchored): "Federal regulators just excluded *generative and agentic AI* from model risk management. They didn't excuse banks from governing them." Italic Pompeii-red on "generative and agentic AI" (verbatim from footnote 3).
+- Below hero: 3-line problem statement - banks deploying AI agents face a compliance gauntlet they're not ready for; horizontal AI tools don't ship the documentation a bank's examiner expects; we built the vertical platform that does.
+- Four-product strip: AgentGuard / Audit Trail / Compliance Passport / Auditor Bridge - each with a one-line description and the regulator hook it satisfies.
 - Founder credibility block: photo, name, 3 lines of credentials (Amazon FinTech / two books / IJSR reviewer / 42 papers / IEEE awards).
 - Social proof preview: design-partner logos (anonymized "leading US regional bank" placeholder until logos confirmed).
-- Final CTA: "We're taking 10 design partners in 2026. Talk to us."
+- Final CTA: "We're taking 5 design partners in 2026. Talk to us."
 
-**SR 11-7 Whitepaper Landing (`/sr117`)**
-- Hero: "SR 11-7 Compliance for AI Agents: A Practical Framework."
-- Subhead: Free 24-page whitepaper. Email required. Written by Ashish K. Saxena.
-- Body: 5-paragraph excerpt teasing the framework
-- Email gate: single field, submit → confirmation page with PDF link
-- Secondary CTA on confirmation: "Want to discuss your specific exam? 30-min call."
+**AI Agents After SR 11-7 Whitepaper Landing (`/sr117`)**
+- Hero: "AI Agent Governance After SR 11-7." Italic Pompeii-red on "after SR 11-7."
+- Subhead: On April 17 2026 the agencies rescinded SR 11-7 and excluded gen and agentic AI from the replacement. This is the framework banks adopt instead. Coming soon. Written by Ashish K. Saxena.
+- Body: footnote 3 quote, principles-survive argument, 5-paragraph excerpt teasing the new framework
+- Email gate: coming-soon mode. Single field, submit → "We'll send it the morning we ship."
+- Secondary CTA on confirmation: "Want to talk before then? 30-min call."
 
 **FDA Page (`/fda`)**
-- Same template as SR 11-7 page, but for healthcare buyers
+- Same template as the post-SR 11-7 page, but for healthcare buyers
 - Whitepaper: "FDA Q-Sub Strategy for AI Agent Governance Platforms"
 - Email gate identical
 - This page may not ship in MVP; deploy in Month 6 when Healthcare SKU enters planning
@@ -116,7 +175,7 @@ If the site fails any of those three, the buyer closes the tab. There is no seco
 - Four-product architecture explained in depth
 - The "spine" diagram (visual: audit log as the central data structure feeding the other three products)
 - Each product gets its own section with: what it does, what regulator hook it satisfies, what artifact it ships
-- Pricing band per product (not exact pricing — bands like "$150K–$500K platform")
+- Pricing band per product (not exact pricing - bands like "$150K-$500K platform")
 - CTA: "Walk through this with the founder."
 
 **About (`/about`)**
@@ -130,15 +189,15 @@ If the site fails any of those three, the buyer closes the tab. There is no seco
 
 **Research (`/research`)**
 - Curated list of Ashish's most relevant papers, with citation counts where possible
-- "Machine Learning and Big Data Analytics for Fraud Detection in the U.S. FinTech Industry" (37 citations) — featured
-- "LSTM Neural Network Approach to Resource Allocation in Hospital Management Systems" — featured
-- "Beyond Code: How TRiSM Redefines AI's Promise" (Medium article) — featured
+- "Machine Learning and Big Data Analytics for Fraud Detection in the U.S. FinTech Industry" (37 citations) - featured
+- "LSTM Neural Network Approach to Resource Allocation in Hospital Management Systems" - featured
+- "Beyond Code: How TRiSM Redefines AI's Promise" (Medium article) - featured
 - Each entry: title, publication, year, citation count, link
 
 **Contact (`/contact`)**
 - Two paths: (1) design-partner inquiry, (2) press / general
 - Design-partner form: Name, Title, Institution, AUM tier (drop-down), specific regulator pain (textarea), preferred call time
-- Press form: simpler — name, outlet, deadline, topic
+- Press form: simpler - name, outlet, deadline, topic
 - Submission triggers: email to founder, optional Calendly link in confirmation
 
 ---
@@ -163,7 +222,7 @@ Outreach (LinkedIn / conference / referral)
 
 ### Email Capture Mechanics
 - Whitepaper download is the **only** email gate. No newsletter signups, no "stay updated" forms.
-- Form: single field (work email). NOT first name + last name + company + role — that's friction.
+- Form: single field (work email). NOT first name + last name + company + role - that's friction.
 - Validation: business email only (reject gmail.com, yahoo.com, outlook.com). Show error: "Please use your work email."
 - On submit: send the PDF as an email attachment AND show a download link on the confirmation page (avoid trapping the lead in inbox limbo).
 - Confirmation page CTA: Calendly link to founder's 30-min discovery slot.
@@ -216,7 +275,7 @@ Citation counts are objective signals. Use them. If counts are below 5, omit the
 - Professional headshot, NOT a stock photo
 - Neutral background
 - Eye contact with camera, slight smile, professional attire
-- If no current professional headshot exists, this is a blocker — invest $300–500 to get one shot. Do not launch without it.
+- If no current professional headshot exists, this is a blocker - invest $300-500 to get one shot. Do not launch without it.
 
 ---
 
@@ -226,7 +285,7 @@ The site should NOT include a comparison table. Comparison tables read as defens
 
 Instead, the positioning is implicit through:
 
-1. **Vocabulary**: Use "SR 11-7," "510(k)," "Q-Sub," "PCCP," "model validation," "OCC examiner" — vocabulary horizontal competitors avoid because they don't know it.
+1. **Vocabulary**: Use "2026 MRM Guidance," "model materiality," "effective challenge," "510(k)," "Q-Sub," "PCCP," "model validation," "OCC examiner," "unsafe or unsound practices" - vocabulary horizontal competitors avoid because they don't know it. Plus "AI Agent Governance After SR 11-7" as the keyword-bridge title that captures both the historical search intent and the post-rewrite reality.
 2. **Specificity**: Every claim ties to a specific regulator framework, not "AI governance" abstractions.
 3. **Founder credentials**: Vertical depth showing through citations, books, papers.
 4. **The four-product diagram**: A complete bundle. Horizontal competitors solve one of four stages each.
@@ -238,9 +297,9 @@ The buyer figures out the comparison themselves. They prefer it that way.
 ## 7. Tech Stack
 
 ### Framework
-- **Next.js 14+ (App Router)** — SSG for marketing pages, ISR for blog posts
-- **TypeScript** — required, no excuses
-- **Tailwind CSS** — for styling
+- **Next.js 14+ (App Router)** - SSG for marketing pages, ISR for blog posts
+- **TypeScript** - required, no excuses
+- **Tailwind CSS** - for styling
 - Deploy on **Vercel** (matches Anthropic/Stripe-tier expectations)
 
 ### Why Not Just HTML/CSS
@@ -256,7 +315,7 @@ The site is small enough that static HTML would work. Use Next.js anyway because
 - For MVP: just email forward to founder. No CRM integration yet.
 
 ### Analytics
-- **Plausible** or **Vercel Analytics** — privacy-respecting, no cookie banner needed
+- **Plausible** or **Vercel Analytics** - privacy-respecting, no cookie banner needed
 - NOT Google Analytics (GA4 cookie banner kills trust + adds friction)
 - Track: page views, whitepaper downloads, contact form submits, demo bookings
 
@@ -267,10 +326,10 @@ The site is small enough that static HTML would work. Use Next.js anyway because
 - Each page has a unique <title> and <meta description>
 
 ### What's NOT in the Stack
-- No CMS (Sanity, Contentful) — overkill for ~10 pages
-- No analytics platform with cookies (PostHog/Mixpanel) — premature
+- No CMS (Sanity, Contentful) - overkill for ~10 pages
+- No analytics platform with cookies (PostHog/Mixpanel) - premature
 - No chatbot, no live chat
-- No A/B testing platform — not enough traffic to be statistically meaningful
+- No A/B testing platform - not enough traffic to be statistically meaningful
 
 ---
 
@@ -308,17 +367,17 @@ for regulated AI agents.                       Research
 
 ## 9. MVP Scope (What to Build First)
 
-### Phase 1: Launch Site (Week 1–2)
+### Phase 1: Launch Site (Week 1-2)
 Goal: ship a credibility document with whitepaper gate. Built by Claude Code.
 
 **Required pages:**
-- [ ] `/` — Home with hero, four-product strip, founder block, CTA
-- [ ] `/sr117` — Whitepaper landing with email gate
-- [ ] `/platform` — Four-product detail page with the spine diagram
-- [ ] `/about` — Founder bio with photo
-- [ ] `/research` — Curated paper list
-- [ ] `/contact` — Design-partner inquiry form
-- [ ] `/legal/privacy` and `/legal/terms` — minimal but real
+- [ ] `/` - Home with hero, four-product strip, founder block, CTA
+- [ ] `/sr117` - Whitepaper landing with email gate
+- [ ] `/platform` - Four-product detail page with the spine diagram
+- [ ] `/about` - Founder bio with photo
+- [ ] `/research` - Curated paper list
+- [ ] `/contact` - Design-partner inquiry form
+- [ ] `/legal/privacy` and `/legal/terms` - minimal but real
 
 **Required components:**
 - [ ] Top navigation with mobile responsive menu
@@ -338,24 +397,24 @@ Goal: ship a credibility document with whitepaper gate. Built by Claude Code.
 - [ ] OG images for each page
 - [ ] Mobile responsive (all breakpoints, including small tablet)
 
-### Phase 2: Healthcare Expansion (Month 3–4)
-- [ ] `/fda` — FDA 510(k)/PCCP whitepaper landing
+### Phase 2: Healthcare Expansion (Month 3-4)
+- [ ] `/fda` - FDA 510(k)/PCCP whitepaper landing
 - [ ] Healthcare SKU added to `/platform` page
 - [ ] Secondary persona detection on home page (subtle, e.g., link "Healthcare buyer? Start here")
 
 ### Phase 3: Content Engine (Month 6+)
-- [ ] `/blog` — MDX-based blog (founder writes, Claude Code does not auto-generate)
+- [ ] `/blog` - MDX-based blog (founder writes, Claude Code does not auto-generate)
 - [ ] Newsletter signup (only after blog is live, not before)
 - [ ] Whitepaper #2: ECOA Fair Lending for AI Credit Models
 - [ ] Whitepaper #3: HIPAA Architecture for Clinical AI Agents
 
 ### What NOT to Build in MVP
-- Login / app shell — there's no product yet
-- Documentation site — premature
-- API reference — premature
-- Pricing page with exact numbers — premature
-- Customer logo carousel — no customers yet
-- Comparison table vs. Credo/Fiddler/Arthur — wrong move (see Section 6)
+- Login / app shell - there's no product yet
+- Documentation site - premature
+- API reference - premature
+- Pricing page with exact numbers - premature
+- Customer logo carousel - no customers yet
+- Comparison table vs. Credo/Fiddler/Arthur - wrong move (see Section 6)
 
 ---
 
@@ -369,7 +428,7 @@ Goal: ship a credibility document with whitepaper gate. Built by Claude Code.
 
 ### Soft Metrics
 - Page views on `/sr117` (the whitepaper page IS the primary conversion surface)
-- Bounce rate on home page (should be <50% — if higher, hero isn't landing)
+- Bounce rate on home page (should be <50% - if higher, hero isn't landing)
 - Time on `/about` (if >90 seconds, founder credibility is working)
 - LinkedIn referrers (signal that outreach is driving traffic)
 
@@ -388,9 +447,9 @@ Goal: ship a credibility document with whitepaper gate. Built by Claude Code.
 | Founder credentials feel like bragging | Plain-text presentation, hairline rules, restrained typography. Let the citations speak. |
 | Whitepaper isn't actually written yet | Ship the site with a "Whitepaper coming Q1" notice if PDF isn't ready. Capture emails anyway. Send the PDF when ready. Do not fake-link to a 404. |
 | Buyer arrives via mobile (subway commute, between meetings) | Mobile-first design. Test on iPhone 14 / iPhone SE / mid-Android. Forms must work on mobile. |
-| Trademark dispute (Diligent Corp adjacent) | Don't say "trusted," "diligent," "diligence" in nav or hero — keep distance from the adjacent brand. Use "audit," "governance," "compliance," "model risk" instead. |
+| Trademark dispute (Diligent Corp adjacent) | Don't say "trusted," "diligent," "diligence" in nav or hero - keep distance from the adjacent brand. Use "audit," "governance," "compliance," "model risk" instead. |
 | GDPR / CCPA exposure on email capture | Plausible Analytics (no cookies). Email forms require explicit consent (checkbox: "I agree to receive a follow-up from Caventia"). Privacy policy real, not template. |
-| Site looks too "art history professor" — wrong for bank | Test with 3 friendly CMROs before launch. Adjust accent color from Pompeii red toward more neutral if needed. Modern Institutional aesthetic, not Old World Stuffy. |
+| Site looks too "art history professor" - wrong for bank | Test with 3 friendly CMROs before launch. Adjust accent color from Pompeii red toward more neutral if needed. Modern Institutional aesthetic, not Old World Stuffy. |
 
 ---
 
@@ -399,18 +458,18 @@ Goal: ship a credibility document with whitepaper gate. Built by Claude Code.
 These need founder input before build begins. Claude Code should ask if not provided.
 
 1. **Founder photo**: Is there a professional headshot? If not, schedule a shoot. Block on this.
-2. **Whitepaper PDF**: Is the SR 11-7 whitepaper drafted? If not, ship the site with "coming soon" gate; PDF can land in Week 4.
+2. **Whitepaper PDF**: The original SR 11-7 whitepaper draft (`tasks/whitepapers/sr11-7-draft-v1.md`) was overtaken by the April 17 2026 MRM Rewrite. v2 is being rewritten as "AI Agent Governance After SR 11-7." Until v2 is finalized, `/sr117` runs in "coming soon" email-capture mode.
 3. **Calendly link**: Set up the founder's discovery call calendar before the form goes live. 30-min slots, 2-3 days/week.
 4. **Resend account**: Founder creates Resend account, gets API key, provides to Claude Code via environment variable.
 5. **Plausible site key**: Founder creates Plausible account, provides site key.
-6. **Logo / wordmark**: Does a designed wordmark exist? If not, Claude Code uses a Fraunces-set wordmark with a small red rule line above the "C" — design system spec provides exact treatment.
+6. **Logo / wordmark**: Does a designed wordmark exist? If not, Claude Code uses a Fraunces-set wordmark with a small red rule line above the "C" - design system spec provides exact treatment.
 7. **Privacy policy text**: Boilerplate vs. counsel-drafted? Recommend counsel review before launch.
 
 ---
 
 ## 13. Cross-References
 
-- **CAVENTIA_DESIGN_SYSTEM.md** — visual identity, typography, color tokens, component styling
-- **caventia-homepage.html** — working visual prototype of the home page
-- Original Caventia product plan (from conversation) — full company strategy
-- Section 17 of the original plan — Year 1 action items the website supports
+- **CAVENTIA_DESIGN_SYSTEM.md** - visual identity, typography, color tokens, component styling
+- **caventia-homepage.html** - working visual prototype of the home page
+- Original Caventia product plan (from conversation) - full company strategy
+- Section 17 of the original plan - Year 1 action items the website supports

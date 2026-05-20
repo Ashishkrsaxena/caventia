@@ -82,8 +82,8 @@ export default function TermsPage() {
         <div className="font-body text-[17px] text-ink leading-[1.75] space-y-6">
           <p>
             These terms govern your use of caventia.com (the
-            &ldquo;Site&rdquo;) operated by {longForm()} (&ldquo;Caventia&rdquo;,
-            &ldquo;we&rdquo; or &ldquo;our&rdquo;). By accessing or using
+            &quot;Site&quot;) operated by {longForm()} (&quot;Caventia&quot;,
+            &quot;we&quot; or &quot;our&quot;). By accessing or using
             the Site you agree to these terms. If you do not agree, please
             do not use the Site.
           </p>
@@ -197,8 +197,8 @@ export default function TermsPage() {
             No warranty
           </h2>
           <p>
-            THE SITE IS PROVIDED &ldquo;AS IS&rdquo; AND &ldquo;AS
-            AVAILABLE&rdquo; WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            THE SITE IS PROVIDED &quot;AS IS&quot; AND &quot;AS
+            AVAILABLE&quot; WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
             IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTY OF
             MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR
             NON-INFRINGEMENT.
@@ -254,7 +254,7 @@ export default function TermsPage() {
           </h2>
           <p>
             We may update these terms as our practices change. The
-            &ldquo;Effective&rdquo; date at the top reflects the most
+            &quot;Effective&quot; date at the top reflects the most
             recent revision. Material changes will be flagged at the top of
             this page for at least thirty days. Your continued use of the
             Site after a revision becomes effective constitutes acceptance

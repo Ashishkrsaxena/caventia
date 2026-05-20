@@ -42,48 +42,50 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "AI Audit Trail for Regulated AI Agents - SR 11-7 - FDA 510(k) - Caventia",
+      "AI Agent Governance for the Models Regulators Excluded - Caventia",
     template: "%s - Caventia",
   },
   description:
-    "The tamper-evident AI audit trail banks and health systems use to make AI agents examiner-ready. SR 11-7 model risk artifacts for banks. FDA 510(k) audit evidence for healthcare. Cryptographically verifiable.",
+    "The audit-trail spine banks adopt for the generative and agentic AI agents the 2026 Interagency Model Risk Management Guidance leaves to them. FDA 510(k)-ready governance for health systems. Examiner-defensible. Cryptographically verifiable.",
   keywords: [
     "AI audit trail",
     "AI agent audit trail",
-    "SR 11-7 AI agents",
+    "AI agent governance",
+    "generative AI governance banks",
+    "agentic AI governance banks",
+    "2026 model risk management guidance",
     "FDA 510(k) AI audit",
-    "AI examiner ready",
-    "agentic AI compliance",
-    "AI model risk management",
+    "AI examiner defensible",
     "regulated AI agents",
     "AI governance",
     "tamper-evident AI logs",
+    "model risk management AI",
   ],
   openGraph: {
     title:
-      "AI Audit Trail for Regulated AI Agents - SR 11-7 - FDA 510(k) - Caventia",
+      "AI Agent Governance for the Models Regulators Excluded - Caventia",
     description:
-      "Tamper-evident AI audit trail for regulated AI agents. SR 11-7 for banks. FDA 510(k) for health systems. Examiner-verifiable.",
+      "Federal regulators excluded generative and agentic AI from model risk management. They didn't excuse banks from governing them. Caventia is the framework banks adopt. FDA 510(k)-ready for health systems.",
     siteName: "Caventia",
     type: "website",
     url: SITE_URL,
     images: [
       {
-        url: "/api/og?title=AI+Audit+Trail+for+Regulated+AI+Agents&desc=SR+11-7+for+banks.+FDA+510(k)+for+health+systems.",
+        url: "/api/og?title=AI+Agent+Governance+for+the+Models+Regulators+Excluded&desc=The+audit-trail+spine+banks+adopt+for+generative+and+agentic+AI.+FDA+510(k)+for+health+systems.",
         width: 1200,
         height: 630,
-        alt: "Caventia - AI audit trail for regulated AI agents",
+        alt: "Caventia - AI agent governance for the models regulators excluded",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "AI Audit Trail for Regulated AI Agents - SR 11-7 - FDA 510(k) - Caventia",
+      "AI Agent Governance for the Models Regulators Excluded - Caventia",
     description:
-      "Tamper-evident AI audit trail for regulated AI agents. SR 11-7 for banks. FDA 510(k) for health systems. Examiner-verifiable.",
+      "Banks now own AI agent governance. Caventia is the framework they adopt. FDA 510(k)-ready for health systems. Examiner-defensible.",
     images: [
-      "/api/og?title=AI+Audit+Trail+for+Regulated+AI+Agents&desc=SR+11-7+for+banks.+FDA+510(k)+for+health+systems.",
+      "/api/og?title=AI+Agent+Governance+for+the+Models+Regulators+Excluded&desc=The+audit-trail+spine+banks+adopt+for+generative+and+agentic+AI.+FDA+510(k)+for+health+systems.",
     ],
   },
   alternates: {

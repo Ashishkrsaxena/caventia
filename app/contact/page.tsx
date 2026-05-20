@@ -29,9 +29,9 @@ export default function ContactPage() {
           </h1>
           <p className="type-body-lg mt-8 max-w-[640px] text-ink-mute font-light">
             We&apos;re taking five design partners in 2026. If you are a Chief
-            Model Risk Officer, Chief Medical Information Officer or a
-            founder shipping AI into a regulated workflow - write to us.
-            Thirty-minute discovery calls; no decks.
+            Risk Officer, Chief Medical Information Officer or a founder
+            shipping AI into a regulated workflow - write to us. Thirty-minute
+            discovery calls; no decks.
           </p>
         </div>
       </section>
@@ -44,7 +44,7 @@ export default function ContactPage() {
               {[
                 "Reply within two business days, from the founder directly.",
                 "Thirty minutes, video or audio, your choice.",
-                "Specific to your regulator framework. SR 11-7 for banks, 510(k)/PCCP for health systems.",
+                "Specific to your regulator framework. The 2026 MRM Guidance for banks, 510(k)/PCCP for health systems.",
                 "No NDA required for the first conversation.",
               ].map((line) => (
                 <li

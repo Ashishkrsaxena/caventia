@@ -4,17 +4,17 @@ const PROBLEMS = [
   {
     numeral: "I.",
     title: "Horizontal tools, vertical regulators",
-    body: 'Credo AI, Fiddler, Arthur - none of them ship the SR 11-7 model risk documentation pack an OCC examiner expects. They were built for "AI governance" in the abstract.',
+    body: 'Credo AI, Fiddler, Arthur - none of them ship the documentation a bank needs when its examiner walks in. They were built for "AI governance" in the abstract.',
   },
   {
     numeral: "II.",
     title: "Audit logs that aren't audit logs",
-    body: "Most AI observability tools capture latency and cost. None capture the feature snapshots and decision metadata that an SR 11-7 reconstruction requires.",
+    body: "Most AI observability tools capture latency and cost. None capture the feature snapshots and decision metadata that a governance reconstruction requires.",
   },
   {
     numeral: "III.",
     title: "No certified human in the loop",
-    body: "Banks need third-party model validation under SR 11-7. There is no productized auditor network for AI agents - you hire a Big 4 consulting team at $500K and wait six months.",
+    body: "Banks still need independent model validation. There is no productized auditor network for AI agents - you hire a Big 4 consulting team at $500K and wait six months.",
   },
 ];
 
@@ -54,8 +54,8 @@ export default function ProblemSection() {
         >
           Pre-deploy security scan. Runtime audit logging. Governance
           documentation. Third-party sign-off. Today, each step is a separate
-          vendor, a separate workflow and a separate gap in the model risk
-          file your examiner is going to read.
+          vendor, a separate workflow and a separate gap in the file your
+          examiner is going to read.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14 mt-24 relative z-[2]">

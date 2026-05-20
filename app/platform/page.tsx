@@ -8,12 +8,12 @@ import Marginalia from "@/components/Marginalia";
 export const metadata: Metadata = {
   title: "The Platform - Four Products, One AI Audit Trail Spine",
   description:
-    "The Caventia platform captures every AI agent decision in a tamper-evident chain. SDK, ingestion API, examiner console and verification CLI. Four products on one audit-trail spine, built for SR 11-7 and FDA 510(k) examiner readiness.",
+    "The Caventia platform captures every AI agent decision in a tamper-evident chain. SDK, ingestion API, examiner console and verification CLI. Four products on one audit-trail spine, built for the principles the 2026 MRM Guidance still expects and FDA 510(k) examiner readiness.",
   keywords: [
     "AI audit trail platform",
     "AI agent audit trail",
     "AI governance platform",
-    "SR 11-7 compliance platform",
+    "2026 MRM Guidance AI",
     "FDA 510(k) AI platform",
     "tamper-evident AI logs",
     "AI examiner console",
@@ -48,7 +48,7 @@ const PRODUCTS: Product[] = [
       "AgentGuard wires into your build pipeline and runs adversarial checks every time a model or prompt changes. It detects prompt-injection paths, PII leakage, jailbreak surfaces and policy violations before an agent reaches production.",
       "Output is a deploy-gate decision and a machine-readable report.",
     ],
-    regulator: "SR 11-7 §IV (model implementation), NIST AI RMF GOVERN-2.1",
+    regulator: "2026 MRM Guidance §IV (model development & use), NIST AI RMF GOVERN-2.1",
     artifact: "Pre-deployment validation report (PDF + JSON)",
     pricingBand: "$60K-$120K annual seat",
   },
@@ -59,10 +59,10 @@ const PRODUCTS: Product[] = [
     name: "Audit Trail",
     tagline: "The spine. Every agent action, captured with full context.",
     description: [
-      "An SDK and dashboard that capture every input, feature snapshot, decision and outcome. The data structure was designed to satisfy SR 11-7's reconstruction requirement and FDA's algorithm change protocol expectations.",
+      "An SDK and dashboard that capture every input, feature snapshot, decision and outcome. The data structure was designed to satisfy the surviving outcomes-analysis and ongoing-monitoring expectations and FDA's algorithm change protocol expectations.",
       "This is the substrate every other Caventia product reads from.",
     ],
-    regulator: "SR 11-7 §V (ongoing monitoring), FDA PCCP, ECOA §1002.9",
+    regulator: "2026 MRM Guidance §V (validation & monitoring), FDA PCCP, ECOA §1002.9",
     artifact: "Queryable runtime log with examiner-mode export",
     pricingBand: "$120K-$250K platform + per-event scaling",
   },
@@ -73,11 +73,11 @@ const PRODUCTS: Product[] = [
     name: "Compliance Passport",
     tagline: "Auto-assembled regulator packs. No more spreadsheet glue.",
     description: [
-      "The Passport reads from the Audit Trail and emits the model risk pack your examiner expects: SR 11-7 model documentation, ECOA disparate-impact analysis, NIST AI RMF mapping, NYC Local Law 144 disclosures.",
+      "The Passport reads from the Audit Trail and emits the model risk pack examiners still expect: model identity documentation, validation reports, ECOA disparate-impact analysis, NIST AI RMF mapping, NYC Local Law 144 disclosures.",
       "The artifacts ship as PDFs with full evidence links back to the audit log.",
     ],
-    regulator: "SR 11-7 §VII, ECOA, NYC LL 144, NIST AI RMF",
-    artifact: "Examiner-ready model risk pack",
+    regulator: "2026 MRM Guidance §VII (vendor/third-party), ECOA, NYC LL 144, NIST AI RMF",
+    artifact: "Examiner-defensible model risk pack",
     pricingBand: "$80K-$150K annual",
   },
   {
@@ -87,11 +87,11 @@ const PRODUCTS: Product[] = [
     name: "Auditor Bridge",
     tagline: "Productized model validation. Structurally independent.",
     description: [
-      "SR 11-7 requires independent third-party model validation. Today, that means a $500K Big 4 engagement and six months of waiting.",
+      "Banks still need independent model validation under the surviving principles. Today, that means a $500K Big 4 engagement and six months of waiting.",
       "Auditor Bridge runs as a separately-incorporated entity (Caventia Audit Services LLC) with its own management chain, P&L and quality control function. Auditor compensation is flat-fee and not tied to validation outcome.",
-      "The four pillars (functional, organizational, compensation and knowledge independence) are documented in a public independence policy. Cycles shrink from quarters to weeks while the SR 11-7 independence standard goes up, not down.",
+      "The four pillars (functional, organizational, compensation and knowledge independence) are documented in a public independence policy. Cycles shrink from quarters to weeks while the independence standard goes up, not down.",
     ],
-    regulator: "SR 11-7 §VI (independent validation), OCC Bulletin 2011-12, Interagency Third-Party Risk Guidance (June 2023)",
+    regulator: "2026 MRM Guidance §VI (governance & controls), Interagency Third-Party Risk Guidance (June 2023)",
     artifact: "Signed validator opinion, liability rider and independence attestation",
     pricingBand: "$40K-$80K per validation",
   },
@@ -117,10 +117,10 @@ export default function PlatformPage() {
             One platform. Four artifacts. A single audit-trail spine.
           </h1>
           <p className="type-body-lg mt-8 max-w-[640px] text-ink-mute font-light">
-            Caventia is a vertical TRiSM platform. The four products share one
-            data model, one identity layer and one evidence ledger - so the
-            artifact your OCC examiner reads is the same artifact your auditor
-            countersigns.
+            Caventia is a vertical AI governance platform. The four products
+            share one data model, one identity layer and one evidence ledger -
+            so the artifact your OCC examiner reads is the same artifact your
+            auditor countersigns.
           </p>
         </div>
       </section>
@@ -216,7 +216,7 @@ export default function PlatformPage() {
           <p className="mt-6 font-mono text-[12px] tracking-[0.06em] text-ink-light">
             Prefer to read first?{" "}
             <Link href="/sr117" className="text-accent border-b border-accent">
-              SR 11-7 whitepaper
+              AI Agents After SR 11-7
             </Link>
           </p>
         </div>

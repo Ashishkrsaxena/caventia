@@ -81,7 +81,14 @@ export default function Hero() {
             fontVariationSettings: '"opsz" 24, "SOFT" 50',
           }}
         >
-          Tamper-evident capture for every prompt, tool call and decision your AI agents make. Built for SR 11-7 model risk reviews at banks and FDA 510(k) submissions in healthcare.
+          Federal regulators just excluded{" "}
+          <em
+            className="text-accent"
+            style={{ fontVariationSettings: '"opsz" 24, "SOFT" 100, "WONK" 1' }}
+          >
+            generative and agentic AI
+          </em>{" "}
+          from model risk management. They didn&apos;t excuse banks from governing them. Tamper-evident capture for every prompt, tool call and decision your agents make. Examiner-defensible at banks, 510(k)-ready at health systems.
         </p>
 
         {/* Hero meta - For FinTech / For Healthcare */}
@@ -91,7 +98,7 @@ export default function Hero() {
           {[
             {
               label: "For FinTech",
-              body: "SR 11-7 model risk documentation, ECOA disparate impact reporting, OCC-examiner-ready artifacts.",
+              body: "Examiner-defensible AI agent governance, ECOA disparate impact reporting, model inventory and validation artifacts.",
             },
             {
               label: "For Healthcare",
@@ -136,7 +143,7 @@ export default function Hero() {
             href="/sr117"
             className="inline-flex items-center gap-[10px] border border-ink text-ink hover:bg-ink hover:text-parchment px-8 py-[18px] font-body font-medium text-[15px] tracking-[0.01em] rounded-[2px] transition-colors"
           >
-            <span>Read the SR 11-7 whitepaper</span>
+            <span>What replaced SR 11-7</span>
             <span aria-hidden="true">→</span>
           </Link>
         </div>

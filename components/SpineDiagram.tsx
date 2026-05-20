@@ -24,8 +24,8 @@ const LEFT_NODES: Node[] = [
     hook: "Governance documentation",
     name: "Compliance Passport",
     description:
-      "Auto-assembles the SR 11-7 model risk pack, ECOA disparate impact report, NIST AI RMF mapping.",
-    regulator: "→ Examiner-ready artifacts",
+      "Auto-assembles the model risk pack examiners still expect, ECOA disparate impact report, NIST AI RMF mapping.",
+    regulator: "→ Examiner-defensible artifacts",
   },
 ];
 
@@ -43,7 +43,7 @@ const RIGHT_NODES: Node[] = [
     hook: "Certified sign-off",
     name: "Auditor Bridge",
     description:
-      "Independent third-party model validation with liability coverage. Built for SR 11-7 examiner readiness.",
+      "Independent third-party model validation with liability coverage. Built for the independence and effective challenge principles examiners still expect.",
     regulator: "→ Independent attestation",
   },
 ];

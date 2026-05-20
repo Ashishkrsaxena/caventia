@@ -239,8 +239,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Biographical statement - ported from the SR 11-7 whitepaper's
-          "About the Author" section. Citation-specific, awards-specific. */}
+      {/* Biographical statement - originally ported from the founder
+          whitepaper's "About the Author" section. Citation-specific,
+          awards-specific. */}
       <section className="bg-parchment border-t border-rule">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 py-20 md:py-28">
           <SectionLabel numeral="I.">Biographical statement</SectionLabel>
@@ -271,7 +272,7 @@ export default function AboutPage() {
             <p>
               Before Amazon, he was at Morgan Stanley in IT and Risk,
               working on the kind of model-and-control problems that became
-              the early shape of what is now SR 11-7 model risk management.
+              the early shape of what later became and outlived SR 11-7.
               His academic foundation goes back to the IITD-IBMIRL
               question-answering system, which placed ninth worldwide at
               the 2007 Text REtrieval Conference (TREC).
@@ -332,8 +333,8 @@ export default function AboutPage() {
               policy and bias measurement.
             </p>
             <p>
-              He is an IEEE Senior Member, a distinction held by only the
-              top 10 percent of IEEE&apos;s 400,000 members globally, and a
+              He is an IEEE Senior Member (a distinction held by only the
+              top 10 percent of IEEE&apos;s 400,000 members globally) and a
               Fellow of the British Computer Society, the UK&apos;s
               chartered institute for IT professionals. He serves on the
               editorial review board of an international computer science
@@ -458,7 +459,8 @@ export default function AboutPage() {
               moved billions of dollars in payments and I watched the model
               risk function struggle to keep up. We were good at the
               engineering. We were not great at the documentation an
-              examiner expects under SR 11-7. The gap kept widening.
+              examiner expects when AI is making the decisions. The gap
+              kept widening.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
               Then generative AI arrived. Suddenly every business unit
@@ -473,13 +475,13 @@ export default function AboutPage() {
             <p className="font-body text-[17px] text-ink leading-[1.75] mb-6">
               Caventia exists because the next decade of AI inside
               regulated industries needs a platform whose first principle
-              is not &ldquo;make AI safe&rdquo; but &ldquo;make AI legible
-              to the specific regulator who is going to read it.&rdquo;
-              That is a vertical problem. SR 11-7 is not the same as the
-              FDA&apos;s 510(k). 510(k) is not the same as ECOA. The
-              artifact your OCC examiner expects is not the artifact your
-              IRB expects. We built the platform around the artifact, not
-              the other way around.
+              is not &quot;make AI safe&quot; but &quot;make AI legible
+              to the specific regulator who is going to read it&quot;.
+              That is a vertical problem. Bank model risk management is
+              not the same as the FDA&apos;s 510(k). 510(k) is not the same
+              as ECOA. The artifact your OCC examiner expects is not the
+              artifact your IRB expects. We built the platform around the
+              artifact, not the other way around.
             </p>
             <p className="font-body text-[17px] text-ink leading-[1.75]">
               The bet is simple: in the regulated half of the AI market,
@@ -501,7 +503,7 @@ export default function AboutPage() {
               Talk to the founder
             </LinkButton>
             <LinkButton href="/sr117" variant="secondary">
-              Read the SR 11-7 whitepaper
+              Read AI Agents After SR 11-7
             </LinkButton>
           </div>
         </div>

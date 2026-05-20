@@ -10,7 +10,7 @@ const organization = {
   url: SITE_URL,
   logo: `${SITE_URL}/api/og?title=Caventia`,
   description:
-    "The vertical TRiSM platform for regulated AI agents. SR 11-7 model risk artifacts for banks, FDA 510(k)-ready governance artifacts for health systems.",
+    "The vertical AI governance platform banks adopt for the generative and agentic AI agents the 2026 Interagency Model Risk Management Guidance leaves to them. FDA 510(k)-ready governance artifacts for health systems.",
   founder: {
     "@type": "Person",
     name: "Ashish K. Saxena",
@@ -37,7 +37,7 @@ const website = {
   name: "Caventia",
   url: SITE_URL,
   description:
-    "The audit-trail spine for regulated AI agents. SR 11-7 for banks, FDA 510(k) for health systems.",
+    "The audit-trail spine for regulated AI agents. The framework banks adopt for the generative and agentic AI excluded from the 2026 MRM Guidance. FDA 510(k) for health systems.",
   publisher: {
     "@type": "Organization",
     name: "Caventia",

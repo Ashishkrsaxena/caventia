@@ -32,7 +32,7 @@ export default function NotFound() {
             {[
               { href: "/", label: "Home" },
               { href: "/platform", label: "Platform - four products" },
-              { href: "/sr117", label: "SR 11-7 whitepaper" },
+              { href: "/sr117", label: "AI Agents After SR 11-7" },
               { href: "/about", label: "About the founder" },
               { href: "/research", label: "Research" },
               { href: "/contact", label: "Contact" },

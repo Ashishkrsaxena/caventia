@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   keywords: [
     "AI audit trail design partner",
     "AI governance pilot",
-    "SR 11-7 design partner",
+    "AI agent governance design partner",
     "FDA 510(k) AI pilot",
     "Caventia design partner",
     "AI model risk pilot",
@@ -67,7 +67,7 @@ const RIGHT_FIT: FitItem[] = [
 const WRONG_FIT: FitItem[] = [
   {
     primary: "Exploring AI governance without specific pressure",
-    sub: "If there is no named examiner, audit or board ask, the SR 11-7 whitepaper is a better starting point.",
+    sub: "If there is no named examiner, audit or board ask, the AI Agents After SR 11-7 whitepaper is a better starting point.",
   },
   {
     primary: "No AI agents in production today",
@@ -107,7 +107,7 @@ const PHASES: Phase[] = [
     num: "III.",
     weeks: "Weeks 7-9",
     title: "Production capture",
-    body: "SDK live in production. First real decisions in the audit trail. Daily Merkle anchor running. Walkthrough with your second line of defense mapping captured fields to SR 11-7 or 510(k) requirements.",
+    body: "SDK live in production. First real decisions in the audit trail. Daily Merkle anchor running. Walkthrough with your independent validation function mapping captured fields to the surviving MRM principles or 510(k) requirements.",
   },
   {
     num: "IV.",
@@ -447,7 +447,7 @@ export default function DesignPartnersPage() {
               Apply to be a design partner
             </LinkButton>
             <LinkButton href="/sr117" variant="secondary">
-              Read the SR 11-7 whitepaper first
+              Read AI Agents After SR 11-7 first
             </LinkButton>
           </div>
           <p

@@ -11,10 +11,11 @@ type Body = {
 const FORWARD_TO = process.env.CONTACT_FORWARD_EMAIL ?? "ashish@caventia.com";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://caventia.com";
 
-const PAPERS: Record<string, { title: string; pdfPath: string | null }> = {
+const PAPERS: Record<string, { title: string; pdfPath: string | null; comingSoon?: boolean }> = {
   sr117: {
-    title: "SR 11-7 Compliance for AI Agents: A Practical Framework",
-    pdfPath: "/whitepaper-sr117.pdf",
+    title: "AI Agent Governance After SR 11-7",
+    pdfPath: null,
+    comingSoon: true,
   },
   fda: {
     title: "FDA Q-Sub Strategy for AI Agent Governance Platforms",
@@ -52,6 +53,7 @@ export async function POST(req: Request) {
   const paper = PAPERS[paperId];
   const paperTitle = paper?.title ?? paperId;
   const pdfUrl = paper?.pdfPath ? `${SITE_URL}${paper.pdfPath}` : null;
+  const comingSoon = paper?.comingSoon === true;
 
   // 1. Notify the founder.
   await sendNotification({
@@ -61,44 +63,66 @@ export async function POST(req: Request) {
     replyTo: email,
   });
 
-  // 2. Acknowledge to the requester. If the PDF exists, link it inline;
-  // otherwise fall back to the manual-follow-up wording.
-  const requesterText = pdfUrl
-    ? [
-        `Hi,`,
-        ``,
-        `Thanks for requesting "${paperTitle}".`,
-        ``,
-        `Download the PDF here:`,
-        pdfUrl,
-        ``,
-        `If you'd like to discuss your specific examiner readiness, reply to this email. Ashish reads every reply.`,
-        ``,
-        `- Caventia`,
-      ].join("\n")
-    : [
-        `Hi,`,
-        ``,
-        `Thanks for requesting "${paperTitle}".`,
-        ``,
-        `The PDF is being finalized and will arrive in a follow-up email within the next business day. If you'd like to discuss your specific examiner readiness in the meantime, reply to this email. Ashish reads every reply.`,
-        ``,
-        `- Caventia`,
-      ].join("\n");
+  // 2. Acknowledge to the requester. Three modes:
+  //    - pdfUrl set: send the download link inline.
+  //    - comingSoon: confirm they're on the launch list.
+  //    - neither (legacy null-path): manual follow-up wording.
+  let requesterText: string;
+  let requesterSubject: string;
+  let publicMessage: string;
+
+  if (pdfUrl) {
+    requesterText = [
+      `Hi,`,
+      ``,
+      `Thanks for requesting "${paperTitle}".`,
+      ``,
+      `Download the PDF here:`,
+      pdfUrl,
+      ``,
+      `If you'd like to discuss your specific examiner exposure, reply to this email. Ashish reads every reply.`,
+      ``,
+      `- Caventia`,
+    ].join("\n");
+    requesterSubject = "Your Caventia whitepaper is ready";
+    publicMessage = "Whitepaper request received. Check your inbox for the download link.";
+  } else if (comingSoon) {
+    requesterText = [
+      `Hi,`,
+      ``,
+      `You're on the launch list for "${paperTitle}".`,
+      ``,
+      `On April 17 2026 the Federal Reserve, OCC and FDIC rescinded SR 11-7 and excluded generative and agentic AI from the replacement guidance. The new edition rewrites the framework around what banks build instead. We'll send it the morning it ships.`,
+      ``,
+      `If you'd like to talk before then, reply to this email. Ashish reads every reply.`,
+      ``,
+      `- Caventia`,
+    ].join("\n");
+    requesterSubject = "You're on the list - AI Agent Governance After SR 11-7";
+    publicMessage = "You're on the list. We'll send it the morning it ships.";
+  } else {
+    requesterText = [
+      `Hi,`,
+      ``,
+      `Thanks for requesting "${paperTitle}".`,
+      ``,
+      `The PDF is being finalized and will arrive in a follow-up email within the next business day. If you'd like to discuss your specific examiner exposure in the meantime, reply to this email. Ashish reads every reply.`,
+      ``,
+      `- Caventia`,
+    ].join("\n");
+    requesterSubject = "Your Caventia whitepaper is on its way";
+    publicMessage = "Whitepaper request received. Check your inbox for confirmation; the PDF follows within a business day.";
+  }
 
   await sendNotification({
     to: email,
-    subject: pdfUrl
-      ? "Your Caventia whitepaper is ready"
-      : "Your Caventia whitepaper is on its way",
+    subject: requesterSubject,
     text: requesterText,
   });
 
   return NextResponse.json({
     ok: true,
-    message: pdfUrl
-      ? "Whitepaper request received. Check your inbox for the download link."
-      : "Whitepaper request received. Check your inbox for confirmation; the PDF follows within a business day.",
+    message: publicMessage,
     pdfUrl,
   });
 }

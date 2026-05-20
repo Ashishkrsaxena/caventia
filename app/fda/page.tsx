@@ -253,14 +253,15 @@ export default function FDAPage() {
           <p className="font-body text-[17px] text-ink leading-[1.75] mt-8">
             False or misleading claims about regulatory status are FTC
             unfair-trade-practice violations. You can&apos;t say
-            &ldquo;FDA approved&rdquo;, &ldquo;FDA cleared&rdquo; or
-            &ldquo;regulatory approved auditor&rdquo; for a governance
+            &quot;FDA approved&quot;, &quot;FDA cleared&quot; or
+            &quot;regulatory approved auditor&quot; for a governance
             platform.
           </p>
           <p className="font-body text-[17px] text-ink leading-[1.75] mt-6">
-            You can say &ldquo;aligned with SR 11-7 requirements&rdquo;,
-            &ldquo;generates 510(k)-submission-ready documentation&rdquo;
-            and &ldquo;HIPAA-compliant architecture, BAA available&rdquo;.
+            You can say &quot;aligned with the 2026 Interagency MRM
+            Guidance principles&quot;,
+            &quot;generates 510(k)-submission-ready documentation&quot;
+            and &quot;HIPAA-compliant architecture, BAA available&quot;.
             Bake this into the brand from day one. One wrong sales-deck slide
             creates years of FTC exposure.
           </p>

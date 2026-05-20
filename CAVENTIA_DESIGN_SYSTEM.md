@@ -7,7 +7,7 @@
 
 ## 1. Aesthetic Direction
 
-**"Editorial Institutional"** — reads as a serious financial publication or academic journal, executed with modern infrastructure-software precision.
+**"Editorial Institutional"** - reads as a serious financial publication or academic journal, executed with modern infrastructure-software precision.
 
 ### What this means in practice
 - **NOT** dark mode with purple/blue gradients (generic AI startup)
@@ -21,30 +21,30 @@
 
 ### Reference points
 - Bloomberg.com (the cleaner editorial pages, not the terminal)
-- Stripe Press (book pages — editorial gravitas + modern)
+- Stripe Press (book pages - editorial gravitas + modern)
 - Financial Times subscription page
 - Anthropic's homepage (restraint, generous whitespace)
 - The New York Times longform features
-- NOT: any "AI compliance" competitor (Credo, Fiddler, Arthur, Robust Intelligence) — those are the aesthetic we're differentiating against
+- NOT: any "AI compliance" competitor (Credo, Fiddler, Arthur, Robust Intelligence) - those are the aesthetic we're differentiating against
 
 ---
 
 ## 2. Typography
 
-### Fonts (Use Google Fonts — accessible and CDN-cached)
+### Fonts (Use Google Fonts - accessible and CDN-cached)
 
 ```css
-/* Display — characterful classical serif with modern proportions */
+/* Display - characterful classical serif with modern proportions */
 font-family: 'Fraunces', 'GT Sectra', 'Tiempos Headline', Georgia, serif;
 
-/* Body — precise modern sans, NOT Inter (overused) */
+/* Body - precise modern sans, NOT Inter (overused) */
 font-family: 'Newsreader', 'Söhne', 'Inter Tight', system-ui, sans-serif;
 
-/* Monospace — for data, code, IDs, technical labels */
+/* Monospace - for data, code, IDs, technical labels */
 font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
 ```
 
-Load Fraunces with the SOFT and WONK axes available — gives more typographic character on display sizes.
+Load Fraunces with the SOFT and WONK axes available - gives more typographic character on display sizes.
 
 ### Type Scale
 
@@ -76,7 +76,7 @@ Load Fraunces with the SOFT and WONK axes available — gives more typographic c
 3. **Section eyebrows are small-caps Newsreader** with `letter-spacing: 0.12em`, weight 500.
 4. **Numerals in display use lining figures.** In body, use oldstyle figures if the font supports it (Fraunces does).
 5. **Drop caps on long-form pages** (`/sr117`, `/about` "Why Caventia exists" section). Three-line drop cap, Fraunces, accent color.
-6. **Roman numerals for section dividers** on long pages (I., II., III.) — subtle nod to Latin etymology. Wide letter-spacing.
+6. **Roman numerals for section dividers** on long pages (I., II., III.) - subtle nod to Latin etymology. Wide letter-spacing.
 
 ---
 
@@ -87,28 +87,28 @@ Load Fraunces with the SOFT and WONK axes available — gives more typographic c
 ```css
 :root {
   /* Backgrounds */
-  --bg-primary:    #F7F4ED;  /* Parchment — main page background */
-  --bg-secondary:  #FFFFFF;  /* Paper — cards, elevated surfaces */
-  --bg-deep:       #0F1116;  /* Deep ink — footer, contrast sections */
+  --bg-primary:    #F7F4ED;  /* Parchment - main page background */
+  --bg-secondary:  #FFFFFF;  /* Paper - cards, elevated surfaces */
+  --bg-deep:       #0F1116;  /* Deep ink - footer, contrast sections */
   
   /* Text */
-  --ink:           #0F1116;  /* Deep warm black — primary text */
-  --ink-mute:      #5C5852;  /* Stone — secondary text */
-  --ink-light:     #8E8980;  /* Light stone — captions, metadata */
+  --ink:           #0F1116;  /* Deep warm black - primary text */
+  --ink-mute:      #5C5852;  /* Stone - secondary text */
+  --ink-light:     #8E8980;  /* Light stone - captions, metadata */
   --ink-inverse:   #F7F4ED;  /* Parchment text on deep ink */
   
   /* Rules & dividers */
-  --rule:          #D4CFC4;  /* Hairline — section dividers */
-  --rule-strong:   #A8A296;  /* Stronger rule — emphasized dividers */
+  --rule:          #D4CFC4;  /* Hairline - section dividers */
+  --rule-strong:   #A8A296;  /* Stronger rule - emphasized dividers */
   
-  /* Accent — Pompeii Red (USE SPARINGLY) */
-  --accent:        #8B2C2C;  /* Pompeii red — single brand accent */
-  --accent-soft:   #C4948E;  /* Soft terracotta — hover states */
-  --accent-bg:     #F2E4E1;  /* Tinted background — alert callouts */
+  /* Accent - Pompeii Red (USE SPARINGLY) */
+  --accent:        #8B2C2C;  /* Pompeii red - single brand accent */
+  --accent-soft:   #C4948E;  /* Soft terracotta - hover states */
+  --accent-bg:     #F2E4E1;  /* Tinted background - alert callouts */
   
   /* Functional */
-  --success:       #2E5C3E;  /* Verdigris green — successful submit */
-  --warning:       #A87A2F;  /* Bronze amber — warning states */
+  --success:       #2E5C3E;  /* Verdigris green - successful submit */
+  --warning:       #A87A2F;  /* Bronze amber - warning states */
   --link:          #8B2C2C;  /* Links use accent */
   --link-hover:    #6B2020;  /* Darker on hover */
 }
@@ -130,7 +130,7 @@ Load Fraunces with the SOFT and WONK axes available — gives more typographic c
 ### Grid
 - **Max content width**: 1200px
 - **Default column**: 720px (reading width for body content)
-- **Two-column asymmetric**: 240px (labels) / 720px (content) — used on `/platform`, `/sr117`
+- **Two-column asymmetric**: 240px (labels) / 720px (content) - used on `/platform`, `/sr117`
 
 ### Spacing scale (in px, 8-base)
 ```css
@@ -181,7 +181,7 @@ The single most-clicked element on the site.
   font-size: 15px;
   letter-spacing: 0.01em;
   border: none;
-  border-radius: 2px;  /* Sharp corners — institutional, not playful */
+  border-radius: 2px;  /* Sharp corners - institutional, not playful */
   cursor: pointer;
   transition: background 200ms ease;
 }
@@ -264,12 +264,12 @@ For the rare emphasized number on the home page.
 ### 5.6 Spine Diagram
 The signature visual on the home page and `/platform`. Custom SVG, NOT a stock illustration.
 
-**Visual concept**: A horizontal flow showing the four products as a literal spine — a thick vertical line in the center represents the audit log, with the four products as horizontal segments branching off.
+**Visual concept**: A horizontal flow showing the four products as a literal spine - a thick vertical line in the center represents the audit log, with the four products as horizontal segments branching off.
 
 ```
    AgentGuard  →  ─┬─  ←  Audit Trail
                    │
-                   │  (spine — audit log)
+                   │  (spine - audit log)
                    │
    Compliance ←  ─┴─  →  Auditor Bridge
    Passport
@@ -355,8 +355,8 @@ For the four-product strip on the home page.
 ## 6. Motion & Interaction
 
 ### Principles
-1. **One choreographed page-load reveal** — never scattered micro-interactions.
-2. **Hover states are subtle** — color shifts, never scaling/transforming.
+1. **One choreographed page-load reveal** - never scattered micro-interactions.
+2. **Hover states are subtle** - color shifts, never scaling/transforming.
 3. **Scroll-triggered reveals** for hero diagrams ONLY. Body text appears immediately.
 4. **No parallax.** It's distracting and 2014.
 
@@ -378,7 +378,7 @@ For the four-product strip on the home page.
 - Total: ~2 seconds, one time per page load
 
 ### Reduced Motion
-Honor `prefers-reduced-motion: reduce` — disable all motion, show final state immediately.
+Honor `prefers-reduced-motion: reduce` - disable all motion, show final state immediately.
 
 ---
 
@@ -389,11 +389,11 @@ Honor `prefers-reduced-motion: reduce` — disable all motion, show final state 
 - 600×600px minimum (1200×1200 ideal for retina)
 - Square crop, head and shoulders
 - Direct eye contact, slight smile, professional attire (suit or blazer)
-- Color-graded to match the parchment palette — slightly warm tones
+- Color-graded to match the parchment palette - slightly warm tones
 
 ### Iconography
 - **No emoji.** This is institutional, not casual.
-- **No icon library** (Heroicons, Phosphor) — too generic.
+- **No icon library** (Heroicons, Phosphor) - too generic.
 - For the rare icon needed (download arrow, external link, menu hamburger), use custom 1.5px stroke SVG icons, monochrome, in `var(--ink)`.
 
 ### Photography (if any)
@@ -414,10 +414,10 @@ Honor `prefers-reduced-motion: reduce` — disable all motion, show final state 
 
 ### Mobile-Specific Rules
 1. **Hero headline scales down**: 72px → 44px on mobile.
-2. **Spine diagram becomes vertical-only** — already vertical, just shrink to 90% viewport width.
+2. **Spine diagram becomes vertical-only** - already vertical, just shrink to 90% viewport width.
 3. **Nav collapses to hamburger** below 768px. Hamburger icon in `var(--ink)`, 1.5px stroke.
 4. **Forms stay full-width** with adequate touch targets (44px minimum).
-5. **CTAs remain prominent** — primary button takes 80% width on mobile, centered.
+5. **CTAs remain prominent** - primary button takes 80% width on mobile, centered.
 6. **Two-column asymmetric layouts collapse** to single column with section labels above content (not in left margin).
 
 ---
@@ -525,7 +525,7 @@ caventia.com/
 
 ## 13. Final Reminder
 
-**Restraint is the design.** The temptation will be to add more — more color, more animation, more illustration, more "delight." Resist it.
+**Restraint is the design.** The temptation will be to add more - more color, more animation, more illustration, more "delight." Resist it.
 
 The Chief Model Risk Officer at JPMorgan does not want delight. They want gravitas, specificity, and a clear next step. Every design decision serves those three.
 
