@@ -1,0 +1,104 @@
+---
+title: "Footnote 3: the sentence that took AI agents out of the model risk rulebook"
+description: "The April 2026 guidance rescinded SR 11-7 and then excluded generative and agentic AI from its own scope. Out of scope is not off the hook. Here is what survived, what quietly vanished, and the five controls that turn eight principles into evidence."
+date: "2026-07-30"
+author: "Ashish K. Saxena"
+category: "sr11-7"
+tags: ["model-risk", "ai-governance", "agentic-ai", "sr11-7", "validation"]
+featured: true
+---
+
+On April 17, 2026, the Federal Reserve, the OCC and the FDIC jointly rescinded SR 11-7.
+
+They rescinded OCC 2011-12, FIL-22-2017 and FIL-27-2021 along with it. Fifteen years of model risk doctrine, replaced by a 12-page principles-based document titled "Supervisory Guidance on Model Risk Management".
+
+If you run model risk at a bank, you know this already. What you may not have read closely is footnote 3 on page 3. It is the most consequential sentence in the document and it sits in small type.
+
+Here it is, verbatim:
+
+> "Generative AI and agentic AI models are novel and rapidly evolving. As such, they are not within the scope of this guidance. Nonetheless, a banking organization's risk management and governance practices should guide the determination of appropriate governance and controls for any tools, processes, or systems not covered in this document. However, the principles described in this guidance apply to traditional statistical and quantitative models and non-generative, non-agentic AI models."
+
+Read it twice. The agencies looked at generative and agentic AI, decided the category was moving too fast to write rules against, and handed the problem back to you.
+
+## Out of scope is not off the hook
+
+The temptation is obvious. Your gen AI agents are excluded from the guidance, so the model risk team stops asking about them and the deployment queue speeds up.
+
+That reading survives about one page. Footnote 1, page 2, is the counterweight:
+
+> "supervisory action may result for any violations of law or unsafe or unsound practices stemming from insufficient management of model risk."
+
+So the guidance is non-prescriptive. The replacement text is explicit that "non-compliance with this guidance will not result in supervisory criticism against a banking organization". But ECOA did not get rescinded. UDAAP did not get rescinded. The safety and soundness standard did not get rescinded.
+
+What changed is that you no longer get a checklist telling you what "enough" looks like. You still get held to the outcome.
+
+That is a harder position, not an easier one. A prescriptive rule is also a defense. When an examiner challenges your agent and you can point to the paragraph you satisfied, the argument ends. Now there is no paragraph. There is only the record you kept.
+
+## What quietly disappeared
+
+Put the old and new documents side by side and the absences are louder than the additions.
+
+Gone: the three lines of defense terminology. Gone: any explicit mention of ECOA and fair lending. Gone: the board reporting prescription. Gone: quantitative tier thresholds. Gone: the model risk appetite framework.
+
+None of those obligations disappeared from your business. Only the instructions for meeting them did.
+
+There is one more line worth flagging. The new guidance defines a model in a way that excludes "deterministic rule-based processes and software where there are no statistical, economic, or financial theories underpinning their design or use".
+
+Think about what that does to an agentic workflow. The LLM call may be a model. The tool-calling harness around it, the retrieval step, the routing logic, the post-processing rules? An aggressive reading puts most of that outside the model definition entirely, which means outside your model inventory, which means outside validation.
+
+Your agent's decision does not care where the definition ends. If the harness picks the wrong tool, the customer still gets the wrong answer.
+
+## What survived, and why it is now your only map
+
+The principles that made it into the replacement guidance are the ones worth building against, because they are what an examiner will reason from when there is nothing more specific to cite.
+
+- Model inventory
+- Documentation
+- Validation, split into conceptual soundness, outcomes analysis and ongoing monitoring
+- Effective challenge
+- Governance and controls
+- Vendor oversight
+- Aggregate risk
+- Model materiality, scaled by exposure and purpose
+
+Eight principles. That is your map now. Every one of them applies cleanly to an AI agent, and not one of them tells you what evidence to produce.
+
+## The five controls that turn principles into evidence
+
+Here is what I would build, in order, for any gen AI or agentic system you would be embarrassed to explain in an exam.
+
+**1. Validate the behavioral envelope, not the output.** Traditional models replay exactly. LLMs do not, even at temperature zero, once you cross a model version or an infrastructure deployment. Define the set of outputs the agent should produce across a representative input distribution and test against that envelope. This is how you satisfy conceptual soundness and outcomes analysis when reproducibility is off the table.
+
+**2. Treat the prompt as a versioned model component.** Your system prompt is a feature. Hash it, version-control it, and pin a specific hash to every production deployment. When someone asks what changed between March and June, you answer with a diff instead of a memory.
+
+**3. Make the tool-call trace an audit artifact.** You cannot enumerate every execution path an agent will take. Stop trying. Capture every tool call with its arguments and results in production, so validation shifts from predicting behavior to reconstructing it. When the question is "how did this agent reach this decision", you produce the trace.
+
+**4. Document your model and the vendor model separately.** You cannot produce a model card for GPT-4o or Claude. You can produce a complete one for the prompts, tools, retrieval architecture and post-processing logic, which is also where your actual proprietary work lives. Two documents, two owners, one inventory entry. That is vendor oversight in practice.
+
+**5. Pin validation evidence to a model version.** "The agent has been validated" is not a statement until you say validated against what. Require re-validation before provider auto-upgrades, and negotiate behavior-change notification into the contract while you still have leverage.
+
+Read those back against the eight principles. Envelope tests cover conceptual soundness. Prompt hashes and traces cover documentation and ongoing monitoring. Two-layer documentation covers vendor oversight. Version pinning covers effective challenge, because a challenger who cannot tell which version they are challenging is not challenging anything.
+
+The longer form of each control, with the specific failure it addresses, is in [the five places SR 11-7 breaks down on AI agents](/blog/five-places-sr11-7-breaks-down). That post was written five days before the rescission and the mechanics held up.
+
+## If you are under $30 billion
+
+The new guidance says it is "most relevant" to banking organizations above $30 billion, and generally does not apply below that unless the institution has significant model risk exposure.
+
+That threshold is about this document. It is not about your exposure.
+
+A $6 billion bank running an agent on consumer lending decisions has the same ECOA obligation as a $600 billion bank. State regulators have their own view. The CFPB has its own view. And a plaintiff's attorney reading your discovery has never once been impressed by a relevance threshold in supervisory guidance.
+
+## Where this actually lands
+
+For fifteen years the model risk function had an answer to "how much is enough". SR 11-7 was that answer, and its specificity was the point.
+
+The agencies just replaced specificity with judgment, then carved out the fastest-moving category of models entirely. The burden of proof moved from the regulator's document to your evidence trail.
+
+So the question worth asking this quarter is not whether your AI agents are in scope. It is whether you could reconstruct, today, what one of them decided six months ago and why.
+
+If the room goes quiet when you ask that, you already know where to start.
+
+The full framework, with templates and an implementation roadmap, is in the [model risk whitepaper](/sr117). The FDA 510(k) equivalent for clinical AI is in the [FDA whitepaper](/fda). Both are free.
+
+If your gauntlet looks different in some specific way, that is the kind of conversation the founder takes by email.
