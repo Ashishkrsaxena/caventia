@@ -1,0 +1,198 @@
+---
+title: "The five controls: what an examiner can actually open"
+description: "Eight principles and no checklist. Here is each of the five controls in full, with the artifact it produces, the failure it prevents, the build order nobody tells you and the drill that proves the whole thing works."
+date: "2026-08-05"
+author: "Ashish K. Saxena"
+category: "sr11-7"
+tags: ["model-risk", "ai-governance", "agentic-ai", "validation", "controls"]
+featured: true
+---
+
+<figure className="mb-12">
+  <img
+    src="/blog/five-controls-hero.jpg"
+    alt="Five vertical stacks of thin horizontal bars on a cream ground, each stack suggesting a pile of documents seen edge-on. Four stacks are ink black and warm grey. The middle stack is deep oxblood red."
+    width="2200"
+    height="1228"
+    className="block w-full h-auto border border-rule"
+  />
+  <figcaption className="mt-3 font-mono text-[11px] tracking-[0.16em] uppercase text-ink-mute">
+    Five controls, five artifacts. The third one is the only one you cannot build after the fact.
+  </figcaption>
+</figure>
+
+The April 2026 guidance left you eight principles and no checklist. I covered that in [Footnote 3](/blog/footnote-3-ai-agents-model-risk), along with five controls that turn those principles into evidence.
+
+Five controls in five paragraphs. That was the summary. This is the version you can hand to the person who has to build them.
+
+One rule runs through all five. A control isn't what you intend to do. A control is a file an examiner can open, on a Tuesday, without you in the room.
+
+If a control on your list doesn't terminate in an artifact, it's a policy. Policies are fine. They're just not evidence.
+
+## 1. Validate the behavioral envelope, not the output
+
+Traditional model validation rests on replay. Same input, same output, six months later.
+
+LLMs break that, and not only because of sampling temperature. Cross a model version or an infrastructure boundary and the output moves.
+
+So stop validating the output. Validate the envelope around it.
+
+**What the envelope is.** A stratified set of inputs plus a set of assertions over the responses. Three kinds of assertion, and you need all three:
+
+- **Hard constraints.** The agent never quotes an APR outside the product table. Never promises a decision it isn't authorized to make. Always emits a reason code on an adverse action. These pass or fail per case. One failure is a release blocker.
+- **Distributional constraints.** Recommendation rates by segment stay within a preset tolerance of baseline. This is where fair lending exposure shows up first, and it only works if your strata are large enough to move. A segment with 30 cases swings three points on one flipped decision, which means you're measuring noise and calling it drift.
+- **Semantic constraints.** Scored against a written rubric, on a sample, by people. Slow and unglamorous, and it catches the things assertions never do.
+
+**Set the tolerances before the run.** Write them down, get them signed, then execute. Thresholds chosen after you see the numbers aren't a control. They're a narrative with a spreadsheet attached.
+
+**The artifact.** A per-release envelope report: every assertion with its result, the model version and configuration hash it ran against, plus the diff versus the previous release. The diff is the part people skip and the part an examiner reads first.
+
+Discharges: conceptual soundness, outcomes analysis, ongoing monitoring.
+
+## 2. Treat the prompt as a versioned model component
+
+Everyone gets half of this right. They version the system prompt, pin the hash to the deployment and feel covered.
+
+Then someone refreshes the retrieval index. Behavior moves while the prompt hash sits unchanged, and the control reports green through the entire incident.
+
+The prompt isn't the unit of change. The resolved decision context is. Hash all of it:
+
+- System prompt template and every variable that fills it
+- Tool definitions, including the JSON schemas and the descriptions, because the description is what drives selection
+- Retrieval configuration: index version, embedding model, chunking, top-k, filters
+- Decoding parameters: temperature, top_p, max tokens, seed
+- Model id and version
+- Post-processing and guardrail rules
+
+That composite is your configuration hash. One value. It goes in the deployment manifest, and it goes on every single decision record you write.
+
+**Then put prompt edits under change control.** Plenty of banks now run a prompt console that lets a product owner edit production behavior in an afternoon. That's a model change with a friendlier interface.
+
+Same review, same approval, same record. If your change log shows six months of model stability and your prompt console shows 40 edits, you don't have a change log.
+
+**The artifact.** A deployment manifest per release listing every field above, and a decision log where each row carries the hash that produced it. "What changed between March and June" stops being a memory exercise and becomes a diff.
+
+Discharges: documentation, governance and controls.
+
+## 3. Make the tool-call trace an audit artifact
+
+You can't enumerate every path an agent will take before it takes it. That was true when SR 11-7 stood and it's truer now. Give up on prediction and get serious about reconstruction.
+
+**Capture per step:** timestamp, decision id, configuration hash, step index, tool name, arguments, result, latency, token counts, stop reason. Then the final action and what downstream system consumed it.
+
+Three details separate a real trace store from an expensive log pile.
+
+**Retention.** Most observability vendors default to about 30 days. Regulation B puts consumer credit application records at 25 months, and if your trace is part of how the decision got made, you'll have a hard time arguing it isn't part of the record.
+
+Litigation reaches further still. If the trace expires before the exposure does, the control was decorative.
+
+So price the storage against the retention you actually owe, and do it before you instrument. Retrofitting retention onto data you already deleted isn't a project.
+
+**Tamper evidence.** A log an insider can edit isn't evidence, and everyone in the exam room knows it. Hash-chain the records or write to append-only storage.
+
+The point isn't that you distrust your engineers. The point is that you can demonstrate integrity without asking anyone to take your word.
+
+**Redaction at instrumentation time.** Decide field by field what gets captured, hashed or dropped, before the first trace is written. Teams that skip this discover in month four that their audit trail is full of data they aren't allowed to retain, and then they delete the trail.
+
+**The artifact.** One decision, one page, reconstructible on demand: what came in, which tools fired in what order with what arguments, what came back, what the agent did, under which configuration.
+
+Discharges: ongoing monitoring, documentation and the access that makes effective challenge possible at all.
+
+## 4. Document your model and the vendor model separately
+
+You'll never author a model card for a frontier model. Stop treating that as a gap in your documentation and start treating it as a boundary in your documentation.
+
+**Layer one, the vendor model.** What you can actually obtain: the published model card and evals, the terms covering training use and data retention, the deprecation policy, region and subprocessor list, incident history. Owner: vendor management. Refresh trigger: any provider version change.
+
+**Layer two, your model.** The prompts, the tool inventory, the retrieval corpus and how it gets updated, the post-processing, the guardrails, the human review points and an explicit statement of what the system is authorized to decide and what it isn't.
+
+This layer is fully documentable. It's also where your proprietary work actually lives.
+
+**Classify every tool by blast radius.** Read-only, writes to a system of record, moves money or speaks to a customer. Sort your tool inventory by that column and you're looking at your incident list in advance. The failures that reach a regulator tend to be write-tool failures, not reasoning failures.
+
+**The seam is the risk.** The interesting exposure isn't inside either layer. It's in what you assume the vendor model does and never tested.
+
+Write those assumptions down as assumptions. That page ages better than anything else in the pack.
+
+Two documents, two owners, one inventory entry, one named accountable individual. The name matters more than it used to. The replacement guidance never mentions your board of directors, so the accountability you get is the accountability you assign.
+
+Discharges: model inventory, documentation, vendor oversight, aggregate risk.
+
+## 5. Pin validation evidence to a model version
+
+"The agent has been validated" is a claim, not a statement. Validated against what, and until when?
+
+**Pin the full coordinate.** Model id, version and endpoint or region. Alias targets that resolve to whatever shipped last night are the specific enemy here. Your pin should be a value someone could type back in a year and get the same thing.
+
+**Negotiate while you still have leverage**, which is before the renewal and long before the incident: advance notice of deprecation, notice of behavior-affecting changes, a defined window to stay on a pinned version, access to eval artifacts.
+
+**Write the re-validation trigger list and make it boring.** Any one of these fires it:
+
+- Provider version change
+- Configuration hash change
+- Retrieval corpus refresh past a defined threshold
+- Tool added or its scope widened
+- New product or population
+- Drift alarm firing
+- Calendar floor expiring, so nothing sits unvalidated forever on the grounds that nothing happened
+
+**Track the expiry.** Providers retire versions on their own schedule, which means your pin has an end date. On that date you get pushed onto an unvalidated version whether or not your validators have capacity. Put the date in the risk register the day you pin, not the week it lands.
+
+**And give the challenger real power.** Effective challenge means someone can fail the thing. Independent reporting line, access to the trace store, budget and the authority to block a release.
+
+Without that last one it's review theater, and it reads that way from across the table.
+
+**The artifact.** A one-page validation certificate: what was validated, against which configuration hash and model version, on what data, by whom, what the challenge found, what limitations remain and the expiry date.
+
+Discharges: validation, effective challenge, governance and controls, vendor oversight, aggregate risk.
+
+## How the five map to the eight
+
+| Principle | Control that produces the evidence |
+| --- | --- |
+| Model inventory | 4 (one entry, two documents) |
+| Documentation | 2, 3, 4 |
+| Validation: conceptual soundness, outcomes analysis, ongoing monitoring | 1, 3, 5 |
+| Effective challenge | 3, 5 |
+| Governance and controls | 2, 5 |
+| Vendor oversight | 4, 5 |
+| Aggregate risk | 4, 5 |
+| Model materiality | scales all five |
+
+Every principle terminates in a file. That's the whole design.
+
+## Build order, which isn't the numbered order
+
+Footnote 3 numbered these one through five and said I'd build them in that order. If you're starting from zero, don't. The reason is worth a paragraph.
+
+**Controls 2 and 3 first.** The configuration hash and the trace are instrumentation. They only describe decisions made after you turn them on.
+
+Every week you wait is a week of production history you can never reconstruct, whatever you spend later.
+
+**Controls 1, 4 and 5 after.** Envelope tests, two-layer documentation and version pinning can all be built retroactively against a system already running. Late is expensive. It isn't impossible.
+
+So the sequencing rule is simple. Anything that captures the present goes first. Anything that can look backward can wait.
+
+## Scale it, but don't skip it
+
+Model materiality survived into the new guidance, so use it. A low-exposure internal drafting assistant doesn't need the same envelope depth, the same challenge budget or the same retention posture as an agent touching consumer credit decisions.
+
+Scale four of the five. Don't scale control 3 to zero.
+
+The trace is the one control whose absence you can't remediate after the fact, and the low-materiality system that quietly acquires a write-scoped tool is exactly how a small exposure becomes a large one.
+
+## The drill that tells you if this is real
+
+Pick a decision your agent made six months ago. Pick it at random, not from the demo set.
+
+Hand it to someone who didn't build the system. Ask them to reconstruct what happened and why, using only what's in the record. Start a timer.
+
+If they come back in an hour with the input, the trace, the configuration hash, the validation certificate that covered that hash and the documentation for both layers, your five controls are real.
+
+If it takes three weeks and four engineers, you have five intentions.
+
+The gap between those two outcomes is the entire discipline now. The agencies stopped telling you what enough looks like. The record you kept is the only remaining answer.
+
+The full framework, with templates and an implementation roadmap, is in the [model risk whitepaper](/sr117). The FDA 510(k) equivalent for clinical AI is in the [FDA whitepaper](/fda). Both are free.
+
+If your gauntlet looks different in some specific way, that is the kind of conversation the founder takes by email.
